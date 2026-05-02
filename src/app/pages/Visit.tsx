@@ -100,7 +100,7 @@ export default function Visit() {
             </div>
             <div className="space-y-4">
               <p className="text-[#2B2B2B] leading-relaxed">
-                Jl. Kartika No.2, Sisir, Kec. Batu, Kota Batu, Jawa Timur 65314
+                Jl. Dewi Sartika Atas No.2, Sisir, Kec. Batu, Kota Batu, Jawa Timur
               </p>
               <div className="border-t border-[#C8B9A6] pt-4">
                 <h3 className="font-['Cinzel'] text-lg text-[#2B2B2B] mb-3">How to Get Here</h3>
@@ -127,7 +127,7 @@ export default function Visit() {
                 <Phone className="w-5 h-5 text-[#8C6B3E] mt-1 flex-shrink-0" />
                 <div>
                   <div className="text-[#2B2B2B] font-medium">Phone</div>
-                  <div className="text-[#5A5A5A]">+62 857 4840 5800</div>
+                  <div className="text-[#5A5A5A]">+62 857-4840-5800</div>
                 </div>
               </div>
               <div className="border-t border-[#C8B9A6] pt-4">
