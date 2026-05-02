@@ -12,7 +12,7 @@ export default function NotFound() {
           </h2>
           <p className="text-[#5A5A5A] text-lg mb-8">
             The page you're looking for doesn't exist or has been moved.
-            Let's get you back to exploring Indonesian heritage.
+            Let's get you back to exploring the Glory of Islam Museum.
           </p>
         </div>
 

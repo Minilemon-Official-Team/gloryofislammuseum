@@ -23,7 +23,7 @@ export default function Education() {
             </div>
             <h2 className="font-['Cinzel'] text-2xl text-[#2B2B2B] mb-3">General/Family</h2>
             <p className="text-[#5A5A5A] leading-relaxed">
-              Programs designed for families and general visitors to explore Indonesian heritage together
+              Programs designed for families and general visitors to explore the Glory of Islam Museum together
             </p>
           </div>
 
@@ -213,7 +213,7 @@ export default function Education() {
               <h3 className="font-['Cinzel'] text-xl text-[#8C6B3E] mb-4">Heritage Lecture Series</h3>
               <p className="text-[#2B2B2B] mb-4 leading-relaxed">
                 Monthly lectures by leading scholars, archaeologists, and cultural experts covering various 
-                aspects of Indonesian heritage and Majapahit history.
+                aspects of the Glory of Islam Museum and Majapahit history.
               </p>
               <ul className="space-y-2 text-[#5A5A5A] mb-6">
                 <li>• Monthly evening lectures</li>

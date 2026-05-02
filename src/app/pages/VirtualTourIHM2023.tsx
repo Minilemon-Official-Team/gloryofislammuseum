@@ -47,7 +47,7 @@ export default function VirtualTourIHM2023() {
         <div className="bg-white rounded shadow-lg p-8 mb-8">
           <h2 className="font-['Cinzel'] text-3xl text-[#2B2B2B] mb-6">2023 Updates & Additions</h2>
           <p className="text-[#2B2B2B] leading-relaxed mb-4">
-            The Indonesian Heritage Museum underwent significant renovations and expansions in 2023, introducing new 
+            The Glory of Islam Museum underwent significant renovations and expansions in 2023, introducing new 
             exhibition spaces and acquiring important artifacts that enhance our representation of Indonesian cultural heritage.
           </p>
           <p className="text-[#5A5A5A] leading-relaxed">

@@ -1,78 +1,15 @@
 import { Quote, Star } from 'lucide-react';
 
 const testimonials = [
-  {
-    id: 1,
-    name: 'Sarah Johnson',
-    location: 'Australia',
-    date: 'February 2026',
-    rating: 5,
-    text: 'An absolutely stunning museum! The collection is breathtaking and the way artifacts are presented really brings Indonesian history to life. The virtual tour option was perfect for planning our visit, and the staff were incredibly knowledgeable and helpful. A must-visit when in Malang!',
-  },
-  {
-    id: 2,
-    name: 'Budi Santoso',
-    location: 'Jakarta, Indonesia',
-    date: 'February 2026',
-    rating: 5,
-    text: 'Sangat bangga dengan museum ini! Koleksi Majapahit-nya luar biasa lengkap dan terawat dengan baik. Program edukasinya juga sangat bermanfaat untuk anak-anak. Terima kasih sudah menjaga warisan budaya Indonesia dengan begitu baik.',
-  },
-  {
-    id: 3,
-    name: 'Dr. Michael Chen',
-    location: 'Singapore',
-    date: 'January 2026',
-    rating: 5,
-    text: 'As a historian specializing in Southeast Asian culture, I found this museum to be exceptional. The curation is scholarly yet accessible, and the conservation work is of the highest standard. The staff\'s expertise and passion for Indonesian heritage is evident in every exhibition.',
-  },
-  {
-    id: 4,
-    name: 'Maria Garcia',
-    location: 'Spain',
-    date: 'January 2026',
-    rating: 5,
-    text: 'What a wonderful experience! The museum building itself is beautiful, and the exhibitions are thoughtfully designed. The audio guide in Spanish was very helpful. I especially loved the textile collection and the detailed explanations of batik techniques.',
-  },
-  {
-    id: 5,
-    name: 'Ratna Dewi',
-    location: 'Surabaya, Indonesia',
-    date: 'December 2025',
-    rating: 5,
-    text: 'Museum favorit saya di Jawa Timur! Setiap kali berkunjung selalu ada hal baru yang dipelajari. Program workshopnya sangat menarik, terutama workshop batik. Anak-anak juga sangat menikmati kunjungan edukatif mereka ke sini.',
-  },
-  {
-    id: 6,
-    name: 'James Anderson',
-    location: 'United Kingdom',
-    date: 'December 2025',
-    rating: 5,
-    text: 'Outstanding museum with world-class artifacts. The Candi Jago and Candi Kidal stone reliefs are absolutely magnificent. The museum does an excellent job of contextualizing these pieces within Indonesian history. Highly recommended for anyone interested in Southeast Asian culture.',
-  },
-  {
-    id: 7,
-    name: 'Yuki Tanaka',
-    location: 'Japan',
-    date: 'November 2025',
-    rating: 5,
-    text: 'とても素晴らしい博物館です！インドネシアの文化遺産を学ぶのに最高の場所です。展示は美しく、スタッフはとても親切でした。バーチャルツアーも素晴らしかったです。',
-  },
-  {
-    id: 8,
-    name: 'Emma Williams',
-    location: 'Canada',
-    date: 'November 2025',
-    rating: 5,
-    text: 'This museum exceeded all expectations! The exhibitions are beautifully curated, and I learned so much about Majapahit history. The conservation lab viewing window was fascinating. The gift shop also has wonderful books and replicas.',
-  },
-  {
-    id: 9,
-    name: 'Ahmad Rahman',
-    location: 'Malang, Indonesia',
-    date: 'October 2025',
-    rating: 5,
-    text: 'Sebagai warga Malang, saya sangat bangga dengan museum ini. Ini bukan hanya tempat wisata, tapi juga pusat pembelajaran budaya yang sangat penting. Program komunitas dan kerjasama dengan sekolah-sekolah lokal sangat menginspirasi.',
-  },
+  { id: 1, name: 'Lorem Ipsum', location: 'Lorem City', date: 'February 2026', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' },
+  { id: 2, name: 'Dolor Sit', location: 'Amet, Consectetur', date: 'February 2026', rating: 5, text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' },
+  { id: 3, name: 'Adipiscing Elit', location: 'Sed Do', date: 'January 2026', rating: 5, text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.' },
+  { id: 4, name: 'Eiusmod Tempor', location: 'Incididunt', date: 'January 2026', rating: 5, text: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.' },
+  { id: 5, name: 'Ut Labore', location: 'Et Dolore Magna', date: 'December 2025', rating: 5, text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.' },
+  { id: 6, name: 'Aliqua Ut Enim', location: 'Ad Minim Veniam', date: 'December 2025', rating: 5, text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio.' },
+  { id: 7, name: 'Quis Nostrud', location: 'Exercitation', date: 'November 2025', rating: 5, text: 'Cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.' },
+  { id: 8, name: 'Ullamco Laboris', location: 'Nisi Ut', date: 'November 2025', rating: 5, text: 'Ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.' },
+  { id: 9, name: 'Aliquip Ex Ea', location: 'Commodo Consequat', date: 'October 2025', rating: 5, text: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.' },
 ];
 
 export default function Testimoni() {
@@ -86,7 +23,7 @@ export default function Testimoni() {
           </h1>
           <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6"></div>
           <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto leading-relaxed">
-            Hear what our visitors have to say about their experience at the Glory of Islam Museum
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
           </p>
         </div>
 
@@ -139,8 +76,7 @@ export default function Testimoni() {
         <div className="mt-16 bg-[#E7DED0] rounded-lg shadow-lg p-12 text-center">
           <h2 className="font-['Cinzel'] text-3xl text-[#2B2B2B] mb-4">Share Your Experience</h2>
           <p className="text-[#5A5A5A] mb-8 max-w-2xl mx-auto">
-            We love hearing from our visitors! Share your experience at the Glory of Islam Museum 
-            and help others discover the beauty of Indonesian cultural heritage.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <button className="px-8 py-4 bg-[#8C6B3E] text-white rounded hover:bg-[#6F532F] transition-all shadow-lg hover:shadow-xl">
             Write a Review
