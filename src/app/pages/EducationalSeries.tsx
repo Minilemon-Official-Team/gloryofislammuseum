@@ -1,7 +1,5 @@
 import { Sparkles, Video, BookOpen } from "lucide-react";
 
-const DUMMY_IMAGE = "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772934955/Logo_mkvfjb.webp";
-
 const educationalContent = [
   { id: 1, title: "Lorem Ipsum Dolor Sit Amet", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
   { id: 2, title: "Consectetur Adipiscing Elit", description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
@@ -93,7 +91,7 @@ export default function EducationalSeries() {
               {/* IMAGE */}
               <div className="rounded overflow-hidden bg-[#8C6B3E] flex items-center justify-center p-6 min-h-[280px]">
                 <img
-                  src={DUMMY_IMAGE}
+                  src={`https://placehold.co/600x400/8C6B3E/F4EFE6?text=Series+${content.id}`}
                   alt={content.title}
                   className="w-full h-full max-h-[320px] object-cover rounded"
                   loading="lazy"
