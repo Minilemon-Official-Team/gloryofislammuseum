@@ -5,9 +5,9 @@ export const R2_BASE_URL = 'https://pub-135a7545edfc4289af5e9373bf26a44b.r2.dev'
 export const WORKER_API = 'https://translation-worker.dtopengkingdom.workers.dev';
 
 export const LANGUAGES = [
-    { code: 'id', label: 'Indonesia', flag: '🇮🇩' },
-    { code: 'en', label: 'English', flag: '🇬🇧' },
-    { code: 'zh', label: '中文', flag: '🇨🇳' },
+    { code: 'id', label: 'IDN', flag: '🇮🇩' },
+    { code: 'en', label: 'ENG', flag: '🇬🇧' },
+    { code: 'zh', label: 'CN', flag: '🇨🇳' },
 ] as const;
 
 export type LangCode = typeof LANGUAGES[number]['code'];
