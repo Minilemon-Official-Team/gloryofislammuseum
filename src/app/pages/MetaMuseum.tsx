@@ -6,7 +6,6 @@ import { Cpu, Eye, Layers } from 'lucide-react';
 
 const CDN_IMAGE_BASE = "https://res.cloudinary.com/dnbq1z8lx/image/upload/";
 const CDN_VIDEO_BASE = "https://res.cloudinary.com/dnbq1z8lx/video/upload/";
-const DUMMY_IMAGE = "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772934955/Logo_mkvfjb.webp";
 
 type MediaType = "video" | "image";
 
