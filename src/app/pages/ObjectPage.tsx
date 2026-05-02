@@ -92,7 +92,7 @@ export default function ObjectPage() {
 
             <div className="max-w-[1200px] mx-auto px-4 py-12">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div className="w-full h-[400px] md:h-[500px] bg-[#8C6B3E] flex items-center justify-center p-8">
+                    <div className="w-full h-[400px] md:h-[500px] bg-[#8C6B3E] overflow-hidden">
                         <img src={getZoneImage(zone)} alt={zoneName} className="w-full h-full object-cover" />
                     </div>
 
