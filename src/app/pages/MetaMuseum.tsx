@@ -45,7 +45,7 @@ const arItems: ARItem[] = [
     image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935581/1_5_xkczqq.webp",
     title: "Keseruan Anak-Anak Menikmati Augmented Reality (AR)",
     description:
-      "Anak-anak terlihat sangat menikmati pengalaman baru dengan augmented reality di Indonesian Heritage Museum.",
+      "Anak-anak terlihat sangat menikmati pengalaman baru dengan augmented reality di Glory of Islam Museum.",
   },
   {
     id: 2,
@@ -314,7 +314,7 @@ export default function MetaMuseum() {
       <div className="max-w-[900px] mx-auto px-4 py-16">
         <div className="bg-white rounded shadow-md p-8 md:p-12">
           <p className="text-[#2B2B2B] text-lg leading-relaxed mb-6">
-            Indonesian Heritage Museum menggabungkan teknologi augmented reality
+            Glory of Islam Museum menggabungkan teknologi augmented reality
             untuk memberikan pengalaman baru dalam menjelajahi kekayaan budaya Indonesia.
           </p>
 
