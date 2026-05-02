@@ -6,6 +6,7 @@ import { Cpu, Eye, Layers } from 'lucide-react';
 
 const CDN_IMAGE_BASE = "https://res.cloudinary.com/dnbq1z8lx/image/upload/";
 const CDN_VIDEO_BASE = "https://res.cloudinary.com/dnbq1z8lx/video/upload/";
+const DUMMY_IMAGE = "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772934955/Logo_mkvfjb.webp";
 
 type MediaType = "video" | "image";
 
@@ -39,246 +40,36 @@ const getMedia = (item: ARItem) => {
 ========================= */
 
 const arItems: ARItem[] = [
-  {
-    id: 1,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935581/1_5_xkczqq.webp",
-    title: "Keseruan Anak-Anak Menikmati Augmented Reality (AR)",
-    description:
-      "Anak-anak terlihat sangat menikmati pengalaman baru dengan augmented reality di Glory of Islam Museum.",
-  },
-  {
-    id: 2,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935621/1_21_x5z5tw.webp",
-    title: "Menghadirkan Sejarah yang Menarik untuk Anak-Anak dengan Augmented Reality",
-    description:
-      "Anak-anak bisa merasakan pengalaman yang berbeda saat sejarah Indonesia disajikan melalui augmented reality.",
-  },
-  {
-    id: 3,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935583/1_20_nhtyjq.webp",
-    title: "Keseruan Pengunjung Menikmati Augmented Reality",
-    description:
-      "Pengunjung merasakan pengalaman seru saat menikmati teknologi augmented reality.",
-  },
-  {
-    id: 4,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935582/1_19_o1wmvk.webp",
-    title: "Pengalaman Imersif Pengunjung dengan Augmented Reality",
-    description:
-      "Pengunjung bisa merasakan pengalaman yang mendalam dan seru saat menjelajahi berbagai koleksi melalui AR.",
-  },
-  {
-    id: 5,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935582/1_11_x5l41i.webp",
-    title: "Serunya Pengunjung Menjelajahi Dunia Wayang Melalui Augmented Reality",
-    description:
-      "Pengunjung merasakan pengalaman baru saat menjelajahi dunia wayang melalui augmented reality.",
-  },
-  {
-    id: 6,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935581/1_10_h528jx.webp",
-    title: "Menyusuri Jejak Sejarah Lewat Teknologi Augmented Reality",
-    description:
-      "Pengunjung diajak menyusuri jejak sejarah Indonesia dengan cara yang lebih interaktif melalui teknologi AR.",
-  },
-  {
-    id: 7,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935580/1_1_h3nmiz.webp",
-    title: "Koleksi Barang-Barang Perdagangan China di Nusantara Lewat Teknologi AR",
-    description:
-      "Melalui augmented reality, pengunjung dapat mempelajari lebih dalam tentang koleksi perdagangan China di Nusantara.",
-  },
-  {
-    id: 8,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935818/1_22_vmdd5w.webp",
-    title: "Melihat Sejarah secara Interaktif Lewat Augmented Reality",
-    description:
-      "Pengunjung dapat merasakan sejarah Indonesia secara langsung melalui teknologi AR.",
-  },
-  {
-    id: 9,
-    type: "video",
-    video: "https://res.cloudinary.com/dnbq1z8lx/video/upload/v1772936681/1_5_nwd25c.mp4",
-    title: "Keseruan Pengunjung Memperagakan Augmented Reality",
-    description:
-      "Pengunjung terlibat dalam pengalaman seru memperagakan augmented reality.",
-  },
-  {
-    id: 10,
-    type: "video",
-    video: "https://res.cloudinary.com/dnbq1z8lx/video/upload/v1772936680/1_4_ggrktc.mp4",
-    title: "Petualangan Interaktif Pengunjung dengan Augmented Reality",
-    description:
-      "Dengan augmented reality, pengunjung dapat merasakan pengalaman yang lebih hidup.",
-  },
-  {
-    id: 11,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935583/1_20_nhtyjq.webp",
-    title: "Teknologi Augmented Reality Menghidupkan Rumah Adat",
-    description:
-      "Teknologi AR memungkinkan pengunjung melihat rumah adat Nusantara dalam bentuk digital yang interaktif.",
-  },
-  {
-    id: 12,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935582/1_19_o1wmvk.webp",
-    title: "Menjelajahi Rumah Adat dengan Augmented Reality",
-    description:
-      "Teknologi AR menghadirkan pengalaman interaktif untuk mengeksplorasi rumah adat Nusantara.",
-  },
-  {
-    id: 13,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935582/1_12_gjqzqc.webp",
-    title: "Mengenal Artefak Nusantara dengan Teknologi AR",
-    description:
-      "Teknologi AR menghadirkan pengalaman interaktif dalam menjelajahi artefak bersejarah Nusantara.",
-  },
-  {
-    id: 14,
-    type: "image",
-    image: "",
-    title: "Menghidupkan Tokoh Bersejarah dengan AR",
-    description:
-      "Teknologi AR menghadirkan tokoh-tokoh bersejarah dalam bentuk digital yang interaktif.",
-  },
-  {
-    id: 15,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935580/1_1_h3nmiz.webp",
-    title: "Menghidupkan Kembali Kapal Ekspedisi Kuno dengan AR",
-    description:
-      "Dengan AR, pengunjung dapat melihat visualisasi kapal ekspedisi kuno.",
-  },
-  {
-    id: 16,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935582/1_12_gjqzqc.webp",
-    title: "Menghidupkan Peradaban Kuno dengan AR",
-    description:
-      "Teknologi AR menyajikan visualisasi dinamis yang menghidupkan kembali peradaban kuno.",
-  },
-  {
-    id: 17,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935582/1_17_mjw7mx.webp",
-    title: "Melihat Zaman Prasejarah dengan AR",
-    description:
-      "Augmented Reality membawa pengunjung menelusuri jejak manusia purba.",
-  },
-  {
-    id: 18,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772936678/1_23_x5apvd.webp",
-    title: "Menelusuri Artefak Kuno dengan AR",
-    description:
-      "Augmented Reality memungkinkan pengunjung mengeksplorasi artefak bersejarah secara detail.",
-  },
-  {
-    id: 19,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772936678/1_24_jligfa.webp",
-    title: "Melihat Peradaban Manusia Melayu Indonesia Lewat AR",
-    description:
-      "Visualisasi manusia Melayu Indonesia ditampilkan secara interaktif.",
-  },
-  {
-    id: 20,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935580/1_27_jatoqa.webp",
-    title: "Mengungkap Detail Artefak Kuno dengan AR",
-    description:
-      "Visualisasi AR memungkinkan pengunjung melihat artefak dari berbagai sisi.",
-  },
-  {
-    id: 21,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935581/1_9_em7izc.webp",
-    title: "Menelusuri Rumah Adat Indonesia dengan AR",
-    description:
-      "AR menghadirkan visualisasi rumah adat secara detail.",
-  },
-  {
-    id: 22,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935580/1_4_pgei5n.webp",
-    title: "Menjelajahi Koleksi Bersejarah dengan AR",
-    description:
-      "Pengunjung dapat mengeksplorasi koleksi budaya secara interaktif.",
-  },
-  {
-    id: 23,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935580/1_3_a28egb.webp",
-    title: "Menyelami Peradaban Masa Lalu dengan AR",
-    description:
-      "Teknologi AR membawa pengunjung menjelajahi kehidupan manusia purba.",
-  },
-  {
-    id: 24,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772936678/1_25_lrhtfy.webp",
-    title: "Menjelajahi Artefak Bersejarah Secara Interaktif",
-    description:
-      "Dengan teknologi AR, pengunjung dapat mengamati artefak kuno secara lebih dekat.",
-  },
-  {
-    id: 25,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935580/1_3_a28egb.webp",
-    title: "Mengungkap Peradaban Hindu di Nusantara dengan AR",
-    description:
-      "Pengunjung dapat melihat visualisasi bangunan kuno dari India.",
-  },
-  {
-    id: 26,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935582/1_15_zp7mpa.webp",
-    title: "Melihat Candi Prambanan Lebih Dekat dengan AR",
-    description:
-      "Teknologi AR memungkinkan pengunjung menjelajahi replika Candi Prambanan.",
-  },
-  {
-    id: 27,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935582/1_18_ak4bbd.webp",
-    title: "Visualisasi Panggung Wayang Potehi dengan AR",
-    description:
-      "AR menghadirkan replika digital panggung wayang potehi.",
-  },
-  {
-    id: 28,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935582/1_16_jqglif.webp",
-    title: "Menelusuri Jejak Arsitektur Kuno India dengan AR",
-    description:
-      "AR membantu pengunjung melihat visualisasi bangunan bersejarah.",
-  },
-  {
-    id: 29,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935582/1_17_mjw7mx.webp",
-    title: "Menelusuri Jejak Peradaban Kuno dengan AR",
-    description:
-      "AR membantu pengunjung melihat visualisasi situs bersejarah secara detail.",
-  },
-  {
-    id: 30,
-    type: "image",
-    image: "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772935580/1_2_zli449.webp",
-    title: "Menjelajahi Warisan Budaya Indonesia dengan AR",
-    description:
-      "AR memungkinkan pengunjung melihat visualisasi bangunan dan artefak secara nyata.",
-  },
+  { id: 1, type: "image", image: DUMMY_IMAGE, title: "Lorem Ipsum Dolor Sit Amet", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+  { id: 2, type: "image", image: DUMMY_IMAGE, title: "Consectetur Adipiscing Elit", description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+  { id: 3, type: "image", image: DUMMY_IMAGE, title: "Sed Do Eiusmod Tempor", description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
+  { id: 4, type: "image", image: DUMMY_IMAGE, title: "Incididunt Ut Labore", description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." },
+  { id: 5, type: "image", image: DUMMY_IMAGE, title: "Et Dolore Magna Aliqua", description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium." },
+  { id: 6, type: "image", image: DUMMY_IMAGE, title: "Ut Enim Ad Minim Veniam", description: "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo." },
+  { id: 7, type: "image", image: DUMMY_IMAGE, title: "Quis Nostrud Exercitation", description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores." },
+  { id: 8, type: "image", image: DUMMY_IMAGE, title: "Ullamco Laboris Nisi", description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit." },
+  { id: 9, type: "video", video: "https://res.cloudinary.com/dnbq1z8lx/video/upload/v1772936681/1_5_nwd25c.mp4", title: "Aliquip Ex Ea Commodo", description: "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem." },
+  { id: 10, type: "video", video: "https://res.cloudinary.com/dnbq1z8lx/video/upload/v1772936680/1_4_ggrktc.mp4", title: "Duis Aute Irure Dolor", description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam." },
+  { id: 11, type: "image", image: DUMMY_IMAGE, title: "In Reprehenderit Voluptate", description: "Nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure reprehenderit qui in ea voluptate velit." },
+  { id: 12, type: "image", image: DUMMY_IMAGE, title: "Velit Esse Cillum Dolore", description: "Quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur." },
+  { id: 13, type: "image", image: DUMMY_IMAGE, title: "Eu Fugiat Nulla Pariatur", description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti." },
+  { id: 14, type: "image", image: DUMMY_IMAGE, title: "Excepteur Sint Occaecat", description: "Atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident." },
+  { id: 15, type: "image", image: DUMMY_IMAGE, title: "Cupidatat Non Proident", description: "Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga." },
+  { id: 16, type: "image", image: DUMMY_IMAGE, title: "Sunt In Culpa Officia", description: "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio." },
+  { id: 17, type: "image", image: DUMMY_IMAGE, title: "Deserunt Mollit Anim", description: "Cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est." },
+  { id: 18, type: "image", image: DUMMY_IMAGE, title: "Id Est Laborum Magna", description: "Omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet." },
+  { id: 19, type: "image", image: DUMMY_IMAGE, title: "Curabitur Pretium Tincidunt", description: "Ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus." },
+  { id: 20, type: "image", image: DUMMY_IMAGE, title: "Lacus Nulla Gravida Orci", description: "Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat." },
+  { id: 21, type: "image", image: DUMMY_IMAGE, title: "Nullam Varius Turpis", description: "Vivamus euismod mauris. In ut quam vitae odio lacinia tincidunt. Praesent ut ligula non mi varius sagittis." },
+  { id: 22, type: "image", image: DUMMY_IMAGE, title: "Commodo Pharetra Eros", description: "Cras non dolor. Vivamus quis mi. Phasellus a est. Phasellus magna. In hac habitasse platea dictumst." },
+  { id: 23, type: "image", image: DUMMY_IMAGE, title: "Bibendum Elit Luctus", description: "Curabitur at lacus ac velit ornare lobortis. Curabitur a felis in nunc fringilla tristique." },
+  { id: 24, type: "image", image: DUMMY_IMAGE, title: "Magna Felis Sollicitudin", description: "Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem. Pellentesque libero tortor." },
+  { id: 25, type: "image", image: DUMMY_IMAGE, title: "Mauris Aliquam Tincidunt", description: "Tincidunt et, mollis lobortis, feugiat vitae, ipsum. Sed lectus. Praesent elementum hendrerit tortor." },
+  { id: 26, type: "image", image: DUMMY_IMAGE, title: "Vestibulum Ante Ipsum", description: "Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui." },
+  { id: 27, type: "image", image: DUMMY_IMAGE, title: "Primis In Faucibus Orci", description: "Eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna." },
+  { id: 28, type: "image", image: DUMMY_IMAGE, title: "Luctus Et Ultrices Posuere", description: "Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet." },
+  { id: 29, type: "image", image: DUMMY_IMAGE, title: "Cubilia Curae Donec Velit", description: "Lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis." },
+  { id: 30, type: "image", image: DUMMY_IMAGE, title: "Quisque Volutpat Mattis", description: "Aliquet a, ultricies vel, mauris. Morbi nec mauris ac libero rutrum interdum. Donec ullamcorper fringilla eros." },
 ];
 
 /* =========================
@@ -304,7 +95,7 @@ export default function MetaMuseum() {
           <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
 
           <p className="text-lg md:text-xl opacity-90 leading-relaxed">
-            Augmented Reality — Menjelajahi Warisan Budaya Indonesia Secara Interaktif
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </p>
 
         </div>

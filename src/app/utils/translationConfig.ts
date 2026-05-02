@@ -7,16 +7,7 @@ export const WORKER_API = 'https://translation-worker.dtopengkingdom.workers.dev
 export const LANGUAGES = [
     { code: 'id', label: 'Indonesia', flag: '🇮🇩' },
     { code: 'en', label: 'English', flag: '🇬🇧' },
-    { code: 'ja', label: '日本語', flag: '🇯🇵' },
-    { code: 'ko', label: '한국어', flag: '🇰🇷' },
-    { code: 'ar', label: 'العربية', flag: '🇸🇦' },
-    { code: 'fr', label: 'Français', flag: '🇫🇷' },
-    { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
-    { code: 'es', label: 'Español', flag: '🇪🇸' },
     { code: 'zh', label: '中文', flag: '🇨🇳' },
-    { code: 'ms', label: 'Melayu', flag: '🇲🇾' },
-    { code: 'th', label: 'ภาษาไทย', flag: '🇹🇭' },
-    { code: 'nl', label: 'Nederlands', flag: '🇳🇱' },
 ] as const;
 
 export type LangCode = typeof LANGUAGES[number]['code'];
