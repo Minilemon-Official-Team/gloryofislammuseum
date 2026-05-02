@@ -1,136 +1,31 @@
-import { useEffect } from 'react';
 import { Users, Heart, Camera } from 'lucide-react';
 
+const DUMMY_IMAGE = "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772934955/Logo_mkvfjb.webp";
+
+const testimonials = [
+  { id: 1, title: "Lorem Ipsum Dolor Sit Amet", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+  { id: 2, title: "Consectetur Adipiscing Elit", description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+  { id: 3, title: "Sed Do Eiusmod Tempor", description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
+  { id: 4, title: "Incididunt Ut Labore", description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." },
+  { id: 5, title: "Et Dolore Magna Aliqua", description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium." },
+  { id: 6, title: "Ut Enim Ad Minim Veniam", description: "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo." },
+  { id: 7, title: "Quis Nostrud Exercitation", description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores." },
+  { id: 8, title: "Ullamco Laboris Nisi", description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit." },
+  { id: 9, title: "Aliquip Ex Ea Commodo", description: "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem." },
+  { id: 10, title: "Duis Aute Irure Dolor", description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam." },
+  { id: 11, title: "In Reprehenderit Voluptate", description: "Nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure reprehenderit qui in ea voluptate velit." },
+  { id: 12, title: "Velit Esse Cillum Dolore", description: "Quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur." },
+  { id: 13, title: "Eu Fugiat Nulla Pariatur", description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti." },
+  { id: 14, title: "Excepteur Sint Occaecat", description: "Atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident." },
+  { id: 15, title: "Cupidatat Non Proident", description: "Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga." },
+  { id: 16, title: "Sunt In Culpa Officia", description: "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio." },
+  { id: 17, title: "Deserunt Mollit Anim", description: "Cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est." },
+  { id: 18, title: "Id Est Laborum Magna", description: "Omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet." },
+  { id: 19, title: "Curabitur Pretium Tincidunt", description: "Ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus." },
+  { id: 20, title: "Lacus Nulla Gravida Orci", description: "Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat." },
+];
+
 export default function EducationGeneralFamily() {
-    useEffect(() => {
-    if (!window.tiktokEmbedLoaded) {
-      const script = document.createElement("script");
-      script.src = "https://www.tiktok.com/embed.js";
-      script.async = true;
-      document.body.appendChild(script);
-  
-      window.tiktokEmbedLoaded = true;
-    } else {
-      if (window.tiktokEmbedLoad) {
-        window.tiktokEmbedLoad();
-      }
-    }
-  }, []);
-
-  const testimonials = [
-    {
-      id: 1,
-      videoId: '7416667601687809298',
-      title: 'Inilah Kesan Mereka Tentang Pesona Glory of Islam Museum',
-      description: 'Kata mereka, museum ini sangat menarik karena terdapat benda-benda peninggalan asli yang kaya makna sejarah. Selain itu, museum ini tidak hanya menjadi tempat rekreasi yang menyenangkan, tetapi juga menjadi sarana edukasi yang bermanfaat bagi pengunjung dari berbagai usia.',
-    },
-    {
-      id: 2,
-      videoId: '7446342608315583752',
-      title: 'Begini Pendapat Pengunjung dari Lampung Tentang Pengalaman di Glory of Islam Museum',
-      description: 'Menurut pengunjung, Glory of Islam Museum menawarkan banyak pembelajaran budaya yang berharga. Museum ini menghadirkan wawasan mendalam tentang sejarah dan tradisi Indonesia melalui koleksi-koleksi autentiknya.',
-    },
-    {
-      id: 3,
-      videoId: '7421491440083062024',
-      title: 'Ini yang Dirasakan Pengunjung saat Berkunjung ke Glory of Islam Museum',
-      description: 'Pengunjung dalam video ini menyebut bahwa Glory of Islam Museum adalah tempat yang bagus untuk memahami sejarah dan budaya Indonesia. Mereka merasa museum ini memberikan pengalaman edukasi yang menarik sekaligus menyenangkan.',
-    },
-    {
-      id: 4,
-      videoId: '7416667601687809298',
-      title: 'Pengalaman Berkesan Adik Kecil saat Berkunjung di Glory of Islam Museum',
-      description: 'Selama mengunjungi museum, adik kecil asal Surabaya ini mendapatkan banyak pengetahuan tentang suku adat dan budaya dari berbagai daerah di Indonesia.',
-    },
-    {
-      id: 5,
-      videoId: '7384394681901141266',
-      title: 'Cerita Pengunjung dari Bali tentang Keseruan Mengunjungi Glory of Islam Museum',
-      description: 'Melalui koleksi yang dipamerkan, pengunjung ini menyebut dapat mengenali ciri khas dari berbagai daerah di Indonesia. Selain itu, ukiran pada benda-benda yang dipamerkan memiliki keunikan tersendiri yang mampu menarik perhatian.',
-    },
-    {
-      id: 6,
-      videoId: '7455641795221818642',
-      title: 'Pengalaman Menjelajahi Warisan Indonesia dengan Augmented Reality di Glory of Islam Museum',
-      description: 'Di Glory of Islam Museum, pengunjung dapat mempelajari sejarah Indonesia, mulai dari peradaban kuno hingga zaman modern, serta wawasan mengenai akulturasi budaya antara Indonesia dan budaya luar. Augmented Reality membantu memvisualisasikan secara nyata peradaban bangsa Indonesia.',
-    },
-    {
-      id: 7,
-      videoId: '7462238543105035536',
-      title: 'Pendapat Tentang Penggunaan Augmented Reality di Glory of Islam Museum',
-      description: 'Penggunaan augmented reality di Glory of Islam Museum sangat bagus untuk menciptakan pengalaman interaktif yang menghidupkan sejarah dengan visual yang nyata. Selain itu, pengunjung juga dapat melihat benda-benda purba asli yang memperkaya pengetahuan tentang masa lalu Indonesia.',
-    },
-    {
-      id: 8,
-      videoId: '7388458706545020161',
-      title: 'Cerita Menarik saat Mengunjungi Glory of Islam Museum',
-      description: 'Di Glory of Islam Museum, pengunjung dapat mengetahui sejarah, adat istiadat, dan berbagai peninggalan budaya Indonesia yang kaya dan beragam.',
-    },
-    {
-      id: 9,
-      videoId: '7357924367243726097',
-      title: 'Kesan Seru saat Berkunjung ke Glory of Islam Museum',
-      description: 'Kunjungan ke Glory of Islam Museum sangat memberikan insight yang mendalam tentang sejarah dan budaya nusantara.',
-    },
-    {
-      id: 10,
-      videoId: '7454081256171572486',
-      title: 'Cerita Kesan dan Pesan Setelah Mengunjungi Glory of Islam Museum',
-      description: 'Museum ini memberikan wawasan sejarah yang mendalam dengan informasi lengkap di dalamnya, mencakup berbagai aspek budaya dan suku di Indonesia.',
-    },
-    {
-      id: 11,
-      videoId: '7472314392936254727',
-      title: 'Pengalaman Edukatif Mengunjungi Glory of Islam Museum',
-      description: 'Glory of Islam Museum menyajikan banyak informasi penting yang bisa dipelajari, menjadikannya tempat yang tepat untuk edukasi. Koleksi budayanya sangat lengkap.',
-    },
-    {
-      id: 12,
-      title: 'Kesan Menarik saat Menambah Wawasan di Glory of Islam Museum',
-      description: 'Museum ini memberikan banyak informasi tentang sejarah dan budaya Indonesia dengan cara yang menarik.',
-    },
-    {
-      id: 13,
-      title: 'Kesan Tak Terlupakan Mengenal Budaya Indonesia di Glory of Islam Museum',
-      description: 'Museum ini memberikan pengalaman yang berkesan karena menampilkan berbagai aspek budaya Indonesia.',
-    },
-    {
-      id: 14,
-      title: 'Kesan Seru dan Edukatif bagi Anak Muda di Glory of Islam Museum',
-      description: 'Museum ini memberikan pengalaman yang seru sekaligus menambah wawasan tentang sejarah dan budaya Indonesia.',
-    },
-    {
-      id: 15,
-      title: 'Kesan Seru dengan Edukasi dan Pelayanan Terbaik di Glory of Islam Museum',
-      description: 'Pengalaman berkunjung ke museum ini sangat menyenangkan karena edukasi yang diberikan menarik dan informatif.',
-    },
-    {
-      id: 16,
-      title: 'Pengalaman Baru yang Mengagumkan di Glory of Islam Museum',
-      description: 'Berkunjung ke museum ini memberikan sesuatu yang baru dengan koleksi dari berbagai daerah yang memukau.',
-    },
-    {
-      id: 17,
-      title: 'Kesan Orang Tua Saat Berkunjung ke Glory of Islam Museum',
-      description: 'Orang tua merasa senang karena museum ini sangat lengkap dan dilengkapi fitur augmented reality yang interaktif.',
-    },
-    {
-      id: 18,
-      title: 'Kesan Keluarga Malaysia saat Menjelajah Budaya Indonesia di Glory of Islam Museum',
-      description: 'Keluarga asal Malaysia terkesan bisa mengenal lebih dekat cerita-cerita khas Indonesia yang diwariskan secara turun-temurun.',
-    },
-    {
-      id: 19,
-      title: 'Pengalaman Berkesan Melihat Sejarah secara Langsung di Glory of Islam Museum',
-      description: 'Pengunjung kagum melihat koleksi barang-barang asli yang memperkenalkan sejarah Indonesia secara nyata.',
-    },
-    {
-      id: 20,
-      title: 'Kekaguman Pengunjung saat Menjelajahi Glory of Islam Museum',
-      description: 'Pengunjung terkesan dengan banyaknya hal yang bisa dipelajari, mulai dari sejarah hingga adat dari berbagai wilayah Indonesia.',
-    },
-  ];
-
   return (
     <div className="bg-[#F4EFE6] min-h-screen">
       {/* Hero Section */}
@@ -144,7 +39,7 @@ export default function EducationGeneralFamily() {
           </h1>
           <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
           <p className="text-lg md:text-xl opacity-90 leading-relaxed">
-            Pengalaman Berkesan dari Pengunjung dan Keluarga
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </p>
         </div>
       </div>
@@ -153,10 +48,10 @@ export default function EducationGeneralFamily() {
       <div className="max-w-[900px] mx-auto px-4 py-16">
         <div className="bg-white rounded shadow-md p-8 md:p-12">
           <p className="text-[#2B2B2B] text-lg leading-relaxed mb-6">
-            Glory of Islam Museum telah menjadi destinasi favorit bagi berbagai kalangan, mulai dari individu yang mencari pengalaman sejarah hingga keluarga yang ingin menghabiskan waktu berkualitas bersama. Dengan beragam koleksi yang memukau dan suasana yang edukatif, museum ini menawarkan pengalaman unik yang mampu menginspirasi semua generasi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <p className="text-[#2B2B2B] text-lg leading-relaxed">
-            Testimoni dari para pengunjung menunjukkan bagaimana museum ini berhasil menjadi tempat yang menyatukan edukasi, hiburan, dan kenangan berharga. Baik untuk kunjungan pribadi maupun keluarga, museum ini memberikan kesan mendalam bagi setiap orang yang datang.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
       </div>
@@ -169,27 +64,27 @@ export default function EducationGeneralFamily() {
               <div className="w-16 h-16 rounded-full bg-[#8C6B3E] flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-['Cinzel'] text-xl text-[#2B2B2B] mb-3">Pengalaman Berkesan</h3>
+              <h3 className="font-['Cinzel'] text-xl text-[#2B2B2B] mb-3">Lorem Ipsum</h3>
               <p className="text-[#5A5A5A] leading-relaxed">
-                Setiap kunjungan menciptakan kenangan yang tak terlupakan bagi keluarga dan individu
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
             </div>
             <div className="bg-white rounded shadow-md p-8 text-center">
               <div className="w-16 h-16 rounded-full bg-[#8C6B3E] flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-['Cinzel'] text-xl text-[#2B2B2B] mb-3">Untuk Semua Usia</h3>
+              <h3 className="font-['Cinzel'] text-xl text-[#2B2B2B] mb-3">Dolor Sit Amet</h3>
               <p className="text-[#5A5A5A] leading-relaxed">
-                Museum yang ramah keluarga dengan konten edukatif untuk segala generasi
+                Sed do eiusmod tempor incididunt ut labore et dolore magna.
               </p>
             </div>
             <div className="bg-white rounded shadow-md p-8 text-center">
               <div className="w-16 h-16 rounded-full bg-[#8C6B3E] flex items-center justify-center mx-auto mb-4">
                 <Camera className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-['Cinzel'] text-xl text-[#2B2B2B] mb-3">Interaktif & Modern</h3>
+              <h3 className="font-['Cinzel'] text-xl text-[#2B2B2B] mb-3">Consectetur Elit</h3>
               <p className="text-[#5A5A5A] leading-relaxed">
-                Dilengkapi teknologi Augmented Reality untuk pengalaman yang lebih hidup
+                Ut enim ad minim veniam, quis nostrud exercitation.
               </p>
             </div>
           </div>
@@ -207,16 +102,14 @@ export default function EducationGeneralFamily() {
               } rounded shadow-md overflow-hidden`}
             >
               <div className="grid md:grid-cols-2 gap-8 p-8">
-                {/* TikTok Embed Placeholder */}
-                <div className="rounded overflow-hidden flex justify-center">
-                  <blockquote
-                    className="tiktok-embed"
-                    cite={`https://www.tiktok.com/@indonesianheritage/video/${testimonial.videoId}`}
-                    data-video-id={testimonial.videoId}
-                    style={{ maxWidth: "605px", minWidth: "325px" }}
-                  >
-                    <section></section>
-                  </blockquote>
+                {/* IMAGE */}
+                <div className="rounded overflow-hidden bg-[#8C6B3E] flex items-center justify-center p-6 min-h-[280px]">
+                  <img
+                    src={DUMMY_IMAGE}
+                    alt={testimonial.title}
+                    className="w-full h-full max-h-[320px] object-cover rounded"
+                    loading="lazy"
+                  />
                 </div>
 
                 {/* Content */}
@@ -243,16 +136,16 @@ export default function EducationGeneralFamily() {
       <div className="bg-[#8C6B3E] text-white py-16 px-4">
         <div className="max-w-[900px] mx-auto text-center">
           <h2 className="font-['Cinzel'] text-3xl md:text-4xl mb-6">
-            Jadilah Bagian dari Cerita Kami
+            Lorem Ipsum Dolor Sit
           </h2>
           <p className="text-lg opacity-90 mb-8">
-            Kunjungi Glory of Islam Museum dan ciptakan pengalaman berkesan Anda sendiri
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </p>
           <a
             href="/visit"
             className="inline-block bg-white text-[#8C6B3E] px-8 py-4 rounded font-['Cinzel'] hover:bg-[#F4EFE6] transition-all shadow-lg"
           >
-            Rencanakan Kunjungan Anda
+            Lorem Ipsum
           </a>
         </div>
       </div>
