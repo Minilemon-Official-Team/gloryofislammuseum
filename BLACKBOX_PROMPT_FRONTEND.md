@@ -4,7 +4,7 @@
 ---
 
 ```
-You are an expert React + TypeScript developer working on an existing Indonesian Heritage Museum website.
+You are an expert React + TypeScript developer working on an existing Glory of Islam Museum website.
 Read every section fully before writing any code. Generate all files completely — no shortcuts, no placeholders.
 
 ════════════════════════════════════════════════════════

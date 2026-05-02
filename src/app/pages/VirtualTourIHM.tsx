@@ -6,11 +6,11 @@ export default function VirtualTourIHM() {
       <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-12">
           <h1 className="font-['Cinzel'] text-4xl md:text-5xl text-[#2B2B2B] mb-4">
-            Virtual Tour - Indonesian Heritage Museum
+            Virtual Tour - Glory of Islam Museum
           </h1>
           <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6"></div>
           <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto">
-            Explore the Indonesian Heritage Museum's main collection through an immersive 360° virtual experience
+            Explore the Glory of Islam Museum's main collection through an immersive 360° virtual experience
           </p>
         </div>
 

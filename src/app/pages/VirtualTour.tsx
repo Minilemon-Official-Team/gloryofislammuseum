@@ -15,7 +15,7 @@ export default function VirtualTour() {
           </h1>
           <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6"></div>
           <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto leading-relaxed">
-            Experience the Indonesian Heritage Museum and its associated historical sites from anywhere in the world.
+            Experience the Glory of Islam Museum and its associated historical sites from anywhere in the world.
             Our immersive 360° virtual tours allow you to explore our collections and ancient temples at your own pace.
           </p>
         </div>
@@ -112,7 +112,7 @@ export default function VirtualTour() {
               </div>
               <div className="p-6">
                 <h3 className="font-['Cinzel'] text-xl text-[#2B2B2B] mb-3">
-                  Indonesian Heritage Museum
+                  Glory of Islam Museum
                 </h3>
                 <p className="text-[#5A5A5A] text-sm leading-relaxed mb-4">
                   Explore our main museum building and its extensive collection of artifacts from across the Indonesian archipelago.

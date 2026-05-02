@@ -14,7 +14,7 @@ export default function Footer() {
           <div>
             <h3 className="font-['Cinzel'] text-lg text-[#2B2B2B] mb-4">Glory of Islam Museum</h3>
             <p className="text-[#5A5A5A] text-sm leading-relaxed mb-4">
-              Preserving and celebrating Indonesia's rich cultural heritage through curated exhibitions and educational programs.
+              Preserving and celebrating the glory of Islamic civilization through curated exhibitions and educational programs.
             </p>
             <div className="flex gap-3">
               <a href="https://www.facebook.com/indonesianheritagemu" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-[#8C6B3E] flex items-center justify-center text-white hover:bg-[#6F532F] transition-colors">

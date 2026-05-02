@@ -23,7 +23,7 @@ const testimonials = [
     location: 'Singapore',
     date: 'January 2026',
     rating: 5,
-    text: 'As a historian specializing in Southeast Asian culture, I found this museum to be exceptional. The curation is scholarly yet accessible, and the conservation work is of the highest standard. The staff\'s expertise and passion for Indonesian heritage is evident in every exhibition.',
+    text: 'As a historian specializing in Southeast Asian culture, I found this museum to be exceptional. The curation is scholarly yet accessible, and the conservation work is of the highest standard. The staff\'s expertise and passion for the Glory of Islam Museum is evident in every exhibition.',
   },
   {
     id: 4,
