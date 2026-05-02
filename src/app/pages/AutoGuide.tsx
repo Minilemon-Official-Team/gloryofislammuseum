@@ -123,7 +123,7 @@ export default function AutoGuide() {
                                         </button>
 
                                         <div className="grid md:grid-cols-2 gap-6 p-6">
-                                            <div className="rounded overflow-hidden bg-[#8C6B3E] h-[320px] flex items-center justify-center p-6">
+                                            <div className="rounded overflow-hidden bg-[#8C6B3E] h-[320px]">
                                                 <img
                                                     src={getZoneImage(zone)}
                                                     alt={zoneName}
