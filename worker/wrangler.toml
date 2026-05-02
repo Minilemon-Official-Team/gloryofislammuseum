@@ -1,0 +1,19 @@
+name = "translation-worker"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+account_id = "cd932427a70c9e379f99bd90f35c16f7"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "translations-db"
+database_id = "a53f7b0f-c3f5-4711-9e42-a5613a4619c7"
+preview_database_id = "a53f7b0f-c3f5-4711-9e42-a5613a4619c7"
+
+[[r2_buckets]]
+binding = "AUDIO_BUCKET"
+bucket_name = "audio-translations"
+preview_bucket_name = "audio-translations"
+
+[vars]
+R2_PUBLIC_URL = "https://pub-135a7545edfc4289af5e9373bf26a44b.r2.dev"
+DEEPL_ENDPOINT = "https://api-free.deepl.com/v2/translate"

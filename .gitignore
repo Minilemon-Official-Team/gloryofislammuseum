@@ -1,0 +1,64 @@
+# ===========================
+# DEPENDENCIES
+# ===========================
+node_modules/
+worker/node_modules/
+
+# ===========================
+# BUILD OUTPUT
+# ===========================
+dist/
+build/
+.output/
+
+# ===========================
+# ENVIRONMENT & SECRETS ⚠️
+# ===========================
+.env
+.env.local
+.env.development
+.env.production
+worker/.env
+worker/.env.local
+
+# ===========================
+# CLOUDFLARE
+# ===========================
+.wrangler/
+worker/.wrangler/
+
+# ===========================
+# LOGS
+# ===========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===========================
+# OS FILES
+# ===========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===========================
+# EDITOR
+# ===========================
+.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ===========================
+# TYPESCRIPT
+# ===========================
+*.tsbuildinfo
+
+# ===========================
+# MISC
+# ===========================
+.cache/
+.temp/
