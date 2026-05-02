@@ -49,10 +49,10 @@ export default function Header() {
       style={{ borderBottom: "1px solid #C8B9A6" }}
     >
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105">
+            <div className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-105">
               <img
                 src="/images/logo.png"
                 alt="Glory of Islam Museum Logo"

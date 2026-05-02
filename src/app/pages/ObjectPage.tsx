@@ -38,7 +38,7 @@ export default function ObjectPage() {
 
     if (!found) {
         return (
-            <div className="bg-[#F4EFE6] min-h-screen pt-20 pb-12">
+            <div className="bg-[#F4EFE6] min-h-screen pt-24 pb-12">
                 <div className="max-w-[1200px] mx-auto px-4 py-12 text-center">
                     <h1 className="font-['Cinzel'] text-3xl text-[#8C6B3E] mb-4">Object Not Found</h1>
                     <p className="text-[#5A5A5A] mb-8">The object with ID {id} was not found in our collection.</p>
@@ -61,7 +61,7 @@ export default function ObjectPage() {
         : getDescription(zone.name, zone.description);
 
     return (
-        <div className="bg-[#F4EFE6] min-h-screen pt-20 pb-12">
+        <div className="bg-[#F4EFE6] min-h-screen pt-24 pb-12">
             <div className="bg-[#E7DED0] py-3 px-4">
                 <div className="max-w-[1200px] mx-auto">
                     <div className="flex items-center gap-2 text-sm">
