@@ -126,7 +126,7 @@ export default function EducationalSeries() {
           </p>
 
           <p className="text-[#2B2B2B] text-lg leading-relaxed">
-            Melalui format digital ini, Indonesian Heritage Museum
+            Melalui format digital ini, Glory of Islam Museum
             memungkinkan masyarakat untuk belajar mengenai warisan budaya
             Indonesia dengan cara yang menarik dan mudah diakses.
           </p>

@@ -95,7 +95,7 @@ export default function Gallery() {
           </h1>
           <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6"></div>
           <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto leading-relaxed">
-            The galleries at the Indonesian Heritage Museum display various collections that illustrate the richness of Indonesian culture, ranging from ancient statues, traditional masks, to scriptures that have high historical value. Each collection reflects the uniqueness and diversity of cultures that developed in various regions in Indonesia. Through this exhibition, visitors can better understand how Indonesia’s art and traditions are strongly intertwined, as well as the important role these objects played in the lives of Indonesians in the past. The gallery provides a deep insight into the long journey of Indonesian culture that is rich in spiritual, aesthetic and historical values.
+            The galleries at the Glory of Islam Museum display various collections that illustrate the richness of Indonesian culture, ranging from ancient statues, traditional masks, to scriptures that have high historical value. Each collection reflects the uniqueness and diversity of cultures that developed in various regions in Indonesia. Through this exhibition, visitors can better understand how Indonesia’s art and traditions are strongly intertwined, as well as the important role these objects played in the lives of Indonesians in the past. The gallery provides a deep insight into the long journey of Indonesian culture that is rich in spiritual, aesthetic and historical values.
           </p>
         </div>
 

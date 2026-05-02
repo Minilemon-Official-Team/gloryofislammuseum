@@ -21,112 +21,112 @@ export default function EducationGeneralFamily() {
     {
       id: 1,
       videoId: '7416667601687809298',
-      title: 'Inilah Kesan Mereka Tentang Pesona Indonesian Heritage Museum',
+      title: 'Inilah Kesan Mereka Tentang Pesona Glory of Islam Museum',
       description: 'Kata mereka, museum ini sangat menarik karena terdapat benda-benda peninggalan asli yang kaya makna sejarah. Selain itu, museum ini tidak hanya menjadi tempat rekreasi yang menyenangkan, tetapi juga menjadi sarana edukasi yang bermanfaat bagi pengunjung dari berbagai usia.',
     },
     {
       id: 2,
       videoId: '7446342608315583752',
-      title: 'Begini Pendapat Pengunjung dari Lampung Tentang Pengalaman di Indonesian Heritage Museum',
-      description: 'Menurut pengunjung, Indonesian Heritage Museum menawarkan banyak pembelajaran budaya yang berharga. Museum ini menghadirkan wawasan mendalam tentang sejarah dan tradisi Indonesia melalui koleksi-koleksi autentiknya.',
+      title: 'Begini Pendapat Pengunjung dari Lampung Tentang Pengalaman di Glory of Islam Museum',
+      description: 'Menurut pengunjung, Glory of Islam Museum menawarkan banyak pembelajaran budaya yang berharga. Museum ini menghadirkan wawasan mendalam tentang sejarah dan tradisi Indonesia melalui koleksi-koleksi autentiknya.',
     },
     {
       id: 3,
       videoId: '7421491440083062024',
-      title: 'Ini yang Dirasakan Pengunjung saat Berkunjung ke Indonesian Heritage Museum',
-      description: 'Pengunjung dalam video ini menyebut bahwa Indonesian Heritage Museum adalah tempat yang bagus untuk memahami sejarah dan budaya Indonesia. Mereka merasa museum ini memberikan pengalaman edukasi yang menarik sekaligus menyenangkan.',
+      title: 'Ini yang Dirasakan Pengunjung saat Berkunjung ke Glory of Islam Museum',
+      description: 'Pengunjung dalam video ini menyebut bahwa Glory of Islam Museum adalah tempat yang bagus untuk memahami sejarah dan budaya Indonesia. Mereka merasa museum ini memberikan pengalaman edukasi yang menarik sekaligus menyenangkan.',
     },
     {
       id: 4,
       videoId: '7416667601687809298',
-      title: 'Pengalaman Berkesan Adik Kecil saat Berkunjung di Indonesian Heritage Museum',
+      title: 'Pengalaman Berkesan Adik Kecil saat Berkunjung di Glory of Islam Museum',
       description: 'Selama mengunjungi museum, adik kecil asal Surabaya ini mendapatkan banyak pengetahuan tentang suku adat dan budaya dari berbagai daerah di Indonesia.',
     },
     {
       id: 5,
       videoId: '7384394681901141266',
-      title: 'Cerita Pengunjung dari Bali tentang Keseruan Mengunjungi Indonesian Heritage Museum',
+      title: 'Cerita Pengunjung dari Bali tentang Keseruan Mengunjungi Glory of Islam Museum',
       description: 'Melalui koleksi yang dipamerkan, pengunjung ini menyebut dapat mengenali ciri khas dari berbagai daerah di Indonesia. Selain itu, ukiran pada benda-benda yang dipamerkan memiliki keunikan tersendiri yang mampu menarik perhatian.',
     },
     {
       id: 6,
       videoId: '7455641795221818642',
-      title: 'Pengalaman Menjelajahi Warisan Indonesia dengan Augmented Reality di Indonesian Heritage Museum',
-      description: 'Di Indonesian Heritage Museum, pengunjung dapat mempelajari sejarah Indonesia, mulai dari peradaban kuno hingga zaman modern, serta wawasan mengenai akulturasi budaya antara Indonesia dan budaya luar. Augmented Reality membantu memvisualisasikan secara nyata peradaban bangsa Indonesia.',
+      title: 'Pengalaman Menjelajahi Warisan Indonesia dengan Augmented Reality di Glory of Islam Museum',
+      description: 'Di Glory of Islam Museum, pengunjung dapat mempelajari sejarah Indonesia, mulai dari peradaban kuno hingga zaman modern, serta wawasan mengenai akulturasi budaya antara Indonesia dan budaya luar. Augmented Reality membantu memvisualisasikan secara nyata peradaban bangsa Indonesia.',
     },
     {
       id: 7,
       videoId: '7462238543105035536',
-      title: 'Pendapat Tentang Penggunaan Augmented Reality di Indonesian Heritage Museum',
-      description: 'Penggunaan augmented reality di Indonesian Heritage Museum sangat bagus untuk menciptakan pengalaman interaktif yang menghidupkan sejarah dengan visual yang nyata. Selain itu, pengunjung juga dapat melihat benda-benda purba asli yang memperkaya pengetahuan tentang masa lalu Indonesia.',
+      title: 'Pendapat Tentang Penggunaan Augmented Reality di Glory of Islam Museum',
+      description: 'Penggunaan augmented reality di Glory of Islam Museum sangat bagus untuk menciptakan pengalaman interaktif yang menghidupkan sejarah dengan visual yang nyata. Selain itu, pengunjung juga dapat melihat benda-benda purba asli yang memperkaya pengetahuan tentang masa lalu Indonesia.',
     },
     {
       id: 8,
       videoId: '7388458706545020161',
-      title: 'Cerita Menarik saat Mengunjungi Indonesian Heritage Museum',
-      description: 'Di Indonesian Heritage Museum, pengunjung dapat mengetahui sejarah, adat istiadat, dan berbagai peninggalan budaya Indonesia yang kaya dan beragam.',
+      title: 'Cerita Menarik saat Mengunjungi Glory of Islam Museum',
+      description: 'Di Glory of Islam Museum, pengunjung dapat mengetahui sejarah, adat istiadat, dan berbagai peninggalan budaya Indonesia yang kaya dan beragam.',
     },
     {
       id: 9,
       videoId: '7357924367243726097',
-      title: 'Kesan Seru saat Berkunjung ke Indonesian Heritage Museum',
-      description: 'Kunjungan ke Indonesian Heritage Museum sangat memberikan insight yang mendalam tentang sejarah dan budaya nusantara.',
+      title: 'Kesan Seru saat Berkunjung ke Glory of Islam Museum',
+      description: 'Kunjungan ke Glory of Islam Museum sangat memberikan insight yang mendalam tentang sejarah dan budaya nusantara.',
     },
     {
       id: 10,
       videoId: '7454081256171572486',
-      title: 'Cerita Kesan dan Pesan Setelah Mengunjungi Indonesian Heritage Museum',
+      title: 'Cerita Kesan dan Pesan Setelah Mengunjungi Glory of Islam Museum',
       description: 'Museum ini memberikan wawasan sejarah yang mendalam dengan informasi lengkap di dalamnya, mencakup berbagai aspek budaya dan suku di Indonesia.',
     },
     {
       id: 11,
       videoId: '7472314392936254727',
-      title: 'Pengalaman Edukatif Mengunjungi Indonesian Heritage Museum',
-      description: 'Indonesian Heritage Museum menyajikan banyak informasi penting yang bisa dipelajari, menjadikannya tempat yang tepat untuk edukasi. Koleksi budayanya sangat lengkap.',
+      title: 'Pengalaman Edukatif Mengunjungi Glory of Islam Museum',
+      description: 'Glory of Islam Museum menyajikan banyak informasi penting yang bisa dipelajari, menjadikannya tempat yang tepat untuk edukasi. Koleksi budayanya sangat lengkap.',
     },
     {
       id: 12,
-      title: 'Kesan Menarik saat Menambah Wawasan di Indonesian Heritage Museum',
+      title: 'Kesan Menarik saat Menambah Wawasan di Glory of Islam Museum',
       description: 'Museum ini memberikan banyak informasi tentang sejarah dan budaya Indonesia dengan cara yang menarik.',
     },
     {
       id: 13,
-      title: 'Kesan Tak Terlupakan Mengenal Budaya Indonesia di Indonesian Heritage Museum',
+      title: 'Kesan Tak Terlupakan Mengenal Budaya Indonesia di Glory of Islam Museum',
       description: 'Museum ini memberikan pengalaman yang berkesan karena menampilkan berbagai aspek budaya Indonesia.',
     },
     {
       id: 14,
-      title: 'Kesan Seru dan Edukatif bagi Anak Muda di Indonesian Heritage Museum',
+      title: 'Kesan Seru dan Edukatif bagi Anak Muda di Glory of Islam Museum',
       description: 'Museum ini memberikan pengalaman yang seru sekaligus menambah wawasan tentang sejarah dan budaya Indonesia.',
     },
     {
       id: 15,
-      title: 'Kesan Seru dengan Edukasi dan Pelayanan Terbaik di Indonesian Heritage Museum',
+      title: 'Kesan Seru dengan Edukasi dan Pelayanan Terbaik di Glory of Islam Museum',
       description: 'Pengalaman berkunjung ke museum ini sangat menyenangkan karena edukasi yang diberikan menarik dan informatif.',
     },
     {
       id: 16,
-      title: 'Pengalaman Baru yang Mengagumkan di Indonesian Heritage Museum',
+      title: 'Pengalaman Baru yang Mengagumkan di Glory of Islam Museum',
       description: 'Berkunjung ke museum ini memberikan sesuatu yang baru dengan koleksi dari berbagai daerah yang memukau.',
     },
     {
       id: 17,
-      title: 'Kesan Orang Tua Saat Berkunjung ke Indonesian Heritage Museum',
+      title: 'Kesan Orang Tua Saat Berkunjung ke Glory of Islam Museum',
       description: 'Orang tua merasa senang karena museum ini sangat lengkap dan dilengkapi fitur augmented reality yang interaktif.',
     },
     {
       id: 18,
-      title: 'Kesan Keluarga Malaysia saat Menjelajah Budaya Indonesia di Indonesian Heritage Museum',
+      title: 'Kesan Keluarga Malaysia saat Menjelajah Budaya Indonesia di Glory of Islam Museum',
       description: 'Keluarga asal Malaysia terkesan bisa mengenal lebih dekat cerita-cerita khas Indonesia yang diwariskan secara turun-temurun.',
     },
     {
       id: 19,
-      title: 'Pengalaman Berkesan Melihat Sejarah secara Langsung di Indonesian Heritage Museum',
+      title: 'Pengalaman Berkesan Melihat Sejarah secara Langsung di Glory of Islam Museum',
       description: 'Pengunjung kagum melihat koleksi barang-barang asli yang memperkenalkan sejarah Indonesia secara nyata.',
     },
     {
       id: 20,
-      title: 'Kekaguman Pengunjung saat Menjelajahi Indonesian Heritage Museum',
+      title: 'Kekaguman Pengunjung saat Menjelajahi Glory of Islam Museum',
       description: 'Pengunjung terkesan dengan banyaknya hal yang bisa dipelajari, mulai dari sejarah hingga adat dari berbagai wilayah Indonesia.',
     },
   ];
@@ -153,7 +153,7 @@ export default function EducationGeneralFamily() {
       <div className="max-w-[900px] mx-auto px-4 py-16">
         <div className="bg-white rounded shadow-md p-8 md:p-12">
           <p className="text-[#2B2B2B] text-lg leading-relaxed mb-6">
-            Indonesian Heritage Museum telah menjadi destinasi favorit bagi berbagai kalangan, mulai dari individu yang mencari pengalaman sejarah hingga keluarga yang ingin menghabiskan waktu berkualitas bersama. Dengan beragam koleksi yang memukau dan suasana yang edukatif, museum ini menawarkan pengalaman unik yang mampu menginspirasi semua generasi.
+            Glory of Islam Museum telah menjadi destinasi favorit bagi berbagai kalangan, mulai dari individu yang mencari pengalaman sejarah hingga keluarga yang ingin menghabiskan waktu berkualitas bersama. Dengan beragam koleksi yang memukau dan suasana yang edukatif, museum ini menawarkan pengalaman unik yang mampu menginspirasi semua generasi.
           </p>
           <p className="text-[#2B2B2B] text-lg leading-relaxed">
             Testimoni dari para pengunjung menunjukkan bagaimana museum ini berhasil menjadi tempat yang menyatukan edukasi, hiburan, dan kenangan berharga. Baik untuk kunjungan pribadi maupun keluarga, museum ini memberikan kesan mendalam bagi setiap orang yang datang.
@@ -246,7 +246,7 @@ export default function EducationGeneralFamily() {
             Jadilah Bagian dari Cerita Kami
           </h2>
           <p className="text-lg opacity-90 mb-8">
-            Kunjungi Indonesian Heritage Museum dan ciptakan pengalaman berkesan Anda sendiri
+            Kunjungi Glory of Islam Museum dan ciptakan pengalaman berkesan Anda sendiri
           </p>
           <a
             href="/visit"

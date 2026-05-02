@@ -86,7 +86,7 @@ export default function Testimoni() {
           </h1>
           <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6"></div>
           <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto leading-relaxed">
-            Hear what our visitors have to say about their experience at the Indonesian Heritage Museum
+            Hear what our visitors have to say about their experience at the Glory of Islam Museum
           </p>
         </div>
 
@@ -139,7 +139,7 @@ export default function Testimoni() {
         <div className="mt-16 bg-[#E7DED0] rounded-lg shadow-lg p-12 text-center">
           <h2 className="font-['Cinzel'] text-3xl text-[#2B2B2B] mb-4">Share Your Experience</h2>
           <p className="text-[#5A5A5A] mb-8 max-w-2xl mx-auto">
-            We love hearing from our visitors! Share your experience at the Indonesian Heritage Museum 
+            We love hearing from our visitors! Share your experience at the Glory of Islam Museum 
             and help others discover the beauty of Indonesian cultural heritage.
           </p>
           <button className="px-8 py-4 bg-[#8C6B3E] text-white rounded hover:bg-[#6F532F] transition-all shadow-lg hover:shadow-xl">

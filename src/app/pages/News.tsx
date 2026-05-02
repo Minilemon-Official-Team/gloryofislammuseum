@@ -4,15 +4,15 @@ import { Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 const newsArticles = [
   {
     id: 1,
-    title: 'Semangat Eksplor Indonesian Heritage Museum di Jatim Park 1 Sangat Luar Biasa, Pelajar Pancasila Wajib Datang!',
+    title: 'Semangat Eksplor Glory of Islam Museum di Jatim Park 1 Sangat Luar Biasa, Pelajar Pancasila Wajib Datang!',
     date: 'March 1, 2026',
     category: 'Exhibition',
     image: 'https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772928714/screenshot-20201113-133811-gallery-6479bdd708a8b552583a76e3_l427th.webp',
-    excerpt: 'Keindahan taman rekreasi Jatim Park 1 di Kota Batu, Jawa Timur, tidak terlepas dari keberadaan Indonesian Heritage Museum (IHM) sebagai wahana edukasi yang multikultur. Sebagai tempat hiburan terbaik suasana Jatim Park 1 sangat meriah dengan berbagai atraksi permainan, bahkan dikelilingi sejumlah wahana edukasi di dalam ruangan. Salah satunya Indonesian Heritage Museum yang menampilkan ribuan benda koleksi bersejarah dari seluruh penjuru Indonesia.  ',
+    excerpt: 'Keindahan taman rekreasi Jatim Park 1 di Kota Batu, Jawa Timur, tidak terlepas dari keberadaan Glory of Islam Museum (IHM) sebagai wahana edukasi yang multikultur. Sebagai tempat hiburan terbaik suasana Jatim Park 1 sangat meriah dengan berbagai atraksi permainan, bahkan dikelilingi sejumlah wahana edukasi di dalam ruangan. Salah satunya Glory of Islam Museum yang menampilkan ribuan benda koleksi bersejarah dari seluruh penjuru Indonesia.  ',
   },
   {
     id: 2,
-    title: 'Kajian Indonesian Heritage Museum : Sejarah Wayang Potehi',
+    title: 'Kajian Glory of Islam Museum : Sejarah Wayang Potehi',
     date: 'February 15, 2026',
     category: 'Research',
     image: 'https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772928951/1-649ec852e1a1676b31155872_y8trlr.webp',
@@ -20,7 +20,7 @@ const newsArticles = [
   },
   {
     id: 3,
-    title: 'Kajian Indonesian Heritage Museum: Topeng Jawa Timur',
+    title: 'Kajian Glory of Islam Museum: Topeng Jawa Timur',
     date: 'February 10, 2026',
     category: 'Education',
     image: 'https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772928712/1-649e9c984addee76a0426332_xdh14w.webp',
@@ -28,23 +28,23 @@ const newsArticles = [
   },
   {
     id: 4,
-    title: 'Mewujudkan 4 Motivasi Kunjungan Indonesian Heritage Museum yang Historikal',
+    title: 'Mewujudkan 4 Motivasi Kunjungan Glory of Islam Museum yang Historikal',
     date: 'January 28, 2026',
     category: 'Conservation',
     image: 'https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772928712/ihmm3-64c8e1a108a8b564d002cda2_nyjcff.webp',
-    excerpt: 'Kunjungan Indonesian Heritage Museum (IHM) di Jatim Park 1 sebagai pusat edukasi telah mewarnai wawasan nusantara bangsa kita. Seluruh pengunjung terutama usia anak-anak diajakserta berkenalan pada ribuan benda koleksi dari berbagai penjuru Nusantara. Disini pula motivasi anak dan remaja untuk memandang kekayaan artefak bangsanya terus bertumbuh seiring bimbingan guru hingga orangtua untuk berkunjung ke museum.',
+    excerpt: 'Kunjungan Glory of Islam Museum (IHM) di Jatim Park 1 sebagai pusat edukasi telah mewarnai wawasan nusantara bangsa kita. Seluruh pengunjung terutama usia anak-anak diajakserta berkenalan pada ribuan benda koleksi dari berbagai penjuru Nusantara. Disini pula motivasi anak dan remaja untuk memandang kekayaan artefak bangsanya terus bertumbuh seiring bimbingan guru hingga orangtua untuk berkunjung ke museum.',
   },
   {
     id: 5,
-    title: 'Misteri Cucuran Darah di Balik Patung Letti 2000 Tahun yang Lalu, di Museum Indonesian Heritage',
+    title: 'Misteri Cucuran Darah di Balik Patung Letti 2000 Tahun yang Lalu, di Glory of Islam Museum',
     date: 'December 20, 2025',
     category: 'Announcement',
     image: 'https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772926890/5_r19bii.webp',
-    excerpt: 'Indonesian Heritage Museum (IHM) di Jatim Park 1 memang memiliki keragaman artefak langka dari Sabang hingga Merauke. Namun salah satu artefak yang paling misterius adalah patung letti dari Kepulauan Yene, Maluku, Nusa Tenggara Timur. ',
+    excerpt: 'Glory of Islam Museum (IHM) di Jatim Park 1 memang memiliki keragaman artefak langka dari Sabang hingga Merauke. Namun salah satu artefak yang paling misterius adalah patung letti dari Kepulauan Yene, Maluku, Nusa Tenggara Timur. ',
   },
   {
     id: 6,
-    title: 'New Indonesian Heritage Museum JTP 1 with ASG Tour Technology (English Ver.)',
+    title: 'New Glory of Islam Museum JTP 1 with ASG Tour Technology (English Ver.)',
     date: 'January 15, 2026',
     category: 'Exhibition',
     image: 'https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772928713/Patung-Loro-Blonyo-dari-Jawa-Tengah-dipercaya-sebagai-patung-keberuntungan-1024x683-1_n1fmdr.webp',
@@ -84,7 +84,7 @@ export default function News() {
           </h1>
           <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6"></div>
           <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto leading-relaxed">
-            Stay informed about the latest exhibitions, events, research discoveries, and programs at the Indonesian Heritage Museum
+            Stay informed about the latest exhibitions, events, research discoveries, and programs at the Glory of Islam Museum
           </p>
         </div>
 

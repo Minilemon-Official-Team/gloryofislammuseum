@@ -44,7 +44,7 @@ export default function Home() {
         />
         <div className="relative z-10 text-center max-w-4xl px-4">
           <h1 className="font-['Cinzel'] text-5xl md:text-6xl lg:text-7xl text-white mb-6 tracking-wide">
-            Indonesian Heritage Museum
+            Glory of Islam Museum
           </h1>
           <p className="text-xl md:text-2xl text-white/95 mb-8 leading-relaxed">
             Discover the Rich Cultural Legacy of Indonesia
@@ -77,13 +77,13 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-['Cinzel'] text-4xl md:text-5xl text-[#2B2B2B] mb-4">
-              Welcome to Indonesian Heritage Museum
+              Welcome to Glory of Islam Museum
             </h2>
             <div className="w-24 h-1 bg-[#8C6B3E] mx-auto"></div>
           </div>
           <div className="text-center max-w-[900px] mx-auto">
             <p className="text-[#2B2B2B] text-lg leading-relaxed mb-6">
-              <span className="font-bold">Indonesian Heritage Museum</span> merupakan museum warisan budaya Indonesia yang mempunyai koleksi warisan budaya dari seluruh wilayah Indonesia, berdiri sejak tahun 2010, Indonesian heritage Museum juga merupakan pelopor museum berteknologi Augmented Reality di Indonesia, terdapat 17 zona yang mewakili wilayah di Indonesia, yang menyimpan benda benda bersejarah dari seluruh suku di tanah air.
+              <span className="font-bold">Glory of Islam Museum</span> merupakan museum warisan budaya Indonesia yang mempunyai koleksi warisan budaya dari seluruh wilayah Indonesia, berdiri sejak tahun 2010, Glory of Islam Museum juga merupakan pelopor museum berteknologi Augmented Reality di Indonesia, terdapat 17 zona yang mewakili wilayah di Indonesia, yang menyimpan benda benda bersejarah dari seluruh suku di tanah air.
             </p>
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function Home() {
               <div className="p-8">
                 <h3 className="font-['Cinzel'] text-3xl text-[#2B2B2B] mb-4">Auto Self Guided Tour</h3>
                 <p className="text-[#5A5A5A] text-lg leading-relaxed mb-6">
-                  Silahkan akses Auto Self Guided Tour untuk memudahkan para pengunjung daalam memahami narasi per zona, sembari bermain dan belajar di dalam Indonesian Heritage Museum.
+                  Silahkan akses Auto Self Guided Tour untuk memudahkan para pengunjung daalam memahami narasi per zona, sembari bermain dan belajar di dalam Glory of Islam Museum.
                 </p>
                 <Link
                   to="/auto-guide"
@@ -185,7 +185,7 @@ export default function Home() {
       >
         <div className="max-w-[900px] mx-auto text-center">
           <p className="text-[#2B2B2B] text-xl leading-relaxed">
-            Indonesian Heritage Museum merupakan museum warisan budaya Indonesia yang mempunyai koleksi warisan budaya dari seluruh wilayah Indonesia, berdiri sejak tahun 2010, Indonesian heritage Museum juga merupakan pelopor museum berteknologi Augmented Reality di Indonesia, terdapat 17 zona yang mewakili wilayah di Indonesia, yang menyimpan benda benda bersejarah dari seluruh suku di tanah air.
+            Glory of Islam Museum merupakan museum warisan budaya Indonesia yang mempunyai koleksi warisan budaya dari seluruh wilayah Indonesia, berdiri sejak tahun 2010, Glory of Islam Museum juga merupakan pelopor museum berteknologi Augmented Reality di Indonesia, terdapat 17 zona yang mewakili wilayah di Indonesia, yang menyimpan benda benda bersejarah dari seluruh suku di tanah air.
           </p>
         </div>
       </section>
@@ -223,7 +223,7 @@ export default function Home() {
           <p className="text-[#2B2B2B] text-xl leading-relaxed">
             Silakan kepada para pengunjung untuk dapat mengunduh aplikasi{' '}
             <span className="font-bold text-[#D97234]">Augmented Reality</span> di Google Play Store dan juga{' '}
-            <span className="font-bold text-[#D97234]">Autoself Guided Tour</span> yang dapat diakses melalui website untuk dapat memudahkan para pengunjung selama berada di Indonesian Heritage Museum.
+            <span className="font-bold text-[#D97234]">Autoself Guided Tour</span> yang dapat diakses melalui website untuk dapat memudahkan para pengunjung selama berada di Glory of Islam Museum.
           </p>
         </div>
       </section>

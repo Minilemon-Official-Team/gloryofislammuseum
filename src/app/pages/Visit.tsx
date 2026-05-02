@@ -11,7 +11,7 @@ export default function Visit() {
           </h1>
           <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6"></div>
           <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto leading-relaxed">
-            Everything you need to know before visiting the Indonesian Heritage Museum
+            Everything you need to know before visiting the Glory of Islam Museum
           </p>
         </div>
 

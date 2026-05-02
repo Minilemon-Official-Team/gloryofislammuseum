@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About Section */}
           <div>
-            <h3 className="font-['Cinzel'] text-lg text-[#2B2B2B] mb-4">Indonesian Heritage Museum</h3>
+            <h3 className="font-['Cinzel'] text-lg text-[#2B2B2B] mb-4">Glory of Islam Museum</h3>
             <p className="text-[#5A5A5A] text-sm leading-relaxed mb-4">
               Preserving and celebrating Indonesia's rich cultural heritage through curated exhibitions and educational programs.
             </p>
@@ -104,7 +104,7 @@ export default function Footer() {
 
         <div className="border-t border-[#C8B9A6] mt-12 pt-8 text-center">
           <p className="text-[#5A5A5A] text-sm">
-            © 2026 Indonesian Heritage Museum | Privacy Policy IHM AR
+            © 2026 Glory of Islam Museum | Privacy Policy IHM AR
           </p>
         </div>
       </div>
