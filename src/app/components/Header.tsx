@@ -55,7 +55,7 @@ export default function Header() {
             <div className="w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105">
               <img
                 src="https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772934955/Logo_mkvfjb.webp"
-                alt="Indonesian Heritage Museum Logo"
+                alt="Glory of Islam Museum Logo"
                 className="w-full h-full object-contain"
                 loading="eager"
               />
@@ -63,7 +63,7 @@ export default function Header() {
 
             <div className="hidden md:block">
               <div className="font-['Cinzel'] text-lg text-[#2B2B2B] leading-tight">
-                Indonesian Heritage
+                Glory of Islam
               </div>
               <div className="font-['Cinzel'] text-sm text-[#5A5A5A]">
                 Museum
