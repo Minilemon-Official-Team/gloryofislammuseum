@@ -1,115 +1,22 @@
-import { useEffect } from "react";
 import { GraduationCap, BookOpen, Users } from "lucide-react";
 
+const DUMMY_IMAGE = "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772934955/Logo_mkvfjb.webp";
+
+const testimonials = [
+  { id: 1, title: "Lorem Ipsum Dolor Sit Amet", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+  { id: 2, title: "Consectetur Adipiscing Elit", description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+  { id: 3, title: "Sed Do Eiusmod Tempor", description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
+  { id: 4, title: "Incididunt Ut Labore", description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." },
+  { id: 5, title: "Et Dolore Magna Aliqua", description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium." },
+  { id: 6, title: "Ut Enim Ad Minim Veniam", description: "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo." },
+  { id: 7, title: "Quis Nostrud Exercitation", description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores." },
+  { id: 8, title: "Ullamco Laboris Nisi", description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit." },
+  { id: 9, title: "Aliquip Ex Ea Commodo", description: "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem." },
+  { id: 10, title: "Duis Aute Irure Dolor", description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam." },
+  { id: 11, title: "In Reprehenderit Voluptate", description: "Nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure reprehenderit qui in ea voluptate velit." },
+];
+
 export default function EducationInstitution() {
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    if (!window.tiktokEmbedLoaded) {
-      const script = document.createElement("script");
-      script.src = "https://www.tiktok.com/embed.js";
-      script.async = true;
-      document.body.appendChild(script);
-      window.tiktokEmbedLoaded = true;
-    } else {
-      if (window.tiktokEmbedLoad) {
-        window.tiktokEmbedLoad();
-      }
-    }
-  }, []);
-
-  const testimonials = [
-    {
-      id: 1,
-      videoId: "7462238543105035536",
-      title:
-        "Inilah Kesan Kepala Sekolah setelah Mengunjungi Glory of Islam Museum",
-      description:
-        "Kepala Sekolah dari salah satu SMP Negeri Wonogiri mengatakan bahwa Glory of Islam Museum merupakan tempat yang sangat bermanfaat untuk menambah wawasan tentang budaya dan sejarah bangsa.",
-    },
-    {
-      id: 2,
-      videoId: "7456718063233158418",
-      title:
-        "Pengalaman Berkesan Guru MTs Asal Malang di Glory of Islam Museum",
-      description:
-        "Glory of Islam Museum dengan koleksi yang sangat lengkap dinilai oleh guru sebagai tempat belajar yang ideal untuk memperluas pengetahuan anak-anak.",
-    },
-    {
-      id: 3,
-      videoId: "7455641795221818642",
-      title:
-        "Kesan dan Pesan Mahasiswi UGM Setelah Mengunjungi Glory of Islam Museum",
-      description:
-        "Mahasiswi UGM ini menyampaikan kesannya setelah mengunjungi Glory of Islam Museum dan merasa terkesan dengan banyaknya pengetahuan yang didapatkan.",
-    },
-    {
-      id: 4,
-      videoId: "7454081256171572486",
-      title:
-        "Cerita Guru SMA di Sumenep: Pengalaman Berkesan di Museum Warisan Indonesia",
-      description:
-        "Guru asal SMA di Sumenep menyebutkan bahwa Glory of Islam Museum merupakan tempat yang luar biasa karena mampu menyajikan kekayaan budaya Indonesia dengan menarik.",
-    },
-    {
-      id: 5,
-      videoId: "7446342608315583752",
-      title:
-        "Petualangan Seru Adik Kelas 6 SD di Glory of Islam Museum",
-      description:
-        "Menurutnya sejarah yang diceritakan di Glory of Islam Museum sangat menarik karena dijelaskan dengan cara yang detail dan menyenangkan.",
-    },
-    {
-      id: 6,
-      videoId: "7438555262203546887",
-      title:
-        "Pengalaman Edukatif SD asal Pasuruan di Glory of Islam Museum",
-      description:
-        "Glory of Islam Museum memiliki koleksi budaya yang sangat beragam mulai dari Papua hingga berbagai daerah lainnya di Indonesia.",
-    },
-    {
-      id: 7,
-      videoId: "7416667601687809298",
-      title:
-        "Cerita Seru SMP dari Wonogiri saat Mengunjungi Glory of Islam Museum",
-      description:
-        "Glory of Islam Museum memiliki berbagai koleksi menarik tentang sejarah dan budaya Indonesia yang memperluas wawasan pelajar.",
-    },
-    {
-      id: 8,
-      videoId: "7412573976636968208",
-      title:
-        "Kesan Kunjungan dari SMP asal Mojokerto di Glory of Islam Museum",
-      description:
-        "Para siswa mendapatkan pengalaman edukasi berharga tentang sejarah dan budaya dari berbagai daerah di Indonesia.",
-    },
-    {
-      id: 9,
-      videoId: "7389969800685948180",
-      title:
-        "Pengalaman Belajar Sejarah dari MTs asal Tuban di Glory of Islam Museum",
-      description:
-        "Mereka dapat melihat berbagai artefak peninggalan sejarah yang memberikan wawasan mendalam tentang budaya Indonesia.",
-    },
-    {
-      id: 10,
-      videoId: "7388458706545020161",
-      title:
-        "Kesan Edukatif Study Tour di Glory of Islam Museum",
-      description:
-        "Kunjungan ke Glory of Islam Museum memberikan pengalaman belajar menyenangkan tentang tradisi adat dan budaya nusantara.",
-    },
-    {
-      id: 11,
-      videoId: "7384394681901141266",
-      title:
-        "Pengalaman Seru dan Edukatif bagi Siswa di Glory of Islam Museum",
-      description:
-        "Museum ini memungkinkan siswa melihat langsung berbagai budaya dan sejarah Indonesia.",
-    },
-  ];
-
   return (
     <div className="bg-[#F4EFE6] min-h-screen">
 
@@ -127,7 +34,7 @@ export default function EducationInstitution() {
           <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
 
           <p className="text-lg md:text-xl opacity-90 leading-relaxed">
-            Pengalaman Edukatif dari Institusi Pendidikan
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </p>
         </div>
       </div>
@@ -136,13 +43,11 @@ export default function EducationInstitution() {
       <div className="max-w-[900px] mx-auto px-4 py-16">
         <div className="bg-white rounded shadow-md p-8 md:p-12">
           <p className="text-[#2B2B2B] text-lg leading-relaxed mb-6">
-            Glory of Islam Museum telah menjadi mitra edukatif bagi berbagai
-            institusi pendidikan dari tingkat PAUD hingga perguruan tinggi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
           <p className="text-[#2B2B2B] text-lg leading-relaxed">
-            Dengan koleksi autentik dan metode pembelajaran inovatif, museum ini
-            menjadi destinasi favorit kegiatan study tour dan field trip.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
         </div>
       </div>
@@ -153,25 +58,25 @@ export default function EducationInstitution() {
 
           <div className="bg-white rounded shadow-md p-8 text-center">
             <BookOpen className="mx-auto mb-4 text-[#8C6B3E]" size={36} />
-            <h3 className="font-['Cinzel'] text-xl mb-3">Program Terstruktur</h3>
+            <h3 className="font-['Cinzel'] text-xl mb-3">Lorem Ipsum</h3>
             <p>
-              Program edukatif yang disesuaikan dengan kurikulum pendidikan.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
           </div>
 
           <div className="bg-white rounded shadow-md p-8 text-center">
             <GraduationCap className="mx-auto mb-4 text-[#8C6B3E]" size={36} />
-            <h3 className="font-['Cinzel'] text-xl mb-3">Pembelajaran Aktif</h3>
+            <h3 className="font-['Cinzel'] text-xl mb-3">Dolor Sit Amet</h3>
             <p>
-              Metode pembelajaran interaktif yang melibatkan siswa secara aktif.
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
 
           <div className="bg-white rounded shadow-md p-8 text-center">
             <Users className="mx-auto mb-4 text-[#8C6B3E]" size={36} />
-            <h3 className="font-['Cinzel'] text-xl mb-3">Kemitraan Edukatif</h3>
+            <h3 className="font-['Cinzel'] text-xl mb-3">Consectetur Elit</h3>
             <p>
-              Kolaborasi dengan institusi pendidikan untuk program jangka panjang.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
             </p>
           </div>
 
@@ -189,18 +94,14 @@ export default function EducationInstitution() {
           >
             <div className="grid md:grid-cols-2 gap-8 p-8">
 
-              {/* VIDEO */}
-              <div className="flex justify-center">
-                {item.videoId && (
-                  <blockquote
-                    className="tiktok-embed"
-                    cite={`https://www.tiktok.com/@indonesianheritage/video/${item.videoId}`}
-                    data-video-id={item.videoId}
-                    style={{ maxWidth: "605px", minWidth: "325px" }}
-                  >
-                    <section></section>
-                  </blockquote>
-                )}
+              {/* IMAGE */}
+              <div className="rounded overflow-hidden bg-[#8C6B3E] flex items-center justify-center p-6 min-h-[280px]">
+                <img
+                  src={DUMMY_IMAGE}
+                  alt={item.title}
+                  className="w-full h-full max-h-[320px] object-cover rounded"
+                  loading="lazy"
+                />
               </div>
 
               {/* TEXT */}
@@ -230,18 +131,18 @@ export default function EducationInstitution() {
         <div className="max-w-[900px] mx-auto text-center">
 
           <h2 className="font-['Cinzel'] text-3xl md:text-4xl mb-6">
-            Ajak Institusi Anda Berkunjung
+            Lorem Ipsum Dolor Sit
           </h2>
 
           <p className="text-lg opacity-90 mb-8">
-            Hubungi kami untuk mengatur program edukatif khusus
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </p>
 
           <a
             href="/visit"
             className="inline-block bg-white text-[#8C6B3E] px-8 py-4 rounded font-['Cinzel'] hover:bg-[#F4EFE6]"
           >
-            Hubungi Kami
+            Lorem Ipsum
           </a>
 
         </div>

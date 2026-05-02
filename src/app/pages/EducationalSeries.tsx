@@ -1,101 +1,22 @@
-import { useEffect } from "react";
 import { Sparkles, Video, BookOpen } from "lucide-react";
 
+const DUMMY_IMAGE = "https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772934955/Logo_mkvfjb.webp";
+
+const educationalContent = [
+  { id: 1, title: "Lorem Ipsum Dolor Sit Amet", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+  { id: 2, title: "Consectetur Adipiscing Elit", description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+  { id: 3, title: "Sed Do Eiusmod Tempor", description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
+  { id: 4, title: "Incididunt Ut Labore", description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." },
+  { id: 5, title: "Et Dolore Magna Aliqua", description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium." },
+  { id: 6, title: "Ut Enim Ad Minim Veniam", description: "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo." },
+  { id: 7, title: "Quis Nostrud Exercitation", description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores." },
+  { id: 8, title: "Ullamco Laboris Nisi", description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit." },
+  { id: 9, title: "Aliquip Ex Ea Commodo", description: "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem." },
+  { id: 10, title: "Duis Aute Irure Dolor", description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam." },
+  { id: 11, title: "In Reprehenderit Voluptate", description: "Nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure reprehenderit qui in ea voluptate velit." },
+];
+
 export default function EducationalSeries() {
-  useEffect(() => {
-    if (!window.tiktokEmbedLoaded) {
-      const script = document.createElement("script");
-      script.src = "https://www.tiktok.com/embed.js";
-      script.async = true;
-      document.body.appendChild(script);
-      window.tiktokEmbedLoaded = true;
-    } else {
-      if (window.tiktokEmbedLoad) {
-        window.tiktokEmbedLoad();
-      }
-    }
-  }, []);
-
-  const educationalContent = [
-    {
-      id: 1,
-      videoId: "7448941995302620424",
-      title: "Kain Batik Lasem",
-      description:
-        "Kain Batik Lasem merupakan salah satu warisan budaya Indonesia yang khas, dengan motif yang mencerminkan perpaduan antara pengaruh Tiongkok dan Jawa.",
-    },
-    {
-      id: 2,
-      videoId: "7443747332908223762",
-      title: "Kain Batik 3 Negeri",
-      description:
-        "Kain Batik 3 Negeri merupakan perpaduan indah antara budaya Lasem, Solo, dan Pekalongan yang tercermin dalam motif dan warnanya.",
-    },
-    {
-      id: 3,
-      videoId: "7433366411155672340",
-      title: "Kapak Genggam",
-      description:
-        "Kapak genggam adalah alat tradisional yang digunakan oleh suku-suku di Indonesia dalam berbagai kegiatan sehari-hari.",
-    },
-    {
-      id: 4,
-      videoId: "7428542725932223751",
-      title: "Celengan Majapahit",
-      description:
-        "Celengan Majapahit adalah peninggalan sejarah yang mencerminkan kebudayaan dan keahlian kerajinan pada masa Kerajaan Majapahit.",
-    },
-    {
-      id: 5,
-      videoId: "7376613909362494728",
-      title: "Mitologi China: Naga",
-      description:
-        "Naga dalam mitologi China adalah simbol kekuatan, keberuntungan, dan kebijaksanaan.",
-    },
-    {
-      id: 6,
-      videoId: "7370279059122638100",
-      title: "Perisai Talawang",
-      description:
-        "Perisai Talawang adalah salah satu benda pusaka khas suku Dayak yang melambangkan keberanian dan kekuatan.",
-    },
-    {
-      id: 7,
-      videoId: "7357926838565358864",
-      title: "Topeng Monyet Jawa Barat",
-      description:
-        "Topeng Monyet merupakan seni pertunjukan tradisional dari Jawa Barat yang menggambarkan sosok monyet dengan ekspresi lucu.",
-    },
-    {
-      id: 8,
-      videoId: "7352105673892646162",
-      title: "Topeng Sidakarya Bali",
-      description:
-        "Topeng Sidakarya adalah salah satu topeng tradisional Bali yang digunakan dalam pertunjukan tari topeng.",
-    },
-    {
-      id: 9,
-      videoId: "7363234299383926033",
-      title: "Bujang Ganong",
-      description:
-        "Bujang Ganong adalah tokoh dalam kesenian Reog Ponorogo yang dikenal dengan gerakan tari yang energik.",
-    },
-    {
-      id: 10,
-      videoId: "7348715959835708680",
-      title: "Tradisi Menyambut Ramadan",
-      description:
-        "Berbagai daerah di Indonesia memiliki cara unik dalam menyambut Ramadan.",
-    },
-    {
-      id: 11,
-      videoId: "7484165354000764165",
-      title: "Asal-usul Kata Puasa",
-      description:
-        "Istilah puasa berasal dari kata upavasa dalam tradisi Hindu-Buddha.",
-    },
-  ];
-
   return (
     <div className="bg-[#F4EFE6] min-h-screen">
       {/* HERO */}
@@ -112,7 +33,7 @@ export default function EducationalSeries() {
           <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
 
           <p className="text-lg md:text-xl opacity-90">
-            Jelajahi Kekayaan Budaya Indonesia Melalui Video Edukatif
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </p>
         </div>
       </div>
@@ -121,14 +42,11 @@ export default function EducationalSeries() {
       <div className="max-w-[900px] mx-auto px-4 py-16">
         <div className="bg-white rounded shadow-md p-10">
           <p className="text-[#2B2B2B] text-lg leading-relaxed mb-6">
-            Educational Series menghadirkan video edukatif mengenai sejarah,
-            seni, dan budaya Indonesia melalui platform digital.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
           <p className="text-[#2B2B2B] text-lg leading-relaxed">
-            Melalui format digital ini, Glory of Islam Museum
-            memungkinkan masyarakat untuk belajar mengenai warisan budaya
-            Indonesia dengan cara yang menarik dan mudah diakses.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
         </div>
       </div>
@@ -139,20 +57,20 @@ export default function EducationalSeries() {
 
           <div className="bg-white p-8 rounded shadow text-center">
             <Video className="w-10 h-10 mx-auto text-[#8C6B3E] mb-4" />
-            <h3 className="font-['Cinzel'] text-xl mb-3">Video Edukatif</h3>
-            <p>Konten video yang menarik untuk semua usia.</p>
+            <h3 className="font-['Cinzel'] text-xl mb-3">Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
 
           <div className="bg-white p-8 rounded shadow text-center">
             <BookOpen className="w-10 h-10 mx-auto text-[#8C6B3E] mb-4" />
-            <h3 className="font-['Cinzel'] text-xl mb-3">Beragam Topik</h3>
-            <p>Berbagai aspek budaya Indonesia dibahas secara menarik.</p>
+            <h3 className="font-['Cinzel'] text-xl mb-3">Dolor Sit Amet</h3>
+            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
           </div>
 
           <div className="bg-white p-8 rounded shadow text-center">
             <Sparkles className="w-10 h-10 mx-auto text-[#8C6B3E] mb-4" />
-            <h3 className="font-['Cinzel'] text-xl mb-3">Akses Mudah</h3>
-            <p>Belajar kapan saja melalui media sosial.</p>
+            <h3 className="font-['Cinzel'] text-xl mb-3">Consectetur Elit</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation.</p>
           </div>
 
         </div>
@@ -172,16 +90,14 @@ export default function EducationalSeries() {
 
             <div className="grid md:grid-cols-2 gap-8 p-8">
 
-              {/* TIKTOK VIDEO */}
-              <div className="flex justify-center">
-                <blockquote
-                  className="tiktok-embed"
-                  cite={`https://www.tiktok.com/@indonesianheritage/video/${content.videoId}`}
-                  data-video-id={content.videoId}
-                  style={{ maxWidth: "605px", minWidth: "325px" }}
-                >
-                  <section></section>
-                </blockquote>
+              {/* IMAGE */}
+              <div className="rounded overflow-hidden bg-[#8C6B3E] flex items-center justify-center p-6 min-h-[280px]">
+                <img
+                  src={DUMMY_IMAGE}
+                  alt={content.title}
+                  className="w-full h-full max-h-[320px] object-cover rounded"
+                  loading="lazy"
+                />
               </div>
 
               {/* TEXT */}
@@ -217,21 +133,18 @@ export default function EducationalSeries() {
         <div className="max-w-[900px] mx-auto text-center">
 
           <h2 className="font-['Cinzel'] text-3xl md:text-4xl mb-6">
-            Ikuti Konten Edukatif Kami
+            Lorem Ipsum Dolor Sit
           </h2>
 
           <p className="text-lg opacity-90 mb-8">
-            Dapatkan video edukatif terbaru melalui TikTok
-            @indonesianheritage
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </p>
 
           <a
-            href="https://www.tiktok.com/@indonesianheritage"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
             className="inline-block bg-white text-[#8C6B3E] px-8 py-4 rounded font-['Cinzel'] hover:bg-[#F4EFE6]"
           >
-            Kunjungi TikTok Kami
+            Lorem Ipsum
           </a>
 
         </div>
