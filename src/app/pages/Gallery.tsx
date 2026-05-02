@@ -2,8 +2,6 @@ import { useState } from 'react';
 import Masonry from 'react-responsive-masonry';
 import { X, ZoomIn } from 'lucide-react';
 
-const DUMMY_IMAGE = 'https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772934955/Logo_mkvfjb.webp';
-
 const galleryItems = [
   {
     id: 1,

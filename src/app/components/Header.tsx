@@ -54,7 +54,7 @@ export default function Header() {
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105">
               <img
-                src="https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772934955/Logo_mkvfjb.webp"
+                src="/images/logo.png"
                 alt="Glory of Islam Museum Logo"
                 className="w-full h-full object-contain"
                 loading="eager"

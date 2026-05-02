@@ -1,4 +1,4 @@
-export const DUMMY_LOGO = 'https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772934955/Logo_mkvfjb.webp';
+export const DUMMY_LOGO = '/images/logo.png';
 
 export interface Zone {
     id: number;
