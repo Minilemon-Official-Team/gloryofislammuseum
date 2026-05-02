@@ -74,7 +74,7 @@ export default function AutoGuide() {
                 </div>
             </div>
 
-            <div className="sticky top-20 z-40 bg-white shadow-md py-3 px-4">
+            <div className="sticky top-24 z-40 bg-white shadow-md py-3 px-4">
                 <div className="max-w-[1200px] mx-auto flex items-center gap-4">
                     <ContentLanguageSwitcher />
                     {isLoading && (
