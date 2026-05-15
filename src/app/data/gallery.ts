@@ -61,15 +61,23 @@ export const galleryItems: GalleryItem[] = [
   {
     id: 6,
     era: 'islam-dunia',
+    title: 'Dinasti Islam',
+    caption:
+      'Wilayah Islam meluas menjadi kekaisaran besar dari Spanyol hingga Asia.',
+    image: '/images/gallery/islam-dunia/islam-dunia-6.jpg',
+  },
+  {
+    id: 7,
+    era: 'islam-dunia',
     title: 'Imperium Ottoman Turki (1299–1922 M)',
     caption:
       'Kekaisaran Islam terkuat dan terlama, dipimpin Sultan besar seperti Suleiman the Magnificent.',
-    image: '/images/gallery/islam-dunia/islam-dunia-6.jpg',
+    image: '/images/gallery/islam-dunia/islam-dunia-7.jpg',
   },
 
   // --- Era Awal Nusantara ---
   {
-    id: 7,
+    id: 8,
     era: 'awal-nusantara',
     title: 'Theatre',
     caption:
@@ -77,7 +85,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/awal-nusantara/awal-nusantara-1.jpg',
   },
   {
-    id: 8,
+    id: 9,
     era: 'awal-nusantara',
     title: 'Barus, Perlak & Kerajaan Samudera Pasai',
     caption:
@@ -85,7 +93,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/awal-nusantara/awal-nusantara-2.jpg',
   },
   {
-    id: 9,
+    id: 10,
     era: 'awal-nusantara',
     title: 'Laksamana Cheng Ho',
     caption: 'Jejak Tionghoa Muslim di Nusantara abad 7-9.',
@@ -94,7 +102,7 @@ export const galleryItems: GalleryItem[] = [
 
   // --- Era Kesultanan ---
   {
-    id: 10,
+    id: 11,
     era: 'kesultanan',
     title: 'Walisanga',
     caption:
@@ -102,7 +110,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/kesultanan/kesultanan-1.jpg',
   },
   {
-    id: 11,
+    id: 12,
     era: 'kesultanan',
     title: 'Kesultanan Demak',
     caption:
@@ -110,7 +118,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/kesultanan/kesultanan-2.jpg',
   },
   {
-    id: 12,
+    id: 13,
     era: 'kesultanan',
     title: 'Kesultanan Cirebon & Kesultanan Banten',
     caption:
@@ -118,7 +126,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/kesultanan/kesultanan-3.jpg',
   },
   {
-    id: 13,
+    id: 14,
     era: 'kesultanan',
     title: 'Kesultanan Gowa, Kutai Kertanegara & Kesultanan Bone',
     caption:
@@ -126,7 +134,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/kesultanan/kesultanan-4.jpg',
   },
   {
-    id: 14,
+    id: 15,
     era: 'kesultanan',
     title: 'Kesultanan Lombok, Banjar, Tidore & Aceh',
     caption:
@@ -134,7 +142,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/kesultanan/kesultanan-5.jpg',
   },
   {
-    id: 15,
+    id: 16,
     era: 'kesultanan',
     title: 'Kesultanan Banten & Mataram',
     caption:
@@ -142,7 +150,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/kesultanan/kesultanan-6.jpg',
   },
   {
-    id: 16,
+    id: 17,
     era: 'kesultanan',
     title: 'Kesultanan Bima, Deli & Siak',
     caption:
@@ -152,7 +160,7 @@ export const galleryItems: GalleryItem[] = [
 
   // --- Era Keraton ---
   {
-    id: 17,
+    id: 18,
     era: 'keraton',
     title: 'Keraton Surakarta & Kadipaten Mangkunegaran',
     caption:
@@ -160,7 +168,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/keraton/keraton-1.jpg',
   },
   {
-    id: 18,
+    id: 19,
     era: 'keraton',
     title: 'Keraton Ngayogyakarta & Kadipaten Pakualaman',
     caption:
