@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
+import { useUILanguage, UI_LANGUAGES } from "../context/UILanguageContext";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [language, setLanguage] = useState("EN");
+  const { uiLang, setUILang } = useUILanguage();
   const location = useLocation();
 
   useEffect(() => {
@@ -26,20 +27,8 @@ export default function Header() {
     setOpenDropdown(openDropdown === menu ? null : menu);
   };
 
-  const languages = [
-    "EN",
-    "ID",
-    "JP",
-    "KR",
-    "CN",
-    "ES",
-    "FR",
-    "DE",
-    "IT",
-    "NL",
-    "RU",
-    "AR",
-  ];
+  const currentLangLabel =
+    UI_LANGUAGES.find((l) => l.code === uiLang)?.label ?? "ENG";
 
   return (
     <header
@@ -157,20 +146,22 @@ export default function Header() {
             </div>
 
             {/* Language */}
-            <div className="relative group ml-2">
+            <div className="relative group ml-2 notranslate">
               <button className="px-3 py-2 text-[#8C6B3E] border border-[#8C6B3E] rounded hover:bg-[#8C6B3E] hover:text-white flex items-center gap-2">
                 <Globe className="w-4 h-4" />
-                {language}
+                {currentLangLabel}
               </button>
 
               <div className="absolute top-full right-0 mt-2 w-32 bg-white shadow-lg rounded border border-[#C8B9A6] py-2 hidden group-hover:block">
-                {languages.map((lang) => (
+                {UI_LANGUAGES.map((lang) => (
                   <button
-                    key={lang}
-                    onClick={() => setLanguage(lang)}
-                    className="block w-full text-left px-4 py-2 hover:bg-[#E7DED0]"
+                    key={lang.code}
+                    onClick={() => setUILang(lang.code)}
+                    className={`block w-full text-left px-4 py-2 hover:bg-[#E7DED0] ${
+                      uiLang === lang.code ? "text-[#8C6B3E] font-medium" : ""
+                    }`}
                   >
-                    {lang}
+                    {lang.flag} {lang.label}
                   </button>
                 ))}
               </div>
@@ -282,22 +273,22 @@ export default function Header() {
             </div>
 
             {/* Language Selector Mobile */}
-            <div className="pt-2 border-t border-[#C8B9A6]">
+            <div className="pt-2 border-t border-[#C8B9A6] notranslate">
               <div className="px-4 py-2 text-[#8C6B3E] font-['Cinzel'] text-sm">
                 Language
               </div>
               <div className="flex flex-wrap gap-2 px-4">
-                {languages.map((lang) => (
+                {UI_LANGUAGES.map((lang) => (
                   <button
-                    key={lang}
-                    onClick={() => setLanguage(lang)}
+                    key={lang.code}
+                    onClick={() => setUILang(lang.code)}
                     className={`px-3 py-2 text-sm font-['Cinzel'] rounded border ${
-                      language === lang
+                      uiLang === lang.code
                         ? "bg-[#8C6B3E] text-white border-[#8C6B3E]"
                         : "text-[#5A5A5A] border-[#C8B9A6] hover:bg-[#E7DED0]"
                     }`}
                   >
-                    {lang}
+                    {lang.flag} {lang.label}
                   </button>
                 ))}
               </div>
