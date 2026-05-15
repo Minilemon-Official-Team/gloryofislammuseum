@@ -2,9 +2,24 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 
+const heroSlides = [
+  '/images/hero/slide-1.jpg',
+  '/images/hero/slide-2.jpg',
+  '/images/hero/slide-3.jpg',
+  '/images/hero/slide-4.jpg',
+];
+
 export default function Home() {
   const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -36,12 +51,31 @@ export default function Home() {
     <div className="bg-[#F4EFE6]">
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `linear-gradient(rgba(140, 107, 62, 0.4), rgba(140, 107, 62, 0.6)), url('https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772931496/IHM2-768x432_w8r2nn.webp')`,
-          }}
-        />
+        {heroSlides.map((slide, index) => (
+          <div
+            key={slide}
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: `linear-gradient(rgba(140, 107, 62, 0.4), rgba(140, 107, 62, 0.6)), url('${slide}')`,
+              opacity: currentSlide === index ? 1 : 0,
+              transition: 'opacity 1s ease-in-out',
+            }}
+          />
+        ))}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+          {heroSlides.map((slide, index) => (
+            <button
+              key={slide}
+              type="button"
+              aria-label={`Slide ${index + 1}`}
+              onClick={() => setCurrentSlide(index)}
+              className="w-3 h-3 rounded-full transition-all"
+              style={{
+                backgroundColor: currentSlide === index ? '#FFFFFF' : 'rgba(255, 255, 255, 0.45)',
+              }}
+            />
+          ))}
+        </div>
         <div className="relative z-10 text-center max-w-4xl px-4">
           <h1 className="font-['Cinzel'] text-5xl md:text-6xl lg:text-7xl text-white mb-6 tracking-wide">
             Glory of Islam Museum
