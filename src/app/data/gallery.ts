@@ -92,17 +92,10 @@ export const galleryItems: GalleryItem[] = [
       'Barus (Abad 7-8) - Awal Cahaya Islam Menyebar. Perlak (840-890) - Pintu gerbang Islam di Tanah Jawa. Samudera Pasai (1267) - Mercusuar awal Islam di Nusantara.',
     image: '/images/gallery/awal-nusantara/awal-nusantara-2.jpg',
   },
-  {
-    id: 10,
-    era: 'awal-nusantara',
-    title: 'Laksamana Cheng Ho',
-    caption: 'Jejak Tionghoa Muslim di Nusantara abad 7-9.',
-    image: '/images/gallery/awal-nusantara/awal-nusantara-3.jpg',
-  },
 
   // --- Era Kesultanan ---
   {
-    id: 11,
+    id: 10,
     era: 'kesultanan',
     title: 'Walisanga',
     caption:
@@ -110,7 +103,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/kesultanan/kesultanan-1.jpg',
   },
   {
-    id: 12,
+    id: 11,
     era: 'kesultanan',
     title: 'Kesultanan Demak',
     caption:
@@ -118,7 +111,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/kesultanan/kesultanan-2.jpg',
   },
   {
-    id: 13,
+    id: 12,
     era: 'kesultanan',
     title: 'Kesultanan Cirebon & Kesultanan Banten',
     caption:
@@ -126,7 +119,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/kesultanan/kesultanan-3.jpg',
   },
   {
-    id: 14,
+    id: 13,
     era: 'kesultanan',
     title: 'Kesultanan Gowa, Kutai Kertanegara & Kesultanan Bone',
     caption:
@@ -134,7 +127,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/kesultanan/kesultanan-4.jpg',
   },
   {
-    id: 15,
+    id: 14,
     era: 'kesultanan',
     title: 'Kesultanan Lombok, Banjar, Tidore & Aceh',
     caption:
@@ -142,7 +135,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/kesultanan/kesultanan-5.jpg',
   },
   {
-    id: 16,
+    id: 15,
     era: 'kesultanan',
     title: 'Kesultanan Banten & Mataram',
     caption:
@@ -150,7 +143,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/kesultanan/kesultanan-6.jpg',
   },
   {
-    id: 17,
+    id: 16,
     era: 'kesultanan',
     title: 'Kesultanan Bima, Deli & Siak',
     caption:
@@ -160,7 +153,7 @@ export const galleryItems: GalleryItem[] = [
 
   // --- Era Keraton ---
   {
-    id: 18,
+    id: 17,
     era: 'keraton',
     title: 'Keraton Surakarta & Kadipaten Mangkunegaran',
     caption:
@@ -168,7 +161,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/images/gallery/keraton/keraton-1.jpg',
   },
   {
-    id: 19,
+    id: 18,
     era: 'keraton',
     title: 'Keraton Ngayogyakarta & Kadipaten Pakualaman',
     caption:
