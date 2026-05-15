@@ -81,7 +81,7 @@ export default function Home() {
             Glory of Islam Museum
           </h1>
           <p className="text-xl md:text-2xl text-white/95 mb-8 leading-relaxed">
-            Discover the Rich Cultural Legacy of Indonesia
+            Tracing the Islamic legacy from global civilization to the heart of Nusantara.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

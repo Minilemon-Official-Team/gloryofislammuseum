@@ -26,17 +26,9 @@ export default function Visit() {
               <h2 className="font-['Cinzel'] text-2xl text-[#2B2B2B]">Opening Hours</h2>
             </div>
             <div className="space-y-4">
-              <div className="flex justify-between items-center py-3 border-b border-[#C8B9A6]">
-                <span className="text-[#2B2B2B]">Tuesday - Friday</span>
-                <span className="text-[#8C6B3E] font-medium">09:00 - 17:00</span>
-              </div>
-              <div className="flex justify-between items-center py-3 border-b border-[#C8B9A6]">
-                <span className="text-[#2B2B2B]">Saturday - Sunday</span>
-                <span className="text-[#8C6B3E] font-medium">09:00 - 18:00</span>
-              </div>
               <div className="flex justify-between items-center py-3">
-                <span className="text-[#2B2B2B]">Monday</span>
-                <span className="text-[#d4183d] font-medium">Closed</span>
+                <span className="text-[#2B2B2B]">Monday - Sunday</span>
+                <span className="text-[#8C6B3E] font-medium">08:00 - 16:00</span>
               </div>
             </div>
             <div className="mt-6 p-4 bg-[#E7DED0] rounded">
@@ -169,7 +161,7 @@ export default function Visit() {
               <h2 className="font-['Cinzel'] text-2xl text-[#2B2B2B]">Group Visits</h2>
             </div>
             <p className="text-[#2B2B2B] mb-4 leading-relaxed">
-              Special rates and services available for groups of 10 or more visitors, 
+              Special rates and services available for groups of 30 or more visitors,
               including schools, universities, and tour groups.
             </p>
             <ul className="space-y-2 text-[#5A5A5A] mb-6">
