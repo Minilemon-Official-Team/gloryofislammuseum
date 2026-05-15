@@ -202,13 +202,6 @@ export default function Header() {
             </Link>
 
             <Link
-              to="/austronesia"
-              className="px-4 py-3 text-[#2B2B2B] font-['Cinzel'] text-base hover:text-[#8C6B3E] hover:bg-[#E7DED0] rounded"
-            >
-              Austronesia
-            </Link>
-
-            <Link
               to="/news"
               className="px-4 py-3 text-[#2B2B2B] font-['Cinzel'] text-base hover:text-[#8C6B3E] hover:bg-[#E7DED0] rounded"
             >
