@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { X } from 'lucide-react';
 import {
   galleryItems,
   GALLERY_ERAS,
   type GalleryEra,
+  type GalleryItem,
 } from '../data/gallery';
 
 type FilterKey = 'all' | GalleryEra;
@@ -27,6 +29,7 @@ const handleImageError = (
 
 export default function Gallery() {
   const [filter, setFilter] = useState<FilterKey>('all');
+  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
   const filters: { key: FilterKey; label: string }[] = [
     { key: 'all', label: 'All' },
@@ -77,7 +80,8 @@ export default function Gallery() {
           {filteredItems.map((item, index) => (
             <article
               key={item.id}
-              className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-in fade-in slide-in-from-bottom-4"
+              onClick={() => setSelectedItem(item)}
+              className="group bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-in fade-in slide-in-from-bottom-4"
               style={{ animationDelay: `${index * 50}ms`, animationFillMode: 'both' }}
             >
               <div className="h-56 overflow-hidden">
@@ -104,6 +108,45 @@ export default function Gallery() {
           ))}
         </div>
       </div>
+
+      {/* Lightbox */}
+      {selectedItem && (
+        <div
+          className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4 animate-in fade-in"
+          onClick={() => setSelectedItem(null)}
+        >
+          <button
+            type="button"
+            aria-label="Close"
+            onClick={() => setSelectedItem(null)}
+            className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+          >
+            <X className="w-6 h-6" />
+          </button>
+          <div
+            className="max-w-4xl w-full bg-white rounded-lg overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={selectedItem.image}
+              alt={selectedItem.title}
+              onError={(e) => handleImageError(e, selectedItem.image)}
+              className="w-full max-h-[70vh] object-contain bg-[#2B2B2B]"
+            />
+            <div className="p-6">
+              <span className="inline-block px-3 py-1 bg-[#8C6B3E] text-white text-xs rounded-full mb-3">
+                {eraLabel(selectedItem.era)}
+              </span>
+              <h3 className="font-['Cinzel'] text-2xl text-[#2B2B2B] mb-2">
+                {selectedItem.title}
+              </h3>
+              <p className="text-[#5A5A5A] leading-relaxed">
+                {selectedItem.caption}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
