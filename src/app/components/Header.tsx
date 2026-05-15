@@ -173,13 +173,6 @@ export default function Header() {
             </Link>
 
             <Link
-              to="/meta-museum"
-              className="px-4 py-2 text-[#2B2B2B] font-['Cinzel'] text-sm hover:text-[#8C6B3E]"
-            >
-              Meta Museum
-            </Link>
-
-            <Link
               to="/testimoni"
               className="px-4 py-2 text-[#2B2B2B] font-['Cinzel'] text-sm hover:text-[#8C6B3E]"
             >
@@ -286,60 +279,6 @@ export default function Header() {
               Austronesia
             </Link>
 
-            {/* Virtual Tour Mobile */}
-            <div className="space-y-1">
-              <button
-                className="w-full flex items-center justify-between px-4 py-3 text-[#2B2B2B] font-['Cinzel'] text-base hover:bg-[#E7DED0] rounded"
-                onClick={() => toggleDropdown("virtual-tour-mobile")}
-              >
-                <span>Virtual Tour</span>
-                <ChevronDown
-                  className={`w-5 h-5 transition-transform ${openDropdown === "virtual-tour-mobile" ? "rotate-180" : ""}`}
-                />
-              </button>
-
-              {openDropdown === "virtual-tour-mobile" && (
-                <div className="pl-4 space-y-1">
-                  <Link
-                    to="/virtual-tour"
-                    className="block px-4 py-2 text-[#5A5A5A] hover:bg-[#E7DED0] rounded"
-                  >
-                    Virtual Tour Overview
-                  </Link>
-                  <Link
-                    to="/virtual-tour-ihm"
-                    className="block px-4 py-2 text-[#5A5A5A] hover:bg-[#E7DED0] rounded"
-                  >
-                    Virtual Tour - IHM
-                  </Link>
-                  <Link
-                    to="/virtual-tour-candi-jago"
-                    className="block px-4 py-2 text-[#5A5A5A] hover:bg-[#E7DED0] rounded"
-                  >
-                    Virtual Tour - Candi Jago
-                  </Link>
-                  <Link
-                    to="/virtual-tour-candi-kidal"
-                    className="block px-4 py-2 text-[#5A5A5A] hover:bg-[#E7DED0] rounded"
-                  >
-                    Virtual Tour - Candi Kidal
-                  </Link>
-                  <Link
-                    to="/virtual-tour-ihm-2023"
-                    className="block px-4 py-2 text-[#5A5A5A] hover:bg-[#E7DED0] rounded"
-                  >
-                    Virtual Tour - IHM 2023
-                  </Link>
-                  <Link
-                    to="/virtual-tour-candi-jago-2023"
-                    className="block px-4 py-2 text-[#5A5A5A] hover:bg-[#E7DED0] rounded"
-                  >
-                    Virtual Tour - Candi Jago 2023
-                  </Link>
-                </div>
-              )}
-            </div>
-
             <Link
               to="/news"
               className="px-4 py-3 text-[#2B2B2B] font-['Cinzel'] text-base hover:text-[#8C6B3E] hover:bg-[#E7DED0] rounded"
@@ -359,13 +298,6 @@ export default function Header() {
               className="px-4 py-3 text-[#2B2B2B] font-['Cinzel'] text-base hover:text-[#8C6B3E] hover:bg-[#E7DED0] rounded"
             >
               Visit
-            </Link>
-
-            <Link
-              to="/meta-museum"
-              className="px-4 py-3 text-[#2B2B2B] font-['Cinzel'] text-base hover:text-[#8C6B3E] hover:bg-[#E7DED0] rounded"
-            >
-              Meta Museum
             </Link>
 
             <Link

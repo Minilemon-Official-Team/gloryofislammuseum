@@ -44,11 +44,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/virtual-tour" onClick={scrollToTop} className="text-[#5A5A5A] text-sm hover:text-[#8C6B3E] transition-colors">
-                  Virtual Tour
-                </Link>
-              </li>
-              <li>
                 <Link to="/news" onClick={scrollToTop} className="text-[#5A5A5A] text-sm hover:text-[#8C6B3E] transition-colors">
                   News
                 </Link>
@@ -61,11 +56,6 @@ export default function Footer() {
               <li>
                 <Link to="/visit" onClick={scrollToTop} className="text-[#5A5A5A] text-sm hover:text-[#8C6B3E] transition-colors">
                   Visit
-                </Link>
-              </li>
-              <li>
-                <Link to="/meta-museum" onClick={scrollToTop} className="text-[#5A5A5A] text-sm hover:text-[#8C6B3E] transition-colors">
-                  Meta Museum
                 </Link>
               </li>
               <li>
