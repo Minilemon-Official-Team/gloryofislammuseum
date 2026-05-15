@@ -200,8 +200,8 @@ export default function Home() {
       >
         <div className="max-w-[1400px] mx-auto">
           <img
-            src="https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772921565/IHM1-1024x576_1_yhi1lk.webp"
-            alt="Pengunjung melihat koleksi topeng di dinding"
+            src="/images/home/section-1.jpg"
+            alt="Glory of Islam Museum"
             className="w-full h-[500px] object-cover rounded-lg shadow-lg"
           />
         </div>
@@ -236,8 +236,8 @@ export default function Home() {
       >
         <div className="max-w-[1400px] mx-auto">
           <img
-            src="https://res.cloudinary.com/dnbq1z8lx/image/upload/v1772928951/1-649ec852e1a1676b31155872_y8trlr.webp"
-            alt="Koleksi topeng emas di display"
+            src="/images/home/section-2.jpg"
+            alt="Glory of Islam Museum"
             className="w-full h-[500px] object-cover rounded-lg shadow-lg"
           />
         </div>
