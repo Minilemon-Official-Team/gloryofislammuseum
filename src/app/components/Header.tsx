@@ -89,68 +89,6 @@ export default function Header() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#8C6B3E] transition-all group-hover:w-full"></span>
             </Link>
 
-            {/* Virtual Tour Dropdown */}
-            {/* <div className="relative group">
-              <button
-                className="px-4 py-2 text-[#2B2B2B] font-['Cinzel'] text-sm hover:text-[#8C6B3E] transition-colors flex items-center gap-1"
-                onMouseEnter={() => setOpenDropdown('virtual-tour')}
-              >
-                Virtual Tour
-                <ChevronDown className="w-4 h-4" />
-              </button>
-
-              {openDropdown === 'virtual-tour' && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded border border-[#C8B9A6] py-2"
-                  onMouseLeave={() => setOpenDropdown(null)}
-                >
-
-                  <Link
-                    to="/virtual-tour"
-                    className="block px-4 py-2 text-[#2B2B2B] hover:bg-[#E7DED0]"
-                  >
-                    Virtual Tour Overview
-                  </Link>
-
-                  <Link
-                    to="/virtual-tour-ihm"
-                    className="block px-4 py-2 text-[#2B2B2B] hover:bg-[#E7DED0]"
-                  >
-                    Virtual Tour - IHM
-                  </Link>
-
-                  <Link
-                    to="/virtual-tour-candi-jago"
-                    className="block px-4 py-2 text-[#2B2B2B] hover:bg-[#E7DED0]"
-                  >
-                    Virtual Tour - Candi Jago
-                  </Link>
-
-                  <Link
-                    to="/virtual-tour-candi-kidal"
-                    className="block px-4 py-2 text-[#2B2B2B] hover:bg-[#E7DED0]"
-                  >
-                    Virtual Tour - Candi Kidal
-                  </Link>
-
-                  <Link
-                    to="/virtual-tour-ihm-2023"
-                    className="block px-4 py-2 text-[#2B2B2B] hover:bg-[#E7DED0]"
-                  >
-                    Virtual Tour - IHM 2023
-                  </Link>
-
-                  <Link
-                    to="/virtual-tour-candi-jago-2023"
-                    className="block px-4 py-2 text-[#2B2B2B] hover:bg-[#E7DED0]"
-                  >
-                    Virtual Tour - Candi Jago 2023
-                  </Link>
-
-                </div>
-              )}
-            </div> */}
-
             <Link
               to="/news"
               className="px-4 py-2 text-[#2B2B2B] font-['Cinzel'] text-sm hover:text-[#8C6B3E] transition-colors"
