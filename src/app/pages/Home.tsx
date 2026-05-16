@@ -137,21 +137,21 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* AR Card */}
             <div className="bg-white rounded shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
-              <div className="h-80 grid grid-cols-3 gap-2 bg-[#E7DED0] p-2">
+              <div className="h-80 flex gap-1 overflow-hidden">
                 <img
                   src="/images/home/ar-1.jpg"
                   alt="Augmented Reality"
-                  className="w-full h-full object-contain"
+                  className="flex-1 min-w-0 h-full object-cover"
                 />
                 <img
                   src="/images/home/ar-2.jpg"
                   alt="Augmented Reality"
-                  className="w-full h-full object-contain"
+                  className="flex-1 min-w-0 h-full object-cover"
                 />
                 <img
                   src="/images/home/ar-3.png"
                   alt="Augmented Reality"
-                  className="w-full h-full object-contain"
+                  className="flex-1 min-w-0 h-full object-cover"
                 />
               </div>
               <div className="p-8">
