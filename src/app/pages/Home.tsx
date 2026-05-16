@@ -160,7 +160,7 @@ export default function Home() {
                   Silakan mengunduh aplikasi Augmented Reality di link berikut ini dari Google Playstore di Android anda, untuk mempermudah para pengunjung dalam melihat 3 Dimensi.
                 </p>
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.dtopeng.ihmarr"
+                  href="https://play.google.com/store/apps/details?id=com.dtopeng.goiar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-[#D97234] text-white rounded hover:bg-[#C0611D] transition-all shadow-lg hover:shadow-xl"
