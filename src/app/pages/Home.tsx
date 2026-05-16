@@ -137,21 +137,21 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* AR Card */}
             <div className="bg-white rounded shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
-              <div className="h-80 grid grid-cols-2 grid-rows-2 gap-1">
+              <div className="h-80 grid grid-cols-3 gap-2 bg-[#E7DED0] p-2">
                 <img
                   src="/images/home/ar-1.jpg"
                   alt="Augmented Reality"
-                  className="row-span-2 w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
                 <img
                   src="/images/home/ar-2.jpg"
                   alt="Augmented Reality"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
                 <img
                   src="/images/home/ar-3.png"
                   alt="Augmented Reality"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="p-8">
@@ -160,7 +160,7 @@ export default function Home() {
                   Silakan mengunduh aplikasi Augmented Reality di link berikut ini dari Google Playstore di Android anda, untuk mempermudah para pengunjung dalam melihat 3 Dimensi.
                 </p>
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.dtopeng.ihmarr"
+                  href="https://play.google.com/store/apps/details?id=com.dtopeng.goiar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-[#D97234] text-white rounded hover:bg-[#C0611D] transition-all shadow-lg hover:shadow-xl"
