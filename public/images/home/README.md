@@ -1,10 +1,19 @@
-# Home — Full Width Images
+# Home — Images
 
-Upload 2 gambar full-width halaman Home ke folder ini dengan nama persis:
+Upload gambar halaman Home ke folder ini dengan nama persis:
 
-- `section-1.jpg` — gambar full-width pertama (di bawah "Two Feature Cards")
-- `section-2.jpg` — gambar full-width kedua (di bawah Text Section 1)
+**Gambar full-width:**
+- `section-1.jpg` — gambar full-width pertama
+- `section-2.jpg` — gambar full-width kedua
+
+**Kartu Augmented Reality (kolase 3 foto):**
+- `ar-1.jpg` — foto besar (kiri)
+- `ar-2.jpg` — foto kanan atas
+- `ar-3.jpg` — foto kanan bawah
+
+**Kartu Auto Self Guided Tour:**
+- `auto-guide.jpg`
 
 Dipakai di `src/app/pages/Home.tsx`.
 
-Rekomendasi: gambar landscape, lebar minimal 1400px, format `.jpg`.
+Rekomendasi: format `.jpg`. Untuk kolase AR sebaiknya orientasi potret/landscape yang mirip agar rapi.
