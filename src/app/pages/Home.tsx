@@ -149,7 +149,7 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
                 <img
-                  src="/images/home/ar-3.jpg"
+                  src="/images/home/ar-3.png"
                   alt="Augmented Reality"
                   className="w-full h-full object-cover"
                 />
@@ -175,7 +175,7 @@ export default function Home() {
             <div className="bg-white rounded shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
               <div className="h-80 overflow-hidden">
                 <img
-                  src="/images/home/auto-guide.jpg"
+                  src="/images/home/auto-guide.png"
                   alt="Auto Self Guided Tour"
                   className="w-full h-full object-cover"
                 />
