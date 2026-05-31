@@ -23,7 +23,39 @@ export function toZoneKey(zoneName: string): string {
 }
 
 // Indonesian local audio filename mapping (zoneKey -> actual .wav filename without extension)
+// Note: Keys are the result of toZoneKey(zoneName) which converts zone.name to lowercase and replaces non-alphanumeric chars
 const ID_AUDIO_MAP: Record<string, string> = {
+    // === GEDUNG A: JEJAK PERADABAN (Building A zones) ===
+    // Zone 1: RUANG TEATER - No audio (video playback)
+    // Zone 2: RUANG SEJARAH NABI -> "ruang_sejarah_nabi"
+    ruang_sejarah_nabi: 'Khulafaur Rasyidin  Tiga Dekade yang Mengubah Dunia',
+    // Zone 3: RUANG UMAYYAH -> "ruang_umayyah"
+    ruang_umayyah: 'Kekhalifahan Umayyah Awal Kekuasaan Besar Islam',
+    // Zone 4: RUANG ABBASIYAH -> "ruang_abbasiyah"
+    ruang_abbasiyah: 'Masa Keemasan Peradaban Islam  Poros Dunia di Baghdad',
+    // Zone 5: RUANG UTSMANIYAH -> "ruang_utsmaniyah"
+    ruang_utsmaniyah: '3 mahkota ottoman',
+    // Zone 6: RUANG SAFAWIYAH -> "ruang_safawiyah"
+    ruang_safawiyah: 'Iran Safawi',
+    // Zone 7: RUANG MUGHAL -> "ruang_mughal"
+    ruang_mughal: 'kejayaan islam di benua india',
+
+    // === GEDUNG B: CAHAYA ISLAM DI NUSANTARA (Building B zones) ===
+    // Zone 8: RUANG TEATER NUSANTARA - No audio (video playback)
+    // Zone 9: TITIK NOL PERADABAN -> "titik_nol_peradaban"
+    titik_nol_peradaban: 'KESULTANAN SAMUDRA PASAI',
+    // Zone 10: CAHAYA DI JANTUNG MAJAPAHIT & ERA WALI SONGO -> "cahaya_di_jantung_majapahit_era_wali_songo" (& removed)
+    cahaya_di_jantung_majapahit_era_wali_songo: 'Cahaya Islam di singgasana Majapahit',
+    // Zone 11: KEBANGKITAN KESULTANAN JAWA -> "kebangkitan_kesultanan_jawa"
+    kebangkitan_kesultanan_jawa: 'Kesultanan Pajang',
+    // Zone 12: PELITA DI PELOSOK NEGERI -> "pelita_di_pelosok_negeri"
+    pelita_di_pelosok_negeri: 'Laksamana Muslim di Lautan Nusantara',
+    // Zone 13: KEJAYAAN MATARAM ISLAM -> "kejayaan_mataram_islam"
+    kejayaan_mataram_islam: 'KESULTANAN MATARAM ISLAM',
+    // Zone 14: PEWARIS TRADISI DAN DINAMIKA SEJARAH -> "pewaris_tradisi_dan_dinamika_sejarah"
+    pewaris_tradisi_dan_dinamika_sejarah: 'Akhir dari Kesultanan Mataram  KASUNANAN SURAKARTA HADININGRAT',
+
+    // === LEGACY MAPPINGS (kept for backward compatibility) ===
     prasejarah: 'Prasejarah',
     austronesia: 'Austronesia',
     'jawa_timur': 'Jawa_Timur',
