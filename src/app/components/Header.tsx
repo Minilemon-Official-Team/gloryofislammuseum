@@ -79,6 +79,14 @@ export default function Header() {
             </Link>
 
             <Link
+              to="/all-zone"
+              className="px-4 py-2 text-[#2B2B2B] font-['Cinzel'] text-sm hover:text-[#8C6B3E] transition-colors relative group"
+            >
+              All Zone
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#8C6B3E] transition-all group-hover:w-full"></span>
+            </Link>
+
+            <Link
               to="/news"
               className="px-4 py-2 text-[#2B2B2B] font-['Cinzel'] text-sm hover:text-[#8C6B3E] transition-colors"
             >
@@ -199,6 +207,13 @@ export default function Header() {
               className="px-4 py-3 text-[#2B2B2B] font-['Cinzel'] text-base hover:text-[#8C6B3E] hover:bg-[#E7DED0] rounded"
             >
               Auto Guide
+            </Link>
+
+            <Link
+              to="/all-zone"
+              className="px-4 py-3 text-[#2B2B2B] font-['Cinzel'] text-base hover:text-[#8C6B3E] hover:bg-[#E7DED0] rounded"
+            >
+              All Zone
             </Link>
 
             <Link

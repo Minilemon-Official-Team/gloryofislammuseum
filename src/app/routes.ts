@@ -18,6 +18,7 @@ import Education from "./pages/Education";
 import EducationGeneralFamily from "./pages/EducationGeneralFamily";
 import EducationInstitution from "./pages/EducationInstitution";
 import EducationalSeries from "./pages/EducationalSeries";
+import AllZone from "./pages/AllZone";
 import NotFound from "./pages/NotFound";
 
 export const router = createBrowserRouter([
@@ -27,6 +28,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, Component: Home },
       { path: "auto-guide", Component: AutoGuide },
+      { path: "all-zone", Component: AllZone },
       {
         path: "autoguide",
         loader: () => redirect("/auto-guide")
