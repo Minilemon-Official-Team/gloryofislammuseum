@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { ChevronRight, ChevronLeft, Volume2, BookOpen } from 'lucide-react';
+import { ChevronRight, ChevronLeft, Volume2, BookOpen, Share, Check } from 'lucide-react';
 import { floors, Floor, AllZoneItem, ThematicNarration } from '../data/allZoneData';
 
 type View = 'floors' | 'zones' | 'detail' | 'thematic-detail';
@@ -258,6 +258,20 @@ function ThematicDetailScreen({
 }) {
     // const [langTab, setLangTab] = useState<LangTab>('id'); // reserved for auto-translate feature
     const hasText = !!thematic.textId;
+    const [copied, setCopied] = useState(false);
+
+    const handleShare = async () => {
+        const shareUrl = thematic.objectId
+            ? `${window.location.origin}/object/${thematic.objectId}`
+            : window.location.href;
+        try {
+            await navigator.clipboard.writeText(shareUrl);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        } catch (err) {
+            console.error('Failed to copy:', err);
+        }
+    };
 
     return (
         <div className="max-w-2xl mx-auto px-4 py-8">
@@ -291,7 +305,16 @@ function ThematicDetailScreen({
 
             {/* Text Content */}
             {hasText && (
-                <div className="bg-white rounded-xl border border-[#C8B9A6] shadow-sm overflow-hidden mb-6">
+                <div className="relative bg-white rounded-xl border border-[#C8B9A6] shadow-sm overflow-hidden mb-6">
+                    {/* Share Button */}
+                    <button
+                        onClick={handleShare}
+                        className="absolute top-3 right-3 z-10 bg-[#8C6B3E] text-white p-2 rounded-full shadow-md hover:bg-[#7A5F36] transition-colors"
+                        aria-label="Share"
+                    >
+                        {copied ? <Check className="w-4 h-4" /> : <Share className="w-4 h-4" />}
+                    </button>
+
                     {/* Language toggle — reserved for auto-translate feature
                     <div className="flex border-b border-[#C8B9A6]">
                         <button onClick={() => setLangTab('id')} className="...">Indonesia</button>
