@@ -217,6 +217,35 @@ export const floors: Floor[] = [
                     },
                 ],
             },
+            {
+                id: 'ruang-theater',
+                name: 'Ruang Theater',
+                image: '/images/zones/ruang-teater.png',
+                overallAudioFile: '/Audio/id/The glory of islam (banner bhinneka).wav',
+                thematics: [
+                    {
+                        title: "The Glory of Islam (Banner Bhinneka)",
+                        objectId: 74,
+                        audioFile: "/Audio/id/The glory of islam (banner bhinneka).wav",
+                        textId: "Bentangan sejarah mencatat sebuah epos perjalanan panjang yang bermula dari hamparan padang pasir Arabia, membentuk garis waktu peradaban yang mengubah lanskap dunia. Mengikuti jejak waktu, kisah ini berawal dari fajar kenabian di pertengahan abad ke-6 yang memancarkan cahaya Islam pertama, dilanjutkan oleh kepemimpinan mulia era Khulafaur Rasyidin yang meletakkan fondasi awal perluasan wilayah secara masif. Roda zaman terus berputar mengantarkan kebangkitan Kekhalifahan Umayyah yang membentangkan panji kekuasaannya menyeberangi benua, sebelum tongkat peradaban beralih kepada Kekhalifahan Abbasiyah yang mengukir era keemasan sains, literasi, dan kebudayaan dari jantung Baghdad. Ketika pusat-pusat lama mulai meredup, lembaran baru ditulis oleh tiga kekaisaran raksasa yang mendominasi era modern awal: Kesultanan Ottoman yang tangguh menjembatani Eropa dan Asia selama berabad-abad, Kekaisaran Safawiyah yang menorehkan keindahan seni serta identitas kultural di Persia, hingga Kekaisaran Mughal yang mewariskan mahakarya arsitektur tiada tara di anak benua India. Inilah rentetan dinasti dan kekhalifahan yang sambung-menyambung—sebuah estafet kekuasaan, keyakinan, dan kebudayaan yang terus mengukir takdir peradaban manusia dari masa ke masa.",
+                        textEn: '',
+                    },
+                    {
+                        title: "Budaya Islam Dunia",
+                        objectId: 75,
+                        audioFile: "/Audio/id/budaya islam.wav",
+                        textId: "Sejarah peradaban mencatat bahwa persebaran Islam ke berbagai penjuru dunia bukanlah sebuah arus yang menghapus tradisi, melainkan sebuah simfoni akulturasi indah di mana ajaran spiritual berpadu harmonis dengan kearifan lokal. Di Nusantara, ajaran ini mengalir damai melalui sentuhan para Wali Songo yang menyisipkan nilai tauhid dan tasawuf ke dalam medium pertunjukan wayang kulit tanpa menghilangkan epik aslinya. Nun jauh di ufuk timur, interaksi dengan kebudayaan Tiongkok melahirkan Kaligrafi Sini, sebuah sintesis seni menawan di mana ayat-ayat suci digoreskan menggunakan kuas dan tinta bambu hingga menyerupai karakter ketimuran. Melintasi Gurun Sahara menuju Afrika Barat, esensi Islam melebur dengan alam, mewujudkan mahakarya arsitektur Sudano-Sahelian seperti Masjid Agung Djenné yang megah berdiri dari struktur lumpur banco. Di persimpangan peradaban, Anatolia menjembatani Timur dan Barat lewat mistisisme tarian Darwis yang berputar melambangkan kepasrahan ego serta tradisi penyucian diri di Hammam, sementara seniman Persia menerjemahkan deskripsi surga atau Jannah ke dalam kelembutan warna dan corak karpet permadani yang melegenda. Inilah mozaik budaya Islam dunia—menyesuaikan wujud layaknya air di setiap benua, namun tetap dipersatukan oleh satu napas spiritualitas yang sama.",
+                        textEn: '',
+                    },
+                    {
+                        title: "Warisan Peradaban Islam",
+                        objectId: 76,
+                        audioFile: "/Audio/id/legacy islam.wav",
+                        textId: "Di sepanjang lorong waktu, peradaban Islam telah menorehkan warisan agung yang menjadi pilar fundamental bagi kehidupan modern. Kejeniusan ini terekam abadi dalam mahakarya arsitektur yang menentang zaman, mulai dari pesona ilusi optik Taj Mahal hingga kecanggihan sistem tata air di Istana Alhambra. Lebih dari sekadar kemegahan visual, era keemasan ini melahirkan penemuan saintifik revolusioner yang terus hidup hingga kini; seperti ratusan instrumen medis ciptaan Al-Zahrawi yang menjadi standar bedah, fondasi aljabar dan algoritma dari Al-Khwarizmi sebagai detak jantung komputasi masa kini, serta prinsip dasar optik dan kamera yang diungkap oleh Ibn Al-Haytham. Semangat untuk terus mendobrak batas juga diukir oleh para perintis yang mencetak sejarah dunia, ditandai dengan berdirinya observatorium astronomi modern pertama di Maragha, keberanian Abbas Ibn Firnas menantang langit Cordoba dalam uji coba penerbangan manusia pertama, hingga lahirnya tradisi menyeduh kopi di Yaman yang kini merajut miliaran manusia setiap harinya. Inilah warisan agung yang bukan sekadar sisa-sisa sejarah usang, melainkan napas inovasi abadi yang terus membentuk dan menggerakkan peradaban kita hari ini.",
+                        textEn: '',
+                    },
+                ],
+            },
         ],
     },
     {

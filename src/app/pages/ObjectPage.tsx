@@ -14,7 +14,7 @@ export default function ObjectPage() {
 
     const objectId = id ? parseInt(id, 10) : null;
 
-    // Check if this is an All Zone thematic (IDs 15–73)
+    // Check if this is an All Zone thematic (IDs 15+)
     const thematicResult = objectId && objectId >= 15 ? findThematicByObjectId(objectId) : null;
 
     // Otherwise fall back to museumData zones (IDs 1–14)
