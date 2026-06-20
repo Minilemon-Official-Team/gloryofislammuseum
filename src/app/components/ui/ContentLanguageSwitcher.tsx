@@ -21,7 +21,7 @@ export function ContentLanguageSwitcher() {
     };
 
     return (
-        <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-xl px-3 py-2 shadow border border-gray-200">
+        <div className="notranslate flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-xl px-3 py-2 shadow border border-gray-200">
             <span
                 className={`text-lg transition-all duration-300 ease-out ${isAnimating ? 'opacity-0 -translate-y-1 scale-95' : 'opacity-100 translate-y-0 scale-100'}`}
             >

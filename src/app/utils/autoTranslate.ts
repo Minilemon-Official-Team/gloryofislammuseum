@@ -5,7 +5,16 @@ const GTX_ENDPOINT = 'https://translate.googleapis.com/translate_a/single';
 const TARGET_CODE: Record<UILang, string> = {
   id: 'id',
   en: 'en',
+  ja: 'ja',
+  ko: 'ko',
+  ar: 'ar',
+  fr: 'fr',
+  de: 'de',
+  es: 'es',
   zh: 'zh-CN',
+  ms: 'ms',
+  th: 'th',
+  nl: 'nl',
 };
 
 // In-memory cache: key `${lang}::${text}` -> translated text

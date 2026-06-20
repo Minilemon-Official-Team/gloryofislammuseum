@@ -1,14 +1,25 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ChevronRight, ChevronLeft, Volume2, BookOpen, Share, Check } from 'lucide-react';
 import { floors, Floor, AllZoneItem, ThematicNarration } from '../data/allZoneData';
+import { ContentLanguageSwitcher } from '../components/ui/ContentLanguageSwitcher';
+import { useTranslationContext } from '../context/TranslationContext';
+import { R2_BASE_URL, toZoneKey } from '../utils/translationConfig';
 
 type View = 'floors' | 'zones' | 'detail' | 'thematic-detail';
 type TabType = 'zona' | 'thematic';
 // type LangTab = 'id' | 'en'; // reserved for auto-translate feature
 
-function SimpleAudioPlayer({ src }: { src: string }) {
+function SimpleAudioPlayer({ src, contentKey }: { src: string; contentKey?: string }) {
+    const { currentLang } = useTranslationContext();
     const [status, setStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
     const audioRef = useRef<HTMLAudioElement>(null);
+    const translatedAudioSrc = contentKey && currentLang !== 'id'
+        ? `${R2_BASE_URL}/audio/${currentLang}/${toZoneKey(contentKey)}.mp3`
+        : src;
+
+    useEffect(() => {
+        setStatus('idle');
+    }, [translatedAudioSrc]);
 
     return (
         <div className="flex flex-col gap-1.5">
@@ -29,7 +40,8 @@ function SimpleAudioPlayer({ src }: { src: string }) {
             <audio
                 ref={audioRef}
                 controls
-                src={src}
+                src={translatedAudioSrc}
+                key={translatedAudioSrc}
                 className="w-full h-10"
                 onPlay={() => setStatus('ready')}
                 onWaiting={() => setStatus('loading')}
@@ -210,7 +222,7 @@ function ZoneDetailScreen({
                     <p className="text-sm text-[#5A5A5A] mb-4">
                         Rangkuman keseluruhan zona — putar narasi audio berikut untuk mendapatkan gambaran umum zona ini.
                     </p>
-                    <SimpleAudioPlayer src={zone.overallAudioFile} />
+                    <SimpleAudioPlayer src={zone.overallAudioFile} contentKey={zone.name} />
                 </div>
             )}
 
@@ -256,9 +268,21 @@ function ThematicDetailScreen({
     onBack: () => void;
     onNavigate: (direction: 'prev' | 'next') => void;
 }) {
-    // const [langTab, setLangTab] = useState<LangTab>('id'); // reserved for auto-translate feature
+    const { currentLang, getDescription, prefetchTranslation } = useTranslationContext();
     const hasText = !!thematic.textId;
     const [copied, setCopied] = useState(false);
+
+    useEffect(() => {
+        if (hasText && currentLang !== 'id' && currentLang !== 'en') {
+            prefetchTranslation(thematic.title, thematic.textId);
+        }
+    }, [currentLang, hasText, prefetchTranslation, thematic.textId, thematic.title]);
+
+    const narrationText = currentLang === 'id'
+        ? thematic.textId
+        : currentLang === 'en' && thematic.textEn
+            ? thematic.textEn
+            : getDescription(thematic.title, thematic.textId);
 
     const handleShare = async () => {
         const shareUrl = thematic.objectId
@@ -300,7 +324,7 @@ function ThematicDetailScreen({
                     <Volume2 className="w-4 h-4 text-[#8C6B3E]" />
                     <span className="text-sm font-medium text-[#2B2B2B] font-['Cinzel']">Audio Narasi</span>
                 </div>
-                <SimpleAudioPlayer src={thematic.audioFile} />
+                <SimpleAudioPlayer src={thematic.audioFile} contentKey={thematic.title} />
             </div>
 
             {/* Text Content */}
@@ -328,8 +352,7 @@ function ThematicDetailScreen({
                             <span className="text-sm font-medium text-[#8C6B3E] font-['Cinzel']">Teks Narasi</span>
                         </div>
                         <p className="text-sm text-[#2B2B2B] leading-relaxed">
-                            {thematic.textId}
-                            {/* EN text reserved for auto-translate: {thematic.textEn} */}
+                            {narrationText}
                         </p>
                     </div>
                 </div>
@@ -437,6 +460,15 @@ export default function AllZone() {
                     <p className="text-base md:text-lg max-w-xl mx-auto opacity-90">
                         Jelajahi setiap zona museum dengan panduan narasi audio
                     </p>
+                </div>
+            </div>
+
+            <div className="sticky top-24 z-40 bg-white shadow-md py-3 px-4">
+                <div className="max-w-[1200px] mx-auto flex items-center gap-4">
+                    <ContentLanguageSwitcher />
+                    <span className="text-xs text-[#5A5A5A]">
+                        Pilih bahasa narasi dan audio
+                    </span>
                 </div>
             </div>
 

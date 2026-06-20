@@ -88,9 +88,15 @@ async function handleTranslationRequest(env, url) {
             })
           });
 
-          if (deeplRes.ok) {
-            const data = await deeplRes.json();
-            translated = data.translations?.[0]?.text ?? sourceText;
+          if (!deeplRes.ok) {
+            console.error(`DeepL error ${deeplRes.status} for ${langCode}/${contentKey}`);
+            return jsonResponse({ error: 'Translation unavailable' }, 503);
+          }
+
+          const data = await deeplRes.json();
+          translated = data.translations?.[0]?.text;
+          if (!translated || translated === sourceText) {
+            return jsonResponse({ error: 'Translation unavailable' }, 503);
           }
         }
 

@@ -40,6 +40,32 @@ const CLOUDFLARE_ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID;
 const CLOUDFLARE_D1_DATABASE_ID = process.env.CLOUDFLARE_D1_DATABASE_ID;
 const CLOUDFLARE_API_TOKEN = process.env.CLOUDFLARE_API_TOKEN;
 
+const REQUIRED_ENV = [
+  'CLOUDFLARE_ACCOUNT_ID',
+  'CLOUDFLARE_API_TOKEN',
+  'CLOUDFLARE_D1_DATABASE_ID',
+  'DEEPL_API_KEY',
+  'R2_BUCKET_NAME',
+  'R2_PUBLIC_URL',
+  'R2_ENDPOINT',
+  'R2_ACCESS_KEY_ID',
+  'R2_SECRET_ACCESS_KEY',
+];
+
+function validateEnv() {
+  const missing = REQUIRED_ENV.filter((key) => {
+    const value = process.env[key];
+    return !value || value.startsWith('your_') || value.includes('<');
+  });
+
+  if (missing.length > 0) {
+    console.error('❌ Missing/placeholder required environment variables:');
+    for (const key of missing) console.error(`  - ${key}`);
+    console.error('\nFill worker/.env, then run: npm run run-translation');
+    process.exit(1);
+  }
+}
+
 // All 12 languages
 const ALL_LANGUAGES = [
   { code: 'id', label: 'Indonesia', deepl: null, tts: 'id' },  // source — skip DeepL, still generate TTS
@@ -73,6 +99,7 @@ let totalOperations = 0;
 let completedOperations = 0;
 let deepLCharactersUsed = 0;
 let audioFilesGenerated = 0;
+const INTER_LANGUAGE_DELAY_MS = Number(process.env.TRANSLATION_DELAY_MS ?? 300);
 
 // Initialize R2 client
 const r2Client = new S3Client(R2_CONFIG);
@@ -83,6 +110,7 @@ const d1Query = async (sql, params = []) => {
     `https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/d1/database/${CLOUDFLARE_D1_DATABASE_ID}/query`,
     {
       method: 'POST',
+      signal: AbortSignal.timeout(45000),
       headers: {
         'Authorization': `Bearer ${CLOUDFLARE_API_TOKEN}`,
         'Content-Type': 'application/json',
@@ -145,6 +173,7 @@ async function generateTTS(text, langCode) {
     for (const { url } of urls) {
       await new Promise(r => setTimeout(r, 800));
       const res = await fetch(url, {
+        signal: AbortSignal.timeout(45000),
         headers: {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
           'Referer': 'https://translate.google.com/',
@@ -168,6 +197,7 @@ async function translateWithDeepL(text, targetLang) {
   try {
     const response = await fetch(DEEPL_ENDPOINT, {
       method: 'POST',
+      signal: AbortSignal.timeout(45000),
       headers: {
         'Authorization': `DeepL-Auth-Key ${DEEPL_API_KEY}`,
         'Content-Type': 'application/json',
@@ -192,7 +222,7 @@ async function translateWithDeepL(text, targetLang) {
     return data.translations[0].text;
   } catch (error) {
     console.error(`  ❌ DeepL error: ${error.message}`);
-    return text; // fallback to source
+    throw error;
   }
 }
 
@@ -251,6 +281,7 @@ async function insertToD1(contentKey, sourceText, langCode, translated, audioPat
 
 // Main execution
 async function runTranslation() {
+  validateEnv();
   totalOperations = contentKeys.length * ALL_LANGUAGES.length;
   
   // Create D1 table
@@ -273,6 +304,7 @@ async function runTranslation() {
       try {
         // Determine translated text
         let translated = sourceText;
+        let fromD1Cache = false;
         
         if (lang.code === 'id') {
           // Indonesian: use source directly, no DeepL
@@ -287,6 +319,7 @@ async function runTranslation() {
 
             if (existing && existing[0]?.results?.length > 0) {
               translated = existing[0].results[0].translated;
+              fromD1Cache = true;
               console.log(`  ${lang.code}: from D1 cache (skipped DeepL)`);
             } else {
               // Only call DeepL if not in D1
@@ -304,8 +337,9 @@ async function runTranslation() {
         const r2Key = `audio/${lang.code}/${contentKey}.mp3`;
         const audioUrl = `${R2_PUBLIC_URL}/${r2Key}`;
         
-        // Check if audio exists in R2
-        const audioExists = await checkAudioExistsR2(r2Key);
+        // If D1 already has this translation row, trust its audio metadata and
+        // avoid a slow R2 HEAD request. New rows still verify/generate audio.
+        const audioExists = fromD1Cache ? true : await checkAudioExistsR2(r2Key);
         
         if (!audioExists) {
           // Generate TTS
@@ -334,8 +368,11 @@ async function runTranslation() {
       const progress = Math.round((completedOperations / totalOperations) * 100);
       process.stdout.write(`\r  Progress: ${progress}% (${completedOperations}/${totalOperations})`);
       
-      // Step 3: Add 2 second delay between each language to avoid Google rate limiting
-      await new Promise(r => setTimeout(r, 2000));
+      // Small delay between languages to avoid hammering translation/TTS APIs.
+      // Override with TRANSLATION_DELAY_MS if the provider starts rate-limiting.
+      if (INTER_LANGUAGE_DELAY_MS > 0) {
+        await new Promise(r => setTimeout(r, INTER_LANGUAGE_DELAY_MS));
+      }
     }
     
     console.log(`\n  ✅ ${contentKey} complete\n`);
