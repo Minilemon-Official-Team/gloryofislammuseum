@@ -10,6 +10,7 @@ import VirtualTourCandiKidal from "./pages/VirtualTourCandiKidal";
 import VirtualTourIHM2023 from "./pages/VirtualTourIHM2023";
 import VirtualTourCandiJago2023 from "./pages/VirtualTourCandiJago2023";
 import News from "./pages/News";
+import NewsDetail from "./pages/NewsDetail";
 import Gallery from "./pages/Gallery";
 import Visit from "./pages/Visit";
 import MetaMuseum from "./pages/MetaMuseum";
@@ -41,6 +42,7 @@ export const router = createBrowserRouter([
       { path: "virtual-tour-ihm-2023", Component: VirtualTourIHM2023 },
       { path: "virtual-tour-candi-jago-2023", Component: VirtualTourCandiJago2023 },
       { path: "news", Component: News },
+      { path: "news/:slug", Component: NewsDetail },
       { path: "gallery", Component: Gallery },
       { path: "visit", Component: Visit },
       { path: "meta-museum", Component: MetaMuseum },
