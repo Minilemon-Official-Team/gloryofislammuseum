@@ -15,5 +15,5 @@ bucket_name = "audio-translations"
 preview_bucket_name = "audio-translations"
 
 [vars]
-R2_PUBLIC_URL = "https://pub-135a7545edfc4289af5e9373bf26a44b.r2.dev"
+R2_PUBLIC_URL = "https://audio.gloryofislammuseum.com"
 DEEPL_ENDPOINT = "https://api-free.deepl.com/v2/translate"

@@ -1,7 +1,7 @@
 // Translation Configuration for Glory of Islam Museum
 // All audio and translations served from Cloudflare R2 + Workers
 
-export const R2_BASE_URL = 'https://pub-135a7545edfc4289af5e9373bf26a44b.r2.dev';
+export const R2_BASE_URL = 'https://audio.gloryofislammuseum.com';
 export const WORKER_API = 'https://translation-worker.dtopengkingdom.workers.dev';
 
 export const LANGUAGES = [
@@ -94,25 +94,15 @@ const ID_AUDIO_MAP: Record<string, string> = {
     perjalanan_leluhur_nias: 'Sumatera_Perjalanan_Leluhur',
 };
 
-// English local audio filename mapping (identical to ID since filenames match)
-const EN_AUDIO_MAP: Record<string, string> = {
-    ...ID_AUDIO_MAP,
-    // Special cases confirmed from file names
-    'jawa_timur': 'Jawa Timur', // has space
-};
-
 // Build audio URL
 export function buildAudioUrl(langCode: LangCode, zoneName: string): string {
     const zoneKey = toZoneKey(zoneName);
-    const filename = (langCode === 'id' ? ID_AUDIO_MAP : langCode === 'en' ? EN_AUDIO_MAP : null)?.[zoneKey] || zoneKey;
+    const filename = ID_AUDIO_MAP[zoneKey];
 
-    if (langCode === 'id') {
+    if (langCode === 'id' && filename) {
         return `/Audio/id/${filename}.wav`;
     }
-    if (langCode === 'en') {
-        return `/Audio/eng/${filename}.wav`;
-    }
-    // All other languages: .mp3 from Cloudflare R2
+    // English and translated audio (including IDs without a local WAV) live in R2.
     return `${R2_BASE_URL}/audio/${langCode}/${zoneKey}.mp3`;
 }
 

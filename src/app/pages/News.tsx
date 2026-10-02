@@ -9,18 +9,31 @@ export default function News() {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [retryNonce, setRetryNonce] = useState(0);
   const articlesPerPage = 6;
 
   useEffect(() => {
+    let active = true;
     setLoading(true);
+    setError('');
     getPosts(undefined, currentPage, articlesPerPage)
       .then((res) => {
+        if (!active) return;
         setArticles(res.data);
         setTotal(res.meta?.total ?? 0);
       })
-      .catch((err) => setError(err.message))
-      .finally(() => setLoading(false));
-  }, [currentPage]);
+      .catch((err) => {
+        if (!active) return;
+        setError(err instanceof Error ? err.message : 'The museum content service is unavailable.');
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+
+    return () => {
+      active = false;
+    };
+  }, [currentPage, retryNonce]);
 
   const totalPages = Math.ceil(total / articlesPerPage);
 
@@ -48,22 +61,32 @@ export default function News() {
   };
 
   return (
-    <div className="bg-[#F4EFE6] min-h-screen py-16 px-4">
+    <div className="bg-[#F4EFE6] min-h-screen py-16 px-4 museum-plain-page">
       <div className="max-w-[1200px] mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="font-['Cinzel'] text-4xl md:text-5xl text-[#2B2B2B] mb-4">
+        <div className="text-center mb-16 museum-page-intro museum-page-intro-news">
+          <h1 className="font-['Cinzel'] text-4xl md:text-5xl text-[#2B2B2B] mb-4 museum-page-intro-title">
             Museum News & Updates
           </h1>
-          <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6"></div>
-          <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6 museum-page-intro-rule"></div>
+          <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto leading-relaxed museum-page-intro-description">
             Stay informed about the latest exhibitions, events, research discoveries, and programs at the Glory of Islam Museum
           </p>
         </div>
 
         {loading ? (
-          <div className="text-center py-12 text-[#5A5A5A]">Loading...</div>
+          <div className="text-center py-12 text-[#5A5A5A]" aria-live="polite">Loading museum news...</div>
         ) : error ? (
-          <div className="text-center py-12 text-red-500">{error}</div>
+          <div className="mx-auto max-w-xl border border-[#C8B9A6] bg-white/70 px-6 py-10 text-center" role="alert">
+            <p className="font-['Cinzel'] text-2xl text-[#2B2B2B] mb-3">News is taking a break.</p>
+            <p className="text-[#5A5A5A] mb-6">We couldn&apos;t reach the museum content service. Please try again in a moment.</p>
+            <button
+              type="button"
+              onClick={() => setRetryNonce((prev) => prev + 1)}
+              className="inline-flex items-center justify-center border border-[#8C6B3E] bg-[#8C6B3E] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#6F532F]"
+            >
+              Try again
+            </button>
+          </div>
         ) : articles.length === 0 ? (
           <div className="text-center py-12 text-[#5A5A5A]">No articles yet</div>
         ) : (

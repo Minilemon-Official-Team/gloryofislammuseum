@@ -2,18 +2,18 @@ import { PlayCircle, ZoomIn, Info, Calendar } from 'lucide-react';
 
 export default function VirtualTourCandiJago2023() {
   return (
-    <div className="bg-[#F4EFE6] min-h-screen py-16 px-4">
+    <div className="bg-[#F4EFE6] min-h-screen py-16 px-4 museum-plain-page">
       <div className="max-w-[1200px] mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 museum-page-intro museum-page-intro-candi-jago-2023">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#8C6B3E] text-white rounded-full mb-4">
             <Calendar className="w-4 h-4" />
             <span className="text-sm">Updated 2023</span>
           </div>
-          <h1 className="font-['Cinzel'] text-4xl md:text-5xl text-[#2B2B2B] mb-4">
+          <h1 className="font-['Cinzel'] text-4xl md:text-5xl text-[#2B2B2B] mb-4 museum-page-intro-title">
             Virtual Tour - Candi Jago 2023 Update
           </h1>
-          <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6"></div>
-          <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6 museum-page-intro-rule"></div>
+          <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto museum-page-intro-description">
             Experience the latest conservation work and archaeological discoveries at Candi Jago
           </p>
         </div>

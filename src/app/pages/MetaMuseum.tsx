@@ -80,20 +80,20 @@ export default function MetaMuseum() {
     <div className="bg-[#F4EFE6] min-h-screen">
 
       {/* HERO */}
-      <div className="relative bg-[#8C6B3E] text-white py-32 px-4">
-        <div className="max-w-[900px] mx-auto text-center">
+      <div className="relative bg-[#8C6B3E] text-white py-32 px-4 museum-page-hero museum-page-hero-dark museum-page-hero-meta">
+        <div className="max-w-[900px] mx-auto text-center museum-page-hero-inner">
 
           <div className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-8">
             <Cpu className="w-10 h-10 text-white" />
           </div>
 
-          <h1 className="font-['Cinzel'] text-4xl md:text-6xl mb-6">
+          <h1 className="font-['Cinzel'] text-4xl md:text-6xl mb-6 museum-page-hero-title">
             Meta Museum
           </h1>
 
-          <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-white mx-auto mb-8 museum-page-hero-rule"></div>
 
-          <p className="text-lg md:text-xl opacity-90 leading-relaxed">
+          <p className="text-lg md:text-xl opacity-90 leading-relaxed museum-page-hero-description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </p>
 

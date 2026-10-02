@@ -42,15 +42,15 @@ export default function Gallery() {
       : galleryItems.filter((item) => item.era === filter);
 
   return (
-    <div className="bg-[#F4EFE6] min-h-screen py-16 px-4">
+    <div className="bg-[#F4EFE6] min-h-screen py-16 px-4 museum-plain-page">
       <div className="max-w-[1400px] mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="font-['Cinzel'] text-4xl md:text-5xl text-[#2B2B2B] mb-4">
+        <div className="text-center mb-12 museum-page-intro museum-page-intro-gallery">
+          <h1 className="font-['Cinzel'] text-4xl md:text-5xl text-[#2B2B2B] mb-4 museum-page-intro-title">
             Gallery
           </h1>
-          <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6"></div>
-          <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6 museum-page-intro-rule"></div>
+          <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto leading-relaxed museum-page-intro-description">
             Welcome to the Glory of Islam Gallery, a space where the pages of history are not merely told, but vividly witnessed. Through a captivating visual curation—from ancient manuscripts and majestic architectural wonders across the globe, to the peaceful footprints of Islamic propagation in Nusantara—we invite you to immerse yourself in the grandeur of the past. Let every image and artifact on this page serve as a window through time, testifying to how the light of Islam wove harmony and culture, from the global stage to its deep roots in Indonesia.
           </p>
         </div>

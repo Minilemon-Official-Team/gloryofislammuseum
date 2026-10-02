@@ -35,7 +35,7 @@ export function TranslationProvider({ children }: { children: React.ReactNode })
         try {
             setIsLoading(true);
             const url = buildTranslationUrl(currentLang, zoneName);
-            const res = await fetch(url, { signal: AbortSignal.timeout(3000) });
+            const res = await fetch(url, { signal: AbortSignal.timeout(10000) });
             if (!res.ok) throw new Error('not found');
             const data = await res.json();
             cache.current[cacheKey] = data.translated;
@@ -52,7 +52,7 @@ export function TranslationProvider({ children }: { children: React.ReactNode })
         return cache.current[cacheKey] ?? indonesianText;
     }, [currentLang]);
 
-    // All 12 languages get audio from R2 — no special case for Indonesian
+    // Prefer the existing local Indonesian WAVs; translated audio is in R2.
     const getAudio = useCallback((zoneName: string): string => {
         return buildAudioUrl(currentLang, zoneName);
     }, [currentLang]);

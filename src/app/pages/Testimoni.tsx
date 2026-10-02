@@ -14,15 +14,15 @@ const testimonials = [
 
 export default function Testimoni() {
   return (
-    <div className="bg-[#F4EFE6] min-h-screen py-16 px-4">
+    <div className="bg-[#F4EFE6] min-h-screen py-16 px-4 museum-plain-page">
       <div className="max-w-[1200px] mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="font-['Cinzel'] text-4xl md:text-5xl text-[#2B2B2B] mb-4">
+        <div className="text-center mb-16 museum-page-intro museum-page-intro-testimoni">
+          <h1 className="font-['Cinzel'] text-4xl md:text-5xl text-[#2B2B2B] mb-4 museum-page-intro-title">
             Visitor Testimonials
           </h1>
-          <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6"></div>
-          <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6 museum-page-intro-rule"></div>
+          <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto leading-relaxed museum-page-intro-description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
           </p>
         </div>

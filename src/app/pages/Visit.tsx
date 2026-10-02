@@ -2,15 +2,15 @@ import { MapPin, Clock, Ticket, Phone, Mail, DollarSign, Users, Calendar } from 
 
 export default function Visit() {
   return (
-    <div className="bg-[#F4EFE6] min-h-screen py-16 px-4">
+    <div className="bg-[#F4EFE6] min-h-screen py-16 px-4 museum-plain-page">
       <div className="max-w-[1200px] mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="font-['Cinzel'] text-4xl md:text-5xl text-[#2B2B2B] mb-4">
+        <div className="text-center mb-16 museum-page-intro museum-page-intro-visit">
+          <h1 className="font-['Cinzel'] text-4xl md:text-5xl text-[#2B2B2B] mb-4 museum-page-intro-title">
             Plan Your Visit
           </h1>
-          <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6"></div>
-          <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-[#8C6B3E] mx-auto mb-6 museum-page-intro-rule"></div>
+          <p className="text-[#5A5A5A] text-lg max-w-3xl mx-auto leading-relaxed museum-page-intro-description">
             Everything you need to know before visiting the Glory of Islam Museum
           </p>
         </div>
@@ -119,7 +119,7 @@ export default function Visit() {
                 <Phone className="w-5 h-5 text-[#8C6B3E] mt-1 flex-shrink-0" />
                 <div>
                   <div className="text-[#2B2B2B] font-medium">Phone</div>
-                  <div className="text-[#5A5A5A]">+62 857-4840-5800</div>
+                  <div className="text-[#5A5A5A]">+62 813-3437-0700</div>
                 </div>
               </div>
               <div className="border-t border-[#C8B9A6] pt-4">
@@ -171,7 +171,7 @@ export default function Visit() {
               <li>• Advance booking required</li>
             </ul>
             <button className="px-6 py-3 bg-[#8C6B3E] text-white rounded hover:bg-[#6F532F] transition-colors">
-              <a href="https://wa.me/+6285748405800"> Book Group Visit </a>
+              <a href="https://wa.me/6281334370700"> Book Group Visit </a>
             </button>
           </div>
 

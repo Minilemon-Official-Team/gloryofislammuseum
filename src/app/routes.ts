@@ -3,6 +3,7 @@ import Root from "./pages/Root";
 import Home from "./pages/Home";
 import AutoGuide from "./pages/AutoGuide";
 import ObjectPage from "./pages/ObjectPage";
+import DioramaPage from "./pages/DioramaPage";
 import VirtualTour from "./pages/VirtualTour";
 import VirtualTourIHM from "./pages/VirtualTourIHM";
 import VirtualTourCandiJago from "./pages/VirtualTourCandiJago";
@@ -34,6 +35,7 @@ export const router = createBrowserRouter([
         path: "autoguide",
         loader: () => redirect("/auto-guide")
       },
+      { path: "diorama/:slug", Component: DioramaPage },
       { path: "object/:id", Component: ObjectPage },
       { path: "virtual-tour", Component: VirtualTour },
       { path: "virtual-tour-ihm", Component: VirtualTourIHM },

@@ -1,7 +1,8 @@
 // Translation Worker - Main Entry Point
 // Serves translation API and handles CORS
 
-const R2_PUBLIC_URL = 'https://pub-135a7545edfc4289af5e9373bf26a44b.r2.dev';
+const DEFAULT_R2_PUBLIC_URL = 'https://audio.gloryofislammuseum.com';
+const INDONESIAN_R2_PUBLIC_URL = 'https://audio.indonesianheritagemuseum.com';
 const ALLOWED_LANGS = new Set(['id', 'en', 'ja', 'ko', 'ar', 'fr', 'de', 'es', 'zh', 'ms', 'th', 'nl']);
 
 // CORS headers
@@ -20,7 +21,7 @@ export default {
     }
 
     if (url.pathname.startsWith('/api/translations/')) {
-      return handleTranslationRequest(env, url);
+      return handleTranslationRequest(env, url, request);
     }
 
     return new Response('Not Found', {
@@ -30,8 +31,9 @@ export default {
   }
 };
 
-async function handleTranslationRequest(env, url) {
+async function handleTranslationRequest(env, url, request) {
   const pathParts = url.pathname.replace('/api/translations/', '').split('/').filter(Boolean);
+  const r2PublicUrl = resolveR2PublicUrl(request);
 
   try {
     // /api/translations/:lang
@@ -46,7 +48,10 @@ async function handleTranslationRequest(env, url) {
         'SELECT content_key as key, translated, audio_url FROM translations WHERE lang_code = ? ORDER BY content_key ASC'
       ).bind(langCode).all();
 
-      const resultRows = rows?.results ?? [];
+      const resultRows = (rows?.results ?? []).map((row) => ({
+        ...row,
+        audio_url: `${r2PublicUrl}/audio/${langCode}/${row.key}.mp3`,
+      }));
       return jsonResponse(resultRows, 200);
     }
 
@@ -101,7 +106,7 @@ async function handleTranslationRequest(env, url) {
         }
 
         const r2Key = `audio/${langCode}/${contentKey}.mp3`;
-        const audioUrl = `${R2_PUBLIC_URL}/${r2Key}`;
+        const audioUrl = `${r2PublicUrl}/${r2Key}`;
 
         const audioExists = await env.AUDIO_BUCKET.head(r2Key);
         if (!audioExists) {
@@ -124,7 +129,7 @@ async function handleTranslationRequest(env, url) {
 
       return jsonResponse({
         translated: result.translated,
-        audio_url: result.audio_url
+        audio_url: `${r2PublicUrl}/audio/${langCode}/${contentKey}.mp3`
       }, 200);
     }
 
@@ -133,6 +138,21 @@ async function handleTranslationRequest(env, url) {
     console.error('Translation error:', error);
     return jsonResponse({ error: 'Internal error' }, 500);
   }
+}
+
+function resolveR2PublicUrl(request) {
+  const source = request.headers.get('Origin') || request.headers.get('Referer') || '';
+
+  try {
+    const hostname = new URL(source).hostname;
+    if (hostname === 'indonesianheritagemuseum.com' || hostname.endsWith('.indonesianheritagemuseum.com')) {
+      return INDONESIAN_R2_PUBLIC_URL;
+    }
+  } catch {
+    // Non-browser clients may omit Origin/Referer; use the existing Glory default.
+  }
+
+  return DEFAULT_R2_PUBLIC_URL;
 }
 
 function jsonResponse(payload, status = 200) {

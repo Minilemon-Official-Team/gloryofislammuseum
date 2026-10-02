@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { ChevronRight, ChevronLeft, Volume2, BookOpen, Share, Check } from 'lucide-react';
 import { floors, Floor, AllZoneItem, ThematicNarration } from '../data/allZoneData';
+import { allZones as guideZones } from '../data/museumData';
 import { ContentLanguageSwitcher } from '../components/ui/ContentLanguageSwitcher';
 import { useTranslationContext } from '../context/TranslationContext';
+import { copyShareLink } from '../utils/share';
 import { R2_BASE_URL, toZoneKey } from '../utils/translationConfig';
 
 type View = 'floors' | 'zones' | 'detail' | 'thematic-detail';
@@ -166,6 +168,22 @@ function ZoneDetailScreen({
     onSelectThematic: (thematic: ThematicNarration) => void;
 }) {
     const [activeTab, setActiveTab] = useState<TabType>('zona');
+    const { currentLang, getDescription, prefetchTranslation } = useTranslationContext();
+    const guideZone = guideZones.find((item) => toZoneKey(item.name) === toZoneKey(zone.name));
+    const zoneTextId = guideZone?.description ?? '';
+    const zoneTextEn = guideZone?.descriptionEn ?? '';
+
+    useEffect(() => {
+        if (zoneTextId && currentLang !== 'id' && currentLang !== 'en') {
+            prefetchTranslation(zone.name, zoneTextId);
+        }
+    }, [currentLang, prefetchTranslation, zone.name, zoneTextId]);
+
+    const zoneNarration = currentLang === 'id'
+        ? zoneTextId
+        : currentLang === 'en' && zoneTextEn
+            ? zoneTextEn
+            : getDescription(zone.name, zoneTextId);
 
     return (
         <div className="max-w-2xl mx-auto px-4 py-8">
@@ -219,8 +237,8 @@ function ZoneDetailScreen({
             {/* Tab Content */}
             {activeTab === 'zona' && (
                 <div className="bg-white rounded-xl border border-[#C8B9A6] p-5 shadow-sm">
-                    <p className="text-sm text-[#5A5A5A] mb-4">
-                        Rangkuman keseluruhan zona — putar narasi audio berikut untuk mendapatkan gambaran umum zona ini.
+                    <p className="notranslate text-sm text-[#2B2B2B] leading-relaxed mb-4">
+                        {zoneNarration || 'Rangkuman keseluruhan zona — putar narasi audio berikut untuk mendapatkan gambaran umum zona ini.'}
                     </p>
                     <SimpleAudioPlayer src={zone.overallAudioFile} contentKey={zone.name} />
                 </div>
@@ -289,7 +307,7 @@ function ThematicDetailScreen({
             ? `${window.location.origin}/object/${thematic.objectId}`
             : window.location.href;
         try {
-            await navigator.clipboard.writeText(shareUrl);
+            await copyShareLink(shareUrl);
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
         } catch (err) {
@@ -351,7 +369,7 @@ function ThematicDetailScreen({
                             <BookOpen className="w-4 h-4 text-[#8C6B3E]" />
                             <span className="text-sm font-medium text-[#8C6B3E] font-['Cinzel']">Teks Narasi</span>
                         </div>
-                        <p className="text-sm text-[#2B2B2B] leading-relaxed">
+                        <p className="notranslate text-sm text-[#2B2B2B] leading-relaxed">
                             {narrationText}
                         </p>
                     </div>
@@ -450,14 +468,14 @@ export default function AllZone() {
     return (
         <div className="bg-[#F4EFE6] min-h-screen">
             {/* Hero */}
-            <div className="relative bg-[#8C6B3E] text-white py-16 px-4">
-                <div className="max-w-[1200px] mx-auto text-center">
-                    <div className="text-sm md:text-base uppercase tracking-[0.3em] mb-3 opacity-90">
+            <div className="relative bg-[#8C6B3E] text-white py-16 px-4 museum-page-hero museum-page-hero-dark museum-page-hero-all-zone">
+                <div className="max-w-[1200px] mx-auto text-center museum-page-hero-inner">
+                    <div className="text-sm md:text-base uppercase tracking-[0.3em] mb-3 opacity-90 museum-page-hero-eyebrow">
                         Audio Guide
                     </div>
-                    <h1 className="font-['Cinzel'] text-3xl md:text-5xl mb-4">All Zone</h1>
-                    <div className="w-24 h-1 bg-white mx-auto mb-5"></div>
-                    <p className="text-base md:text-lg max-w-xl mx-auto opacity-90">
+                    <h1 className="font-['Cinzel'] text-3xl md:text-5xl mb-4 museum-page-hero-title">All Zone</h1>
+                    <div className="w-24 h-1 bg-white mx-auto mb-5 museum-page-hero-rule"></div>
+                    <p className="text-base md:text-lg max-w-xl mx-auto opacity-90 museum-page-hero-description">
                         Jelajahi setiap zona museum dengan panduan narasi audio
                     </p>
                 </div>

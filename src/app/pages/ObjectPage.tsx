@@ -6,6 +6,7 @@ import { ContentLanguageSwitcher } from '../components/ui/ContentLanguageSwitche
 import { AudioPlayer } from '../components/ui/AudioPlayer';
 import { findZoneById, getZoneImage } from '../data/museumData';
 import { findThematicByObjectId } from '../data/allZoneData';
+import { copyShareLink } from '../utils/share';
 
 export default function ObjectPage() {
     const { id } = useParams<{ id: string }>();
@@ -34,7 +35,7 @@ export default function ObjectPage() {
     const handleShare = async () => {
         const shareUrl = `${window.location.origin}/object/${objectId}`;
         try {
-            await navigator.clipboard.writeText(shareUrl);
+            await copyShareLink(shareUrl);
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
         } catch (err) {
@@ -98,8 +99,8 @@ export default function ObjectPage() {
                 </div>
             </div>
 
-            <div className="relative bg-[#8C6B3E] text-white py-12 px-4">
-                <div className="max-w-[1200px] mx-auto">
+            <div className="relative bg-[#8C6B3E] text-white py-12 px-4 museum-page-hero museum-page-hero-dark museum-page-hero-detail museum-page-hero-object">
+                <div className="max-w-[1200px] mx-auto museum-page-hero-inner">
                     <div className="flex items-center justify-between gap-4 mb-4">
                         <div className="flex items-center gap-2 text-sm opacity-80">
                             <MapPin className="w-4 h-4" />
@@ -107,8 +108,8 @@ export default function ObjectPage() {
                         </div>
                         <ContentLanguageSwitcher />
                     </div>
-                    <h1 className="font-['Cinzel'] text-4xl md:text-5xl mb-2">{zoneName}</h1>
-                    <p className="text-sm opacity-80">
+                    <h1 className="font-['Cinzel'] text-4xl md:text-5xl mb-2 museum-page-hero-title">{zoneName}</h1>
+                    <p className="text-sm opacity-80 museum-page-hero-description">
                         {isEn ? `Zone #${index + 1}` : `Zona #${index + 1}`}
                     </p>
                 </div>
@@ -150,7 +151,7 @@ export default function ObjectPage() {
                         </div>
 
                         <div className="prose max-w-none">
-                            <p className="text-[#2B2B2B] leading-relaxed text-lg">{description}</p>
+                            <p className="notranslate text-[#2B2B2B] leading-relaxed text-lg">{description}</p>
                         </div>
                     </div>
                 </div>
@@ -195,13 +196,13 @@ function AllZoneThematicView({ thematic, zoneName, floorLabel, objectId, copied,
             </div>
 
             {/* Header */}
-            <div className="bg-[#8C6B3E] text-white py-8 px-4">
-                <div className="max-w-[600px] mx-auto">
+            <div className="bg-[#8C6B3E] text-white py-8 px-4 museum-page-hero museum-page-hero-dark museum-page-hero-detail museum-page-hero-thematic">
+                <div className="max-w-[600px] mx-auto museum-page-hero-inner">
                     <div className="flex items-center gap-2 text-sm opacity-80 mb-3">
                         <MapPin className="w-4 h-4" />
                         <span>{floorLabel} · {zoneName}</span>
                     </div>
-                    <h1 className="font-['Cinzel'] text-2xl md:text-3xl leading-tight">{thematic.title}</h1>
+                    <h1 className="font-['Cinzel'] text-2xl md:text-3xl leading-tight museum-page-hero-title">{thematic.title}</h1>
                 </div>
             </div>
 
