@@ -16,7 +16,7 @@ interface TranslationContextType {
 const TranslationContext = createContext<TranslationContextType | null>(null);
 
 export function TranslationProvider({ children }: { children: React.ReactNode }) {
-    const [currentLang, setCurrentLang] = useState<LangCode>('id');
+    const [currentLang, setCurrentLang] = useState<LangCode>('en');
     const [isLoading, setIsLoading] = useState(false);
     const [audioStatus, setAudioStatusMap] = useState<Record<string, 'loading' | 'ready' | 'error'>>({});
     const cache = useRef<Record<string, string>>({});
