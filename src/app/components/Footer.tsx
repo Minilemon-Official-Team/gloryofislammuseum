@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Facebook, Instagram, Youtube } from 'lucide-react';
+import { MapPin, Phone } from 'lucide-react';
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -16,17 +16,9 @@ export default function Footer() {
             <p className="text-[#5A5A5A] text-sm leading-relaxed mb-4">
               Preserving and celebrating the glory of Islamic civilization through curated exhibitions and educational programs.
             </p>
-            <div className="flex gap-3">
-              <a href="https://www.facebook.com/indonesianheritagemu" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-[#8C6B3E] flex items-center justify-center text-white hover:bg-[#6F532F] transition-colors">
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a href="https://www.instagram.com/indonesianheritagemuseum" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-[#8C6B3E] flex items-center justify-center text-white hover:bg-[#6F532F] transition-colors">
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a href="https://www.youtube.com/@indonesianheritagemuseum" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-[#8C6B3E] flex items-center justify-center text-white hover:bg-[#6F532F] transition-colors">
-                <Youtube className="w-4 h-4" />
-              </a>
-            </div>
+            <p className="text-[#5A5A5A] text-xs leading-relaxed">
+              Official social channels will be listed here after they are verified.
+            </p>
           </div>
 
           {/* Quick Links */}
@@ -94,7 +86,7 @@ export default function Footer() {
 
         <div className="border-t border-[#C8B9A6] mt-12 pt-8 text-center">
           <p className="text-[#5A5A5A] text-sm">
-            © 2026 Glory of Islam Museum | Privacy Policy IHM AR
+            © 2026 Glory of Islam Museum | Privacy Policy
           </p>
         </div>
       </div>

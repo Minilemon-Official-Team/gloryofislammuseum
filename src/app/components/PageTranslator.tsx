@@ -26,6 +26,10 @@ export default function PageTranslator() {
     let cancelled = false;
     let debounceTimer: ReturnType<typeof setTimeout> | undefined;
 
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = uiLang === 'zh' ? 'zh-CN' : uiLang;
+    }
+
     const observer = new MutationObserver((mutations) => {
       const hasContentChange = mutations.some(
         (m) =>

@@ -35,7 +35,7 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-[#F4EFE6] shadow-md" : "bg-[#F4EFE6]/95"
       }`}
-      style={{ borderBottom: "1px solid #C8B9A6" }}
+      style={{ borderBottom: "1px solid #C8B9A6", zIndex: 100 }}
     >
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
@@ -115,10 +115,11 @@ export default function Header() {
             </Link>
 
             {/* Education Dropdown */}
-            <div className="relative group">
+            <div className="relative group" onMouseLeave={() => setOpenDropdown(null)}>
               <button
                 className="px-4 py-2 text-[#2B2B2B] font-['Cinzel'] text-sm hover:text-[#8C6B3E] flex items-center gap-1"
                 onMouseEnter={() => setOpenDropdown("education")}
+                onClick={() => setOpenDropdown("education")}
               >
                 Education & Family
                 <ChevronDown className="w-4 h-4" />
@@ -126,8 +127,7 @@ export default function Header() {
 
               {openDropdown === "education" && (
                 <div
-                  className="absolute top-full right-0 mt-2 w-56 bg-white shadow-lg rounded border border-[#C8B9A6] py-2"
-                  onMouseLeave={() => setOpenDropdown(null)}
+                  className="absolute z-50 top-full right-0 mt-2 w-56 bg-white shadow-lg rounded border border-[#C8B9A6] py-2"
                 >
                   <Link
                     to="/education/general-family"
@@ -154,17 +154,33 @@ export default function Header() {
             </div>
 
             {/* Language */}
-            <div className="relative group ml-2 notranslate">
-              <button className="px-3 py-2 text-[#8C6B3E] border border-[#8C6B3E] rounded hover:bg-[#8C6B3E] hover:text-white flex items-center gap-2">
+            <div className="relative ml-2 notranslate">
+              <button
+                type="button"
+                aria-haspopup="menu"
+                aria-expanded={openDropdown === "language"}
+                onClick={() => toggleDropdown("language")}
+                className="px-3 py-2 text-[#8C6B3E] border border-[#8C6B3E] rounded hover:bg-[#8C6B3E] hover:text-white flex items-center gap-2"
+              >
                 <Globe className="w-4 h-4" />
                 {currentLangLabel}
               </button>
 
-              <div className="absolute top-full right-0 mt-2 w-32 bg-white shadow-lg rounded border border-[#C8B9A6] py-2 hidden group-hover:block">
+              <div
+                role="menu"
+                className={`absolute z-50 top-full right-0 mt-2 w-36 bg-white shadow-lg rounded border border-[#C8B9A6] py-2 ${
+                  openDropdown === "language" ? "block" : "hidden"
+                }`}
+              >
                 {UI_LANGUAGES.map((lang) => (
                   <button
                     key={lang.code}
-                    onClick={() => setUILang(lang.code)}
+                    type="button"
+                    role="menuitem"
+                    onClick={() => {
+                      setUILang(lang.code);
+                      setOpenDropdown(null);
+                    }}
                     className={`block w-full text-left px-4 py-2 hover:bg-[#E7DED0] ${
                       uiLang === lang.code ? "text-[#8C6B3E] font-medium" : ""
                     }`}

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslationContext } from '../../context/TranslationContext';
-import { toZoneKey } from '../../utils/translationConfig';
+import { buildAudioUrl, toZoneKey } from '../../utils/translationConfig';
 
 interface AudioPlayerProps {
     zoneName: string;
@@ -13,11 +13,16 @@ export function AudioPlayer({ zoneName }: AudioPlayerProps) {
     const zoneKey = toZoneKey(zoneName);
     const statusKey = `${zoneKey}-${currentLang}`;
     const audioUrl = getAudio(zoneName);
+    const fallbackUrl = buildAudioUrl('id', zoneName);
+    const [sourceUrl, setSourceUrl] = useState(audioUrl);
+    const [usingFallback, setUsingFallback] = useState(false);
 
     useEffect(() => {
+        setSourceUrl(audioUrl);
+        setUsingFallback(false);
         setStatus('loading');
         setAudioStatus(statusKey, 'loading');
-    }, [currentLang, zoneName, statusKey, setAudioStatus]);
+    }, [audioUrl, statusKey, setAudioStatus]);
 
     useEffect(() => {
         setAudioStatus(statusKey, status);
@@ -48,7 +53,7 @@ export function AudioPlayer({ zoneName }: AudioPlayerProps) {
                 )}
                 {status === 'ready' && (
                     <span className="flex items-center gap-1.5 text-green-500">
-                        🎵 Audio siap diputar
+                        {usingFallback ? '🎵 Audio Indonesia tersedia — terjemahan belum tersedia' : '🎵 Audio siap diputar'}
                     </span>
                 )}
                 {status === 'error' && (
@@ -60,12 +65,20 @@ export function AudioPlayer({ zoneName }: AudioPlayerProps) {
 
             <audio
                 ref={audioRef}
-                key={statusKey}
+                key={`${statusKey}-${usingFallback ? 'fallback' : 'primary'}`}
                 controls
-                src={audioUrl}
+                src={sourceUrl}
                 className={`w-full ${status === 'loading' ? 'pointer-events-none opacity-40' : 'opacity-100'}`}
                 onCanPlayThrough={() => setStatus('ready')}
-                onError={() => setStatus('error')}
+                onError={() => {
+                    if (currentLang !== 'id' && !usingFallback && fallbackUrl !== sourceUrl) {
+                        setUsingFallback(true);
+                        setSourceUrl(fallbackUrl);
+                        setStatus('loading');
+                        return;
+                    }
+                    setStatus('error');
+                }}
                 onWaiting={() => setStatus('loading')}
                 preload="metadata"
             >

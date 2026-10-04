@@ -1,25 +1,18 @@
-# Auto Guide Zone Images
+# GOI zone photography
 
-Letakkan 14 file gambar di folder ini dengan nama persis seperti di bawah.
-Format yang diharapkan: `.png` (kalau pakai format lain, ganti ekstensi di
-`src/app/data/museumData.ts`).
+Asset ruang terbaru disimpan lokal supaya ikut tersalin ke `dist/` dan dapat
+dikirim Wrangler tanpa ketergantungan pada Google Drive.
 
-Selama file belum ada, Auto Guide otomatis fallback ke logo dummy.
+## Lantai 1
 
-## Gedung A — Jejak Peradaban
-- `ruang-teater.png`
-- `ruang-sejarah-nabi.png`
-- `ruang-umayyah.png`
-- `ruang-abbasiyah.png`
-- `ruang-utsmaniyah.png`
-- `ruang-safawiyah.png`
-- `ruang-mughal.png`
+`floor-1/` berisi 14 foto: Abbasiyah (3), Mughal, Sejarah Nabi (2), Ottoman,
+Safavid (2), Umayyah (2), dan Teater (3).
 
-## Gedung B — Cahaya Islam di Nusantara
-- `ruang-teater-nusantara.png`
-- `titik-nol-peradaban.png`
-- `cahaya-majapahit-wali-songo.png`
-- `kebangkitan-kesultanan-jawa.png`
-- `pelita-di-pelosok-negeri.png`
-- `kejayaan-mataram-islam.png`
-- `pewaris-tradisi-dan-dinamika-sejarah.png`
+## Lantai 2
+
+`floor-2/` berisi 10 foto: pintu masuk, Barus, Cheng Ho, Demak, Islam
+Nusantara, Mataram, Pakualaman (2), Walisongo, dan Teater.
+
+Mapping zona utama ada di `src/app/data/museumData.ts` dan
+`src/app/data/allZoneData.ts`. Foto alternatif juga ditampilkan melalui
+`src/app/data/gallery.ts` supaya seluruh asset baru tetap terpakai.

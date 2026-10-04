@@ -132,7 +132,7 @@ export default function NewsDetail() {
 
         {HTML_CONTENT_PATTERN.test(post.content) ? (
           <div
-            className="max-w-none text-[#5A5A5A] leading-relaxed [&_a]:text-[#8C6B3E] [&_a]:underline [&_blockquote]:border-l-4 [&_blockquote]:border-[#8C6B3E] [&_blockquote]:pl-4 [&_h1]:mb-4 [&_h1]:mt-8 [&_h1]:text-3xl [&_h1]:font-bold [&_h2]:mb-3 [&_h2]:mt-7 [&_h2]:text-2xl [&_h2]:font-bold [&_h3]:mb-3 [&_h3]:mt-6 [&_h3]:text-xl [&_h3]:font-semibold [&_img]:my-6 [&_img]:rounded-lg [&_li]:mb-2 [&_ol]:mb-4 [&_ol]:ml-6 [&_ol]:list-decimal [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_ul]:list-disc"
+            className="max-w-none text-[#5A5A5A] leading-relaxed [&_a]:text-[#8C6B3E] [&_a]:underline [&_blockquote]:border-l [&_blockquote]:border-[#8C6B3E] [&_blockquote]:pl-4 [&_h1]:mb-4 [&_h1]:mt-8 [&_h1]:text-3xl [&_h1]:font-bold [&_h2]:mb-3 [&_h2]:mt-7 [&_h2]:text-2xl [&_h2]:font-bold [&_h3]:mb-3 [&_h3]:mt-6 [&_h3]:text-xl [&_h3]:font-semibold [&_img]:my-6 [&_img]:rounded-lg [&_li]:mb-2 [&_ol]:mb-4 [&_ol]:ml-6 [&_ol]:list-decimal [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_ul]:list-disc"
             dangerouslySetInnerHTML={{ __html: sanitizeArticleHtml(post.content) }}
           />
         ) : (

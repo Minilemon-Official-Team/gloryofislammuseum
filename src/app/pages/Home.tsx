@@ -3,16 +3,16 @@ import { ArrowDownRight, ArrowRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const heroSlides = [
-  '/images/hero/slide-1.jpg',
-  '/images/hero/slide-2.jpg',
-  '/images/hero/slide-3.jpg',
-  '/images/hero/slide-4.jpg',
+  '/images/zones/floor-1/ruang-umayyah.png',
+  '/images/zones/floor-1/ruang-safavid-1.png',
+  '/images/zones/floor-2/ruang-cheng-ho.png',
+  '/images/zones/floor-2/ruang-demak.png',
 ];
 
 const archiveImages = [
-  { src: '/images/home/ar-1.jpg', alt: 'Augmented Reality di Glory of Islam Museum' },
-  { src: '/images/home/ar-2.jpg', alt: 'Pengalaman digital museum' },
-  { src: '/images/home/ar-3.png', alt: 'Koleksi digital museum' },
+  { src: '/images/zones/floor-2/ruang-barus.png', alt: 'Ruang Barus di Glory of Islam Museum' },
+  { src: '/images/zones/floor-2/ruang-pakualaman-2.png', alt: 'Ruang Pakualaman di Glory of Islam Museum' },
+  { src: '/images/zones/floor-2/ruang-mataram.png', alt: 'Ruang Mataram di Glory of Islam Museum' },
 ];
 
 export default function Home() {
@@ -110,7 +110,7 @@ export default function Home() {
               <video
                 className="goi-hero-video"
                 src="/videos/goi-banner.mp4"
-                poster="/images/hero/slide-1.jpg"
+                poster="/images/zones/floor-2/pintu-masuk-lt2.png"
                 autoPlay
                 muted
                 loop
@@ -152,11 +152,11 @@ export default function Home() {
 
           <div className="goi-intro-gallery" data-goi-reveal style={{ transitionDelay: '140ms' }}>
             <figure className="goi-intro-gallery-main">
-              <img src="/images/home/section-1.jpg" alt="Ruang sejarah dan perdagangan di Glory of Islam Museum" />
+              <img src="/images/zones/floor-2/ruang-cheng-ho.png" alt="Ruang Cheng Ho di Glory of Islam Museum" />
               <figcaption><span>01</span><span>Story rooms</span></figcaption>
             </figure>
             <figure className="goi-intro-gallery-detail">
-              <img src="/images/home/ar-1.jpg" alt="Pengunjung melihat koleksi AR di museum" />
+              <img src="/images/zones/floor-2/ruang-barus.png" alt="Ruang Barus dengan lapisan digital di Glory of Islam Museum" />
               <figcaption><span>02</span><span>Objects in motion</span></figcaption>
             </figure>
             <div className="goi-intro-gallery-note">
@@ -183,7 +183,7 @@ export default function Home() {
           <div className="goi-route-layout">
             <Link to="/auto-guide" className="goi-route-feature" data-goi-reveal style={{ transitionDelay: '100ms' }}>
               <div className="goi-route-media" data-goi-parallax>
-                <img src="/images/home/auto-guide.png" alt="Auto Self Guided Tour" />
+                <img src="/images/zones/floor-1/ruang-nabi-1.png" alt="Ruang Nabi di Glory of Islam Museum" />
                 <span className="goi-route-tag">01 / NARRATIVE</span>
               </div>
               <div className="goi-route-copy">
@@ -221,7 +221,7 @@ export default function Home() {
       <section className="goi-section goi-story" aria-labelledby="goi-story-title">
         <div className="goi-section-shell goi-story-grid">
           <div className="goi-story-media" data-goi-reveal>
-            <img data-goi-parallax src="/images/home/section-1.jpg" alt="Interior Glory of Islam Museum" />
+            <img data-goi-parallax src="/images/zones/floor-2/ruang-walisongo.png" alt="Ruang Walisongo di Glory of Islam Museum" />
             <span>Stories held in material</span>
           </div>
           <div className="goi-story-copy" data-goi-reveal style={{ transitionDelay: '120ms' }}>
@@ -249,7 +249,7 @@ export default function Home() {
             </div>
           </div>
           <div className="goi-archive-media" data-goi-reveal style={{ transitionDelay: '120ms' }}>
-            <img data-goi-parallax src="/images/home/section-2.jpg" alt="Digital layer at Glory of Islam Museum" />
+            <img data-goi-parallax src="/images/zones/floor-1/ruang-safavid-1.png" alt="Ruang Safavid di Glory of Islam Museum" />
             <div className="goi-archive-index">AR / 3D / GUIDE</div>
           </div>
         </div>
@@ -266,7 +266,7 @@ export default function Home() {
             </div>
           </div>
           <div className="goi-final-cta-visual">
-            <img data-goi-parallax src="/images/home/section-2.jpg" alt="Ruang Walisongo di Glory of Islam Museum" />
+            <img data-goi-parallax src="/images/zones/floor-2/ruang-mataram.png" alt="Ruang Mataram di Glory of Islam Museum" />
             <div className="goi-final-cta-stamp">
               <span>GOI / 17 ZONES</span>
               <span>START ANYWHERE</span>

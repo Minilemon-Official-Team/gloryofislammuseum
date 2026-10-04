@@ -27,12 +27,12 @@ export const floors: Floor[] = [
         id: 1,
         label: 'Lantai 1',
         subtitle: 'Spread of Islam around the World',
-        image: '/images/zones/ruang-sejarah-nabi.png',
+        image: '/images/zones/floor-1/ruang-nabi-1.png',
         zones: [
             {
                 id: 'ruang-nabi',
                 name: 'Ruang Sejarah Nabi',
-                image: '/images/zones/ruang-sejarah-nabi.png',
+                image: '/images/zones/floor-1/ruang-nabi.jpg',
                 overallAudioFile: '/Audio/id/Awal Kenabian  Dari Kesunyian Menuju Cahaya Dunia.wav',
                 thematics: [
                     {
@@ -75,7 +75,7 @@ export const floors: Floor[] = [
             {
                 id: 'ruang-umayyah',
                 name: 'Ruang Umayyah',
-                image: '/images/zones/ruang-umayyah.png',
+                image: '/images/zones/floor-1/ruang-umayyah.png',
                 overallAudioFile: '/Audio/id/Kekhalifahan Umayyah Awal Kekuasaan Besar Islam.wav',
                 thematics: [
                     {
@@ -104,7 +104,7 @@ export const floors: Floor[] = [
             {
                 id: 'ruang-abbasiyah',
                 name: 'Ruang Abbasiyah',
-                image: '/images/zones/ruang-abbasiyah.png',
+                image: '/images/zones/floor-1/ruang-abbasiyah.jpg',
                 overallAudioFile: '/Audio/id/Masa Keemasan Peradaban Islam  Poros Dunia di Baghdad.wav',
                 thematics: [
                     {
@@ -140,7 +140,7 @@ export const floors: Floor[] = [
             {
                 id: 'ruang-utsmaniyah',
                 name: 'Ruang Utsmaniyah',
-                image: '/images/zones/ruang-utsmaniyah.png',
+                image: '/images/zones/floor-1/ruang-ottoman.jpg',
                 overallAudioFile: '/Audio/id/3 mahkota ottoman.wav',
                 thematics: [
                     {
@@ -169,7 +169,7 @@ export const floors: Floor[] = [
             {
                 id: 'ruang-safawiyah',
                 name: 'Ruang Safawiyah',
-                image: '/images/zones/ruang-safawiyah.png',
+                image: '/images/zones/floor-1/ruang-safavid.png',
                 overallAudioFile: '/Audio/id/Iran Safawi.wav',
                 thematics: [
                     {
@@ -191,7 +191,7 @@ export const floors: Floor[] = [
             {
                 id: 'ruang-mughal',
                 name: 'Ruang Mughal',
-                image: '/images/zones/ruang-mughal.png',
+                image: '/images/zones/floor-1/ruang-mughal.png',
                 overallAudioFile: '/Audio/id/kejayaan islam di benua india.wav',
                 thematics: [
                     {
@@ -220,7 +220,7 @@ export const floors: Floor[] = [
             {
                 id: 'ruang-theater',
                 name: 'Ruang Theater',
-                image: '/images/zones/ruang-teater.png',
+                image: '/images/zones/floor-1/theater-lt1.jpg',
                 overallAudioFile: '/Audio/id/The glory of islam (banner bhinneka).wav',
                 thematics: [
                     {
@@ -252,12 +252,12 @@ export const floors: Floor[] = [
         id: 2,
         label: 'Lantai 2',
         subtitle: 'Cahaya Islam di Nusantara',
-        image: '/images/zones/titik-nol-peradaban.jpg',
+        image: '/images/zones/floor-2/pintu-masuk-lt2.png',
         zones: [
             {
                 id: 'titik-nol-peradaban',
                 name: 'Titik Nol Peradaban Islam Nusantara',
-                image: '/images/zones/titik-nol-peradaban.jpg',
+                image: '/images/zones/floor-2/ruang-barus.png',
                 overallAudioFile: '/Audio/id/KESULTANAN SAMUDRA PASAI.wav',
                 thematics: [
                     {
@@ -293,7 +293,7 @@ export const floors: Floor[] = [
             {
                 id: 'jejak-islam-tanah-jawa',
                 name: 'Jejak Awal Peradaban Islam di Tanah Jawa',
-                image: '/images/zones/cahaya-majapahit-wali-songo.jpg',
+                image: '/images/zones/floor-2/ruang-walisongo.png',
                 overallAudioFile: '/Audio/id/Cahaya Islam di singgasana Majapahit.wav',
                 thematics: [
                     {
@@ -350,7 +350,7 @@ export const floors: Floor[] = [
             {
                 id: 'jejak-dakwah-chengho',
                 name: 'Jejak Dakwah Laksamana Cheng Ho',
-                image: '/images/zones/ruang-teater-nusantara.jpg',
+                image: '/images/zones/floor-2/ruang-cheng-ho.png',
                 overallAudioFile: '/Audio/id/Jejak Dakwah Laksamana Cheng Ho di Nusantara.wav',
                 thematics: [
                     {
@@ -407,7 +407,7 @@ export const floors: Floor[] = [
             {
                 id: 'pilar-kekuatan-islam-nusantara',
                 name: 'Pilar Kekuatan Islam di Nusantara',
-                image: '/images/zones/kebangkitan-kesultanan-jawa.jpg',
+                image: '/images/zones/floor-2/ruang-demak.png',
                 overallAudioFile: '/Audio/id/Kebangkitan Islam di Nusantara Kesultanan Demak.wav',
                 thematics: [
                     {
@@ -450,7 +450,7 @@ export const floors: Floor[] = [
             {
                 id: 'cahaya-islam-luar-jawa',
                 name: 'Cahaya Islam di Luar Jawa',
-                image: '/images/zones/pelita-di-pelosok-negeri.jpg',
+                image: '/images/zones/floor-2/ruang-islam-nusantara-1.png',
                 overallAudioFile: '/Audio/id/CAHAYA ISLAM DI PULAU SUMATRA.wav',
                 thematics: [
                     {
@@ -500,7 +500,7 @@ export const floors: Floor[] = [
             {
                 id: 'mataram-islam',
                 name: 'Mataram Islam',
-                image: '/images/zones/kejayaan-mataram-islam.jpg',
+                image: '/images/zones/floor-2/ruang-mataram.png',
                 overallAudioFile: '/Audio/id/KESULTANAN MATARAM ISLAM.wav',
                 thematics: [
                     {
@@ -536,7 +536,7 @@ export const floors: Floor[] = [
             {
                 id: 'pewaris-tradisi',
                 name: 'Pewaris Tradisi dan Dinamika Sejarah',
-                image: '/images/zones/pewaris-tradisi-dan-dinamika-sejarah.jpg',
+                image: '/images/zones/floor-2/ruang-pakualaman-1.png',
                 overallAudioFile: '/Audio/id/Akhir dari Kesultanan Mataram  KASUNANAN SURAKARTA HADININGRAT.wav',
                 thematics: [
                     {

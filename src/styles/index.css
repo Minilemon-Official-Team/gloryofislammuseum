@@ -1123,7 +1123,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url('/images/home/section-1.jpg');
+  background-image: url('/images/zones/floor-1/ruang-nabi-1.png');
   background-position: center;
   background-size: cover;
   content: '';
@@ -1187,47 +1187,47 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Each route gets its own museum image so the page identity changes with the story. */
 .museum-page-hero-all-zone::before {
-  background-image: url('/images/hero/slide-1.jpg');
+  background-image: url('/images/zones/floor-2/pintu-masuk-lt2.png');
   background-position: center 42%;
 }
 
 .museum-page-hero-auto-guide::before {
-  background-image: url('/images/home/auto-guide.png');
+  background-image: url('/images/zones/floor-1/ruang-nabi.jpg');
   background-position: center 58%;
 }
 
 .museum-page-hero-meta::before {
-  background-image: url('/images/hero/slide-2.jpg');
+  background-image: url('/images/zones/floor-1/ruang-safavid-1.png');
   background-position: 68% center;
 }
 
 .museum-page-hero-series::before {
-  background-image: url('/images/zones/ruang-abbasiyah.png');
+  background-image: url('/images/zones/floor-1/ruang-abbasiyah-1.jpg');
   background-position: 34% center;
 }
 
 .museum-page-hero-family::before {
-  background-image: url('/images/zones/ruang-teater-nusantara.jpg');
+  background-image: url('/images/zones/floor-1/theater-lt1-1.jpg');
   background-position: center 38%;
 }
 
 .museum-page-hero-institution::before {
-  background-image: url('/images/zones/titik-nol-peradaban.jpg');
+  background-image: url('/images/zones/floor-2/ruang-barus.png');
   background-position: center 64%;
 }
 
 .museum-page-hero-diorama::before {
-  background-image: url('/images/hero/slide-3.jpg');
+  background-image: url('/images/zones/floor-2/ruang-demak.png');
   background-position: 72% center;
 }
 
 .museum-page-hero-object::before {
-  background-image: url('/images/zones/pewaris-tradisi-dan-dinamika-sejarah.jpg');
+  background-image: url('/images/zones/floor-2/ruang-pakualaman-2.png');
   background-position: 32% center;
 }
 
 .museum-page-hero-thematic::before {
-  background-image: url('/images/hero/slide-4.jpg');
+  background-image: url('/images/zones/floor-2/ruang-mataram.png');
   background-position: 64% 34%;
 }
 
@@ -1251,7 +1251,7 @@ h1, h2, h3, h4, h5, h6 {
   inset: 0 0 0 auto;
   z-index: 0;
   width: min(34%, 360px);
-  background-image: url('/images/home/section-2.jpg');
+  background-image: url('/images/zones/floor-2/ruang-mataram.png');
   background-position: center;
   background-size: cover;
   content: '';
@@ -1288,7 +1288,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .museum-page-intro-education::before {
-  background-image: url('/images/home/ar-2.jpg');
+  background-image: url('/images/zones/floor-2/ruang-barus.png');
   background-position: 64% center;
 }
 

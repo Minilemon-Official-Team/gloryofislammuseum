@@ -12,21 +12,6 @@ type FilterKey = 'all' | GalleryEra;
 const eraLabel = (era: GalleryEra): string =>
   GALLERY_ERAS.find((e) => e.key === era)?.label ?? era;
 
-const placeholderFor = (image: string): string => {
-  const filename = image.split('/').pop() ?? 'photo';
-  return `https://placehold.co/600x400?text=${encodeURIComponent(filename)}`;
-};
-
-const handleImageError = (
-  event: React.SyntheticEvent<HTMLImageElement>,
-  image: string
-) => {
-  const img = event.currentTarget;
-  if (img.dataset.fallback) return;
-  img.dataset.fallback = '1';
-  img.src = placeholderFor(image);
-};
-
 export default function Gallery() {
   const [filter, setFilter] = useState<FilterKey>('all');
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
@@ -89,7 +74,6 @@ export default function Gallery() {
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
-                  onError={(e) => handleImageError(e, item.image)}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -130,7 +114,6 @@ export default function Gallery() {
             <img
               src={selectedItem.image}
               alt={selectedItem.title}
-              onError={(e) => handleImageError(e, selectedItem.image)}
               className="w-full max-h-[70vh] object-contain bg-[#2B2B2B]"
             />
             <div className="p-6">
