@@ -1,4 +1,6 @@
-import { MapPin, Clock, Ticket, Phone, Mail, DollarSign, Users, Calendar } from 'lucide-react';
+import { MapPin, Clock, Phone, Users, Calendar } from 'lucide-react';
+
+const WHATSAPP_URL = 'https://wa.me/6281334370700';
 
 export default function Visit() {
   return (
@@ -15,7 +17,7 @@ export default function Visit() {
           </p>
         </div>
 
-        {/* Opening Hours & Admission */}
+        {/* Opening hours and visit contact */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {/* Opening Hours */}
           <div className="bg-white rounded-lg shadow-lg p-8">
@@ -39,43 +41,26 @@ export default function Visit() {
             </div>
           </div>
 
-          {/* Admission Prices */}
+          {/* Visit Information */}
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-full bg-[#E7DED0] flex items-center justify-center">
-                <Ticket className="w-6 h-6 text-[#8C6B3E]" />
+                <Users className="w-6 h-6 text-[#8C6B3E]" />
               </div>
-              <h2 className="font-['Cinzel'] text-2xl text-[#2B2B2B]">Admission</h2>
+              <h2 className="font-['Cinzel'] text-2xl text-[#2B2B2B]">Visit Information</h2>
             </div>
             <div className="space-y-4">
-              <div className="flex justify-between items-center py-3 border-b border-[#C8B9A6]">
-                <div>
-                  <div className="text-[#2B2B2B]">Adults</div>
-                  <div className="text-sm text-[#5A5A5A]">General admission</div>
-                </div>
-                <span className="text-[#8C6B3E] font-medium text-xl">IDR 50,000</span>
-              </div>
-              <div className="flex justify-between items-center py-3 border-b border-[#C8B9A6]">
-                <div>
-                  <div className="text-[#2B2B2B]">Students & Seniors</div>
-                  <div className="text-sm text-[#5A5A5A]">With valid ID</div>
-                </div>
-                <span className="text-[#8C6B3E] font-medium text-xl">IDR 25,000</span>
-              </div>
-              <div className="flex justify-between items-center py-3 border-b border-[#C8B9A6]">
-                <div>
-                  <div className="text-[#2B2B2B]">Children</div>
-                  <div className="text-sm text-[#5A5A5A]">Under 12 years</div>
-                </div>
-                <span className="text-[#8C6B3E] font-medium text-xl">Free</span>
-              </div>
-              <div className="flex justify-between items-center py-3">
-                <div>
-                  <div className="text-[#2B2B2B]">Family Pass</div>
-                  <div className="text-sm text-[#5A5A5A]">2 adults + 2 children</div>
-                </div>
-                <span className="text-[#8C6B3E] font-medium text-xl">IDR 120,000</span>
-              </div>
+              <p className="text-[#5A5A5A] leading-relaxed">
+                Contact us on WhatsApp to plan your visit.
+              </p>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex px-6 py-3 bg-[#8C6B3E] text-white rounded hover:bg-[#6F532F] transition-colors"
+              >
+                Ask About Your Visit on WhatsApp
+              </a>
             </div>
           </div>
         </div>
@@ -118,8 +103,10 @@ export default function Visit() {
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-[#8C6B3E] mt-1 flex-shrink-0" />
                 <div>
-                  <div className="text-[#2B2B2B] font-medium">Phone</div>
-                  <div className="text-[#5A5A5A]">+62 813-3437-0700</div>
+                  <div className="text-[#2B2B2B] font-medium">WhatsApp</div>
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-[#5A5A5A] hover:text-[#8C6B3E]">
+                    +62 813-3437-0700
+                  </a>
                 </div>
               </div>
               <div className="border-t border-[#C8B9A6] pt-4">
@@ -161,18 +148,17 @@ export default function Visit() {
               <h2 className="font-['Cinzel'] text-2xl text-[#2B2B2B]">Group Visits</h2>
             </div>
             <p className="text-[#2B2B2B] mb-4 leading-relaxed">
-              Special rates and services available for groups of 30 or more visitors,
-              including schools, universities, and tour groups.
+              Group visit arrangements are available for schools, universities, and tour groups.
             </p>
             <ul className="space-y-2 text-[#5A5A5A] mb-6">
-              <li>• Discounted group rates</li>
+              <li>• Group visit arrangements</li>
               <li>• Guided tours in multiple languages</li>
               <li>• Educational materials available</li>
               <li>• Advance booking required</li>
             </ul>
-            <button className="px-6 py-3 bg-[#8C6B3E] text-white rounded hover:bg-[#6F532F] transition-colors">
-              <a href="https://wa.me/6281334370700"> Book Group Visit </a>
-            </button>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex px-6 py-3 bg-[#8C6B3E] text-white rounded hover:bg-[#6F532F] transition-colors">
+              Book Group Visit on WhatsApp
+            </a>
           </div>
 
           {/* Special Events */}
@@ -193,9 +179,9 @@ export default function Visit() {
               <li>• Educational workshops</li>
               <li>• Cultural performances</li>
             </ul>
-            <button className="px-6 py-3 bg-[#8C6B3E] text-white rounded hover:bg-[#6F532F] transition-colors">
-              Inquire About Events
-            </button>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex px-6 py-3 bg-[#8C6B3E] text-white rounded hover:bg-[#6F532F] transition-colors">
+              Inquire About Events on WhatsApp
+            </a>
           </div>
         </div>
 

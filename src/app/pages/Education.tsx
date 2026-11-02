@@ -1,5 +1,7 @@
 import { GraduationCap, Users, BookOpen, Palette, Calendar, ArrowRight } from 'lucide-react';
 
+const WHATSAPP_URL = 'https://wa.me/6281334370700';
+
 export default function Education() {
   return (
     <div className="bg-[#F4EFE6] min-h-screen py-16 px-4 museum-plain-page">
@@ -65,11 +67,11 @@ export default function Education() {
                 <li>• Duration: 90 minutes</li>
                 <li>• Ages: 6-12 years with parents</li>
                 <li>• Schedule: Saturdays & Sundays, 10:00 AM & 2:00 PM</li>
-                <li>• Free with museum admission</li>
+                <li>• Ask us for current admission and program information</li>
               </ul>
-              <button className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
-                Book Now <ArrowRight className="w-4 h-4" />
-              </button>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
+                Ask About This Tour on WhatsApp <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
 
             <div className="bg-white rounded-lg shadow-md p-8">
@@ -82,11 +84,11 @@ export default function Education() {
                 <li>• Batik making, pottery, traditional masks</li>
                 <li>• Duration: 2-3 hours</li>
                 <li>• All materials provided</li>
-                <li>• Fee: IDR 100,000 per participant</li>
+                <li>• Ask us about program details and availability</li>
               </ul>
-              <button className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
-                View Schedule <ArrowRight className="w-4 h-4" />
-              </button>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
+                Ask About This Workshop on WhatsApp <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
 
             <div className="bg-white rounded-lg shadow-md p-8">
@@ -99,11 +101,11 @@ export default function Education() {
                 <li>• Quarterly special events</li>
                 <li>• Traditional performances and demonstrations</li>
                 <li>• Cultural food tasting</li>
-                <li>• Free admission on celebration days</li>
+                <li>• Ask us about event details and availability</li>
               </ul>
-              <button className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
-                View Events <ArrowRight className="w-4 h-4" />
-              </button>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
+                Ask About Events on WhatsApp <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
 
             <div className="bg-white rounded-lg shadow-md p-8">
@@ -118,9 +120,9 @@ export default function Education() {
                 <li>• Ages: 7-14 years</li>
                 <li>• Registration opens in April</li>
               </ul>
-              <button className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
-                Register Interest <ArrowRight className="w-4 h-4" />
-              </button>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
+                Register Interest on WhatsApp <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </section>
@@ -142,11 +144,11 @@ export default function Education() {
                 <li>• Tailored to grade levels and curriculum</li>
                 <li>• Pre-visit and post-visit materials</li>
                 <li>• Student worksheets included</li>
-                <li>• Discounted group rates</li>
+                <li>• Group visit arrangements</li>
               </ul>
-              <button className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
-                Book School Visit <ArrowRight className="w-4 h-4" />
-              </button>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
+                Book School Visit on WhatsApp <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
 
             <div className="bg-white rounded-lg shadow-md p-8">
@@ -161,9 +163,9 @@ export default function Education() {
                 <li>• Guest lecture series</li>
                 <li>• Thesis research support</li>
               </ul>
-              <button className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
-                Partnership Inquiry <ArrowRight className="w-4 h-4" />
-              </button>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
+                Ask About Partnership on WhatsApp <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
 
             <div className="bg-white rounded-lg shadow-md p-8">
@@ -178,9 +180,9 @@ export default function Education() {
                 <li>• Curriculum integration support</li>
                 <li>• Certificate of completion provided</li>
               </ul>
-              <button className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
-                View Workshops <ArrowRight className="w-4 h-4" />
-              </button>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
+                Ask About Workshops on WhatsApp <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
 
             <div className="bg-white rounded-lg shadow-md p-8">
@@ -195,9 +197,9 @@ export default function Education() {
                 <li>• Cultural presentations</li>
                 <li>• Available throughout East Java</li>
               </ul>
-              <button className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
-                Request Outreach <ArrowRight className="w-4 h-4" />
-              </button>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
+                Request Outreach on WhatsApp <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </section>
@@ -219,11 +221,11 @@ export default function Education() {
                 <li>• Monthly evening lectures</li>
                 <li>• Expert speakers from around the world</li>
                 <li>• Q&A sessions</li>
-                <li>• Free attendance with RSVP</li>
+                <li>• Advance RSVP required</li>
               </ul>
-              <button className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
-                View Lecture Schedule <ArrowRight className="w-4 h-4" />
-              </button>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
+                Ask About Lecture Schedule on WhatsApp <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
 
             <div className="bg-white rounded-lg shadow-md p-8">
@@ -238,9 +240,9 @@ export default function Education() {
                 <li>• Master instructor-led</li>
                 <li>• Certificate upon completion</li>
               </ul>
-              <button className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
-                Enroll Now <ArrowRight className="w-4 h-4" />
-              </button>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
+                Enroll on WhatsApp <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
 
             <div className="bg-white rounded-lg shadow-md p-8">
@@ -255,9 +257,9 @@ export default function Education() {
                 <li>• 10-week courses</li>
                 <li>• Small class sizes</li>
               </ul>
-              <button className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
-                Learn More <ArrowRight className="w-4 h-4" />
-              </button>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
+                Ask About This Program on WhatsApp <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
 
             <div className="bg-white rounded-lg shadow-md p-8">
@@ -272,9 +274,9 @@ export default function Education() {
                 <li>• Networking opportunities</li>
                 <li>• Publication in proceedings</li>
               </ul>
-              <button className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
-                Symposium Details <ArrowRight className="w-4 h-4" />
-              </button>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-[#8C6B3E] hover:text-[#6F532F] flex items-center gap-2">
+                Ask About Symposium on WhatsApp <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </section>
@@ -287,12 +289,12 @@ export default function Education() {
             or discuss custom educational experiences for your group.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-[#8C6B3E] rounded hover:bg-[#E7DED0] transition-colors shadow-lg">
-              Contact Education Team
-            </button>
-            <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded hover:bg-white/10 transition-colors">
-              Download Program Guide
-            </button>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex px-8 py-4 bg-white text-[#8C6B3E] rounded hover:bg-[#E7DED0] transition-colors shadow-lg">
+              Contact Education Team on WhatsApp
+            </a>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex px-8 py-4 bg-transparent border-2 border-white text-white rounded hover:bg-white/10 transition-colors">
+              Ask for Program Guide on WhatsApp
+            </a>
           </div>
         </div>
       </div>

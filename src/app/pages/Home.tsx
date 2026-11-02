@@ -85,7 +85,7 @@ export default function Home() {
             </p>
             <div className="goi-actions">
               <a
-                href="https://play.google.com/store/apps/details?id=com.dtopeng.goiar"
+                href="https://bit.ly/GOIARmuseum"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="goi-button goi-button-primary"
@@ -101,7 +101,7 @@ export default function Home() {
             <div className="goi-hero-meta" aria-label="Museum highlights">
               <span>17 zones</span>
               <span>AR + 3D</span>
-              <span>Since 2010</span>
+              <span>Since 2026</span>
             </div>
           </div>
 
@@ -196,7 +196,7 @@ export default function Home() {
             </Link>
 
             <a
-              href="https://play.google.com/store/apps/details?id=com.dtopeng.goiar"
+              href="https://bit.ly/GOIARmuseum"
               target="_blank"
               rel="noopener noreferrer"
               className="goi-route-digital"

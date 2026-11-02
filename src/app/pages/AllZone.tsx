@@ -214,6 +214,7 @@ function ZoneDetailScreen({
             <div className="flex rounded-lg overflow-hidden border border-[#C8B9A6] mb-6">
                 <button
                     onClick={() => setActiveTab('zona')}
+                    aria-pressed={activeTab === 'zona'}
                     className={`flex-1 py-2.5 text-sm font-['Cinzel'] font-medium transition-colors ${
                         activeTab === 'zona'
                             ? 'bg-[#8C6B3E] text-white'
@@ -224,6 +225,7 @@ function ZoneDetailScreen({
                 </button>
                 <button
                     onClick={() => setActiveTab('thematic')}
+                    aria-pressed={activeTab === 'thematic'}
                     className={`flex-1 py-2.5 text-sm font-['Cinzel'] font-medium transition-colors ${
                         activeTab === 'thematic'
                             ? 'bg-[#8C6B3E] text-white'
@@ -240,7 +242,7 @@ function ZoneDetailScreen({
                     <p className="notranslate text-sm text-[#2B2B2B] leading-relaxed mb-4">
                         {zoneNarration || 'Rangkuman keseluruhan zona — putar narasi audio berikut untuk mendapatkan gambaran umum zona ini.'}
                     </p>
-                    <SimpleAudioPlayer src={zone.overallAudioFile} contentKey={zone.name} />
+                    {zone.overallAudioFile && <SimpleAudioPlayer src={zone.overallAudioFile} contentKey={zone.name} />}
                 </div>
             )}
 
@@ -248,19 +250,26 @@ function ZoneDetailScreen({
                 <div className="flex flex-col gap-3">
                     <p className="text-sm text-[#5A5A5A] mb-1">Pilih Judul Narasi:</p>
                     {zone.thematics.map((item, index) => (
-                        <button
-                            key={index}
-                            onClick={() => onSelectThematic(item)}
-                            className="group flex items-center gap-3 bg-white rounded-xl border border-[#C8B9A6] px-4 py-3.5 shadow-sm hover:shadow-md hover:border-[#8C6B3E] transition-all duration-200 text-left"
+                        <article
+                            key={item.objectId ?? item.title}
+                            className="bg-white rounded-xl border border-[#C8B9A6] p-4 shadow-sm"
                         >
-                            <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#8C6B3E] text-white text-xs flex items-center justify-center font-bold">
-                                {index + 1}
-                            </span>
-                            <p className="flex-1 text-sm font-medium text-[#2B2B2B] leading-snug group-hover:text-[#8C6B3E] transition-colors">
-                                {item.title}
-                            </p>
-                            <ChevronRight className="w-4 h-4 text-[#8C6B3E] flex-shrink-0" />
-                        </button>
+                            <button
+                                onClick={() => onSelectThematic(item)}
+                                className="group flex w-full items-center gap-3 text-left"
+                            >
+                                <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#8C6B3E] text-white text-xs flex items-center justify-center font-bold">
+                                    {index + 1}
+                                </span>
+                                <span className="flex-1 text-sm font-medium text-[#2B2B2B] leading-snug group-hover:text-[#8C6B3E] transition-colors">
+                                    {item.shortTitle ?? item.title}
+                                </span>
+                                <ChevronRight className="w-4 h-4 text-[#8C6B3E] flex-shrink-0" />
+                            </button>
+                            <div className="mt-3 pl-10">
+                                <SimpleAudioPlayer src={item.audioFile} contentKey={item.audioContentKey ?? item.title} />
+                            </div>
+                        </article>
                     ))}
                 </div>
             )}
@@ -342,7 +351,7 @@ function ThematicDetailScreen({
                     <Volume2 className="w-4 h-4 text-[#8C6B3E]" />
                     <span className="text-sm font-medium text-[#2B2B2B] font-['Cinzel']">Audio Narasi</span>
                 </div>
-                <SimpleAudioPlayer src={thematic.audioFile} contentKey={thematic.title} />
+                <SimpleAudioPlayer src={thematic.audioFile} contentKey={thematic.audioContentKey ?? thematic.title} />
             </div>
 
             {/* Text Content */}

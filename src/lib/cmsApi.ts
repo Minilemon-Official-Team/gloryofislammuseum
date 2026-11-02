@@ -1,3 +1,5 @@
+import { localNewsPosts } from "../app/data/localNews";
+
 export const CMS_API_URL = (import.meta.env.VITE_CMS_API_URL || "https://api.gloryofislammuseum.com").trim();
 export const SITE_ID = import.meta.env.VITE_SITE_ID || "glory-of-islam";
 const CMS_REQUEST_TIMEOUT_MS = 8000;
@@ -32,6 +34,8 @@ export interface CmsPost {
   published_at: string | null;
   created_at: string;
   updated_at: string;
+  source_links?: Array<{ label: string; href: string }>;
+  source_note?: string;
 }
 
 export interface ApiResponse<T> {
@@ -45,17 +49,16 @@ export interface ApiResponse<T> {
 }
 
 export async function getPosts(siteId = SITE_ID, page = 1, limit = 10): Promise<ApiResponse<CmsPost[]>> {
-  const res = await fetchCms(`${CMS_API_URL}/public/posts?site_id=${siteId}&page=${page}&limit=${limit}`);
-  if (!res.ok) throw new Error("Failed to fetch posts");
-  return res.json();
+  const start = (page - 1) * limit;
+  return {
+    success: true,
+    data: localNewsPosts.slice(start, start + limit),
+    meta: { page, limit, total: localNewsPosts.length },
+  };
 }
 
 export async function getPostBySlug(slug: string, siteId = SITE_ID): Promise<CmsPost | null> {
-  const res = await fetchCms(`${CMS_API_URL}/public/posts/${siteId}/${slug}`);
-  if (res.status === 404) return null;
-  if (!res.ok) throw new Error("Failed to fetch post");
-  const data: ApiResponse<CmsPost> = await res.json();
-  return data.data;
+  return localNewsPosts.find((post) => post.slug === slug) ?? null;
 }
 
 export async function getCategories(siteId = SITE_ID): Promise<string[]> {

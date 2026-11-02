@@ -132,11 +132,12 @@ export default function NewsDetail() {
 
         {HTML_CONTENT_PATTERN.test(post.content) ? (
           <div
-            className="max-w-none text-[#5A5A5A] leading-relaxed [&_a]:text-[#8C6B3E] [&_a]:underline [&_blockquote]:border-l [&_blockquote]:border-[#8C6B3E] [&_blockquote]:pl-4 [&_h1]:mb-4 [&_h1]:mt-8 [&_h1]:text-3xl [&_h1]:font-bold [&_h2]:mb-3 [&_h2]:mt-7 [&_h2]:text-2xl [&_h2]:font-bold [&_h3]:mb-3 [&_h3]:mt-6 [&_h3]:text-xl [&_h3]:font-semibold [&_img]:my-6 [&_img]:rounded-lg [&_li]:mb-2 [&_ol]:mb-4 [&_ol]:ml-6 [&_ol]:list-decimal [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_ul]:list-disc"
+            className="notranslate max-w-none text-[#5A5A5A] leading-relaxed [&_a]:text-[#8C6B3E] [&_a]:underline [&_blockquote]:border-l [&_blockquote]:border-[#8C6B3E] [&_blockquote]:pl-4 [&_h1]:mb-4 [&_h1]:mt-8 [&_h1]:text-3xl [&_h1]:font-bold [&_h2]:mb-3 [&_h2]:mt-7 [&_h2]:text-2xl [&_h2]:font-bold [&_h3]:mb-3 [&_h3]:mt-6 [&_h3]:text-xl [&_h3]:font-semibold [&_img]:my-6 [&_img]:rounded-lg [&_li]:mb-2 [&_ol]:mb-4 [&_ol]:ml-6 [&_ol]:list-decimal [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_ul]:list-disc"
+              translate="no"
             dangerouslySetInnerHTML={{ __html: sanitizeArticleHtml(post.content) }}
           />
         ) : (
-          <div className="max-w-none text-[#5A5A5A] leading-relaxed">
+          <div className="notranslate max-w-none text-[#5A5A5A] leading-relaxed" translate="no">
             {post.content.split("\n").map((paragraph, i) => (
               <p key={i} className="mb-4">
                 {paragraph}
@@ -144,6 +145,8 @@ export default function NewsDetail() {
             ))}
           </div>
         )}
+        {post.source_note && <p className="mt-8 text-sm text-[#5A5A5A]">{post.source_note}</p>}
+        {post.source_links?.length ? <section className="mt-6 border-t border-[#C8B9A6] pt-6"><ul className="flex flex-col gap-3">{post.source_links.map((source) => <li key={source.href}><a className="notranslate text-[#8C6B3E] underline" translate="no" href={source.href} target="_blank" rel="noopener noreferrer">{source.label}</a></li>)}</ul></section> : null}
       </div>
     </div>
   );
