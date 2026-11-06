@@ -81,7 +81,7 @@ export default function Home() {
               <em className="goi-hero-title-line goi-hero-title-accent">Islam Museum</em>
             </h1>
             <p className="goi-hero-lede">
-              Tracing the Islamic legacy from global civilization to the heart of Nusantara.
+              Tracing the Islamic legacy from global civilization to the heart of Nusantara
             </p>
             <div className="goi-actions">
               <a
